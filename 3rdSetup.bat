@@ -13,7 +13,7 @@ taskkill /f /im "Dropbox.exe"
 taskkill /f /im "DropboxUpdate.exe"
 net stop DbxSvc
 sc stop DbxSvc
-
+:: LARGE PAGES
 echo .
 echo .
 echo Hit yes on the next pop up...
@@ -22,19 +22,7 @@ echo .
 pause
 cd /d "%ROOTDIR%"
 hugepages.reg
-
-:choice
-
-echo .
-echo .
-set /P c=Repair mods?[Y/N]?
-if /I "%c%" EQU "Y" goto :yeah
-if /I "%c%" EQU "N" goto :nah
-echo .
-echo .
-
-:yeah
-
+:: REPAIR
 attrib -h "%Arma3%/!Workshop"
 cd /d "%Arma3%/!Workshop"
 :: DELETE CBA
@@ -65,8 +53,6 @@ start steam://rungameid/107410
 pause
 TASKKILL /F /IM steam.exe
 TASKKILL /F /IM arma3launcher.exe
-
-:nah
 :: USERCONFIG
 cd /d "%arma3%"
 rmdir /s /q "%arma3%/userconfig"
