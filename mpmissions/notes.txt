@@ -1,0 +1,29 @@
+//Server Settings
+https://www.bestarmahosting.com/guides/how-to-configure-your-arma-3-server-all-options-explained/
+
+https://www.youtube.com/watch?v=7DabmeDCFnM
+
+sceneComplexity=250000;
+
+
+Site:
+call{
+[(getPos thisTrigger),250,5,0.5,5,GUER,[GoodPool],[LeaderHQ]] call NR6_fnc_Sites;
+}
+
+
+Spawn:
+call{
+[GUER,3,[(getpos thisTrigger)],250,nil,"custom",1,[LeaderHQ],[GoodPool],nil,nil,true] spawn NR6_fnc_Reinforcements; 
+}
+
+
+Reinforcements:
+call{
+[GUER,2,[(getpos thisTrigger)],250,250,"custom",1,[LeaderHQ],[[GoodPool],nil,getpos LeaderHQ,false,25] spawn NR6_fnc_Reinforcements; 
+}
+
+
+Commanders:
+call{(group this) spawn G_fnc_initNewAI};
+call{(group this) setVariable ["zbe_cacheDisabled",true]};

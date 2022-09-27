@@ -1,0 +1,8 @@
+*.ps1
+*.vars.Arma3Profile
+Mods/
+Saved/
+UserSaved/
+missions/
+Screenshots/
+compositions/

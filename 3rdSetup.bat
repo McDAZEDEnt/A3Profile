@@ -1,0 +1,83 @@
+@echo off
+set ROOTDIR=%~dp0
+set ROOTDIR=%ROOTDIR:~0,-1%
+cd /d "%ROOTDIR%"
+for %%I in (.) do set CurrDirName=%%~nxI
+echo %CurrDirName%
+if not "%1"=="am_admin" (
+    powershell -Command "Start-Process -Verb RunAs -FilePath '%0' -ArgumentList 'am_admin'"
+    exit /b
+)
+
+taskkill /f /im "Dropbox.exe"
+taskkill /f /im "DropboxUpdate.exe"
+net stop DbxSvc
+sc stop DbxSvc
+
+echo .
+echo .
+echo Hit yes on the next pop up...
+echo .
+echo .
+pause
+cd /d "%ROOTDIR%"
+hugepages.reg
+
+:choice
+
+echo .
+echo .
+set /P c=Repair mods?[Y/N]?
+if /I "%c%" EQU "Y" goto :yeah
+if /I "%c%" EQU "N" goto :nah
+echo .
+echo .
+
+:yeah
+
+attrib -h "%Arma3%/!Workshop"
+cd /d "%Arma3%/!Workshop"
+:: DELETE CBA
+del /s /q /f "@CBA_A3\*"
+:: DELETE ACE
+del /s /q /f "@ace_x\*"
+:: DELETE M3MORY
+del /s /q /f "@memory\*"
+:: DELETE NR6
+del /s /q /f "@NR6\*"
+:: DELETE REALENGINE
+del /s /q /f "@Realengine\*"
+:: DELETE SEM
+del /s /q /f "@SEM\*"
+:: Refresh !workshop
+cd /d "%Arma3%"
+rd /s /q !Workshop
+:: Repair in launcher
+echo .
+echo .
+echo The Arma 3 Launcher will open in a few seconds.
+echo Please import the "FullModded.html" preset into the launcher and repair all broken mods.
+echo (Image reference included beside this script.)
+echo Close the launcher when you are finished...
+echo .
+echo .
+start steam://rungameid/107410
+pause
+TASKKILL /F /IM steam.exe
+TASKKILL /F /IM arma3launcher.exe
+
+:nah
+:: USERCONFIG
+cd /d "%arma3%"
+rmdir /s /q "%arma3%/userconfig"
+rmdir /s /q "%arma3%/mpmissions"
+mklink /J "%arma3%/userconfig" "%ROOTDIR%/userconfig"
+mklink /J "%arma3%/mpmissions" "%ROOTDIR%/mpmissions"
+:: UNHIDE !WORKSHOP
+cd /d "%arma3%"
+attrib -h "%Arma3%/!Workshop"
+:: PROFILE
+rmdir /S /Q "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/"
+mkdir "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Users"
+mklink /j "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Users/%CurrDirName%" "%USERPROFILE%/Documents/Arma 3 - Other Profiles/%CurrDirName%"
+call "%ROOTDIR%/FoV.exe"

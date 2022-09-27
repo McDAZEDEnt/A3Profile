@@ -1,0 +1,5 @@
+version=1;
+class EngineAttributes
+{
+	autosaveTime=-1000;
+};
