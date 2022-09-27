@@ -1,5 +1,6 @@
-*.ps1
-*.vars.Arma3Profile
+Dbx.ps1
+gitpush.sh
+McDAZED.vars.Arma3Profile
 Mods/
 Saved/
 UserSaved/
