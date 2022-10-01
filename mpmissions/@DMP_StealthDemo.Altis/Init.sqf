@@ -1,1 +1,0 @@
-{_x setBehaviour"SAFE"}forEach allGroups;
