@@ -1,0 +1,23 @@
+private["_man"];
+_man=_this select 0;
+if!(local _man)exitWith{};
+if(isPlayer _man)exitWith{};
+_man disableConversation TRUE;
+_man disableAI"RADIOPROTOCOL";
+[_man,"NoVoice"]remoteExec["setSpeaker"];
+_man setVariable["dmpSide",(side _man),TRUE];
+_man setVariable["dmpPOW",TRUE,TRUE];
+//[_man,"AmovPercMstpSsurWnonDnon"]remoteExec["playMove"];
+[_man,TRUE]remoteExec["setCaptive"];
+_man setUnitPos"UP";
+{_man disableAI _x}forEach["MOVE","TARGET","AUTOTARGET","WEAPONAIM","FSM","AUTOCOMBAT"];
+_gear="";
+_h="GroundWeaponHolder_Scripted"createVehicle position _man;
+while{TRUE}do{
+	if((primaryWeapon _man=="")AND(handgunWeapon _man=="")AND(secondaryWeapon _man==""))exitWith{};
+	{if!(_x=="")then{_man action["DropWeapon",_h,_x];sleep .1}}forEach[primaryWeapon _man,handgunWeapon _man,secondaryWeapon _man];
+	sleep .3;
+};
+[_man,"AmovPercMstpSsurWnonDnon"]remoteExec["playMove"];
+if((count(entities"DMP_Interaction"))==0)exitWith{};
+_man call DMP_fnc_InitSoldier;

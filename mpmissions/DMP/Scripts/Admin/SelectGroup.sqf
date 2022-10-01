@@ -1,0 +1,14 @@
+private["_index","_group","_v","_info"];
+disableSerialization;
+_index=lbCurSel 901;
+_group=lbValue[901,_index];
+dmpAdminGroup=dmpAdminGroups select _group;
+//dmpAdminGroup=_group;
+//hintSilent format["%1",_group];
+_v=[];
+//_info=[];
+_info="";
+{_v pushBackUnique(vehicle _x)}forEach(units dmpAdminGroup);
+//{_info pushBack(typeOf _x)}forEach _v;
+{_info=format["%1\n%2\n",_info,_x]}forEach _v;
+hintSilent format["%1\n\n%2",dmpAdminGroup,_info];

@@ -1,0 +1,31 @@
+private["_group","_pos","_spawnInfo","_roads","_r1","_r2","_dir","_b"];
+_group=_this select 0;
+_pos=_this select 1;
+_spawnInfo=_this select 2;
+_group setBehaviour"SAFE";
+_group setCombatMode"YELLOW";
+_group setFormation"DIAMOND";
+_group setSpeedmode"NORMAL";
+(vehicle leader _group)setPos _pos;
+[_pos,_pos,"Security",_spawnInfo]execVM"DMP\Scripts\Spawn\Spawn.sqf";
+sleep 2;
+_roads=_pos nearRoads 30;
+if((count _roads)<2)exitWith{};
+_r1=_roads select 0;
+_r2=_roads select 1;
+_pos=getPos _r1;
+_dir=_r1 getDir _r2;
+_b=createVehicle[(selectRandom["Land_Razorwire_F","Land_HBarrier_5_F"]),_pos,[],0,"none"];
+//_b=createVehicle[(selectRandom["Land_Razorwire_F","Land_HBarrier_5_F"]),_pos,[],0,"can_collide"];
+_b setDir _dir;
+_b setPos _pos;
+
+/*
+_road=_roads select 0;
+_pos=getPos _road;
+_dir=getDir _road;
+(vehicle leader _group)setPos _pos;
+//(vehicle leader _group)setPosASL(_roads select 0);
+sleep 2;
+//_h="RoadBarrier_F"createVehicle _pos;_h setDir(_dir-90);
+[_pos,_pos,"Security",_spawnInfo]execVM"DMP\Scripts\Spawn\Spawn.sqf";

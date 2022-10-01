@@ -1,0 +1,16 @@
+private["_group","_pos"];
+_group=_this select 0;
+_pos=_this select 1;
+_pos=[_pos select 0,_pos select 1,500];
+_group setCombatMode"YELLOW";
+_group setBehaviour"SAFE";
+_group setFormation"FILE";
+(vehicle leader _group)flyInHeight(500+(random 500));
+sleep 1;
+{deleteWaypoint _x}forEach(waypoints _group);
+_group addWaypoint[_pos,0];
+_group move _pos;
+{_x setWaypointType"LOITER"}forEach(waypoints _group);
+{_x setWaypointPosition[_pos,0]}forEach(waypoints _group);
+sleep 10;
+{_x setDammage 0;(vehicle _x)setDammage 0}forEach units _group;

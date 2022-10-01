@@ -1,0 +1,1 @@
+if(dmpHint)then{dmpHint=FALSE;systemChat"Hints OFF"}else{dmpHint=TRUE;systemChat"Hints ON"};

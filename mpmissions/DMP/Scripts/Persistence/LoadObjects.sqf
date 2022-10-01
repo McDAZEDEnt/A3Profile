@@ -1,0 +1,27 @@
+private["_vehicles","_status","_cargo","_vars","_vehicle"];
+_vehicleInfo=dmpVehicleInfo;
+_status=[];
+_cargo=[];
+_vars=[];
+_vehicle=objNull;
+_pos=[];
+{
+_status=_x select 0;
+_cargo=_x select 1;
+_vars=_x select 2;
+_pos=_status select 1;
+_pos=[_pos select 0,_pos select 1,(_pos select 2)+.3];
+_vehicle=createVehicle[_status select 0,_pos,[],0,"none"];
+_vehicle setDir(_status select 2);
+_vehicle setDammage(_status select 3);
+_vehicle setFuel(_status select 4);
+clearWeaponCargoGlobal _vehicle;
+clearMagazineCargoGlobal _vehicle;
+clearItemCargoGlobal _vehicle;
+clearBackpackCargoGlobal _vehicle;
+{_vehicle addItemCargoGlobal[_x,1]}forEach(_cargo select 0);
+{_vehicle addWeaponCargoGlobal[_x,1]}forEach(_cargo select 1);
+{_vehicle addMagazineCargoGlobal[_x,1]}forEach(_cargo select 2);
+{_vehicle addBackpackCargoGlobal[_x,1]}forEach(_cargo select 3);
+[_vehicle,_vars]call dmp_fnc_SetVariables;
+}forEach _vehicleInfo;

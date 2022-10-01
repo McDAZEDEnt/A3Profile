@@ -1,0 +1,13 @@
+private["_lamp","_light","_colour"];
+_lamp=_this;
+_light="#lightpoint" createVehicle(getPosASL _lamp);
+_light attachTo[_lamp,[0,0,0]];
+_colour=[1,1,1];
+_light setLightAmbient _colour;
+_light setLightColor _colour;
+_light setLightIntensity 150;
+_light setLightUseFlare TRUE;
+_light setLightFlareSize 2;
+_light setLightFlareMaxDistance 100;
+waitUntil{isNull _lamp};
+deleteVehicle _lamp;deleteVehicle _light;

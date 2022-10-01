@@ -66,4 +66,6 @@ attrib -h "%Arma3%/!Workshop"
 rmdir /S /Q "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/"
 mkdir "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Users"
 mklink /j "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Users/%CurrDirName%" "%USERPROFILE%/Documents/Arma 3 - Other Profiles/%CurrDirName%"
-call "%ROOTDIR%/FoV.exe"
+cd /d "%ROOTDIR%"
+del /s /q /f *.vars.Arma3Profile
+call FoV.exe

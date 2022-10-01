@@ -1,0 +1,17 @@
+private["_man"];
+_man=_this;
+if!(local _man)exitWith{};
+if(isPlayer _man)exitWith{};
+_man disableConversation TRUE;
+_man disableAI"RADIOPROTOCOL";
+[_man,"NoVoice"]remoteExec["setSpeaker"];
+_man setVariable["dmpSide",(side _man),TRUE];
+_man setVariable["dmpPOW",TRUE,TRUE];
+[_man,"AmovPercMstpSsurWnonDnon"]remoteExec["playMove"];
+[_man,TRUE]remoteExec["setCaptive"];
+_man setUnitPos"UP";
+//_man setBehaviour"CARELESS";
+//{[_man,_x]remoteExec["disableAI"]}forEach["MOVE","TARGET","AUTOTARGET","WEAPONAIM","FSM","AUTOCOMBAT"];
+{_man disableAI _x}forEach["MOVE","TARGET","AUTOTARGET","WEAPONAIM","FSM","AUTOCOMBAT"];
+if((count(entities"DMP_Interaction"))==0)exitWith{};
+_man call DMP_fnc_InitSoldier;

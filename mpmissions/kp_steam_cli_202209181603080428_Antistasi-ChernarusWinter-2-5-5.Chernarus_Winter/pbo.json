@@ -1,0 +1,13 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+            "\\.sqf$",
+            "\\.txt$",
+            "\\.xml$"
+        ]
+    },
+    "headers": [
+    ]
+}

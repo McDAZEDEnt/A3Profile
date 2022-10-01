@@ -1,0 +1,23 @@
+private["_group","_type","_pos","_markerName","_marker","_colour","_side"];
+_group=_this select 0;
+_type=_this select 1;
+_pos=getPos(leader _group);
+_markerName=format["%1%2",_group,_pos];
+_marker=createMarkerLocal[_markerName,_pos];
+_marker setMarkerSizeLocal[.3,.3];
+_marker setMarkerTypeLocal"mil_objective";
+_marker setMarkerTextLocal _type;
+_colour="ColorWhite";
+_colour="ColorEAST";
+_side=side(leader _group);
+if(_side==West)then{_colour="ColorWEST"};
+if(_side==East)then{_colour="ColorEAST"};
+if(_side==Resistance)then{_colour="ColorGUER"};
+if(_side==CIVILIAN)then{_colour="ColorCIVILIAN"};
+_marker setMarkerColorLocal _colour;
+while{TRUE}do{
+	if!(_group call dmp_fnc_GroupIsAlive)exitWith{};
+	_marker setMarkerPos(getPos leader _group);
+	sleep 5;
+};
+deleteMarker _marker;

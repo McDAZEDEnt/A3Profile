@@ -1,0 +1,17 @@
+private["_target","_dir","_chance","_count"];
+_target=_this;
+hintSilent"Freeze!";
+if(isPlayer _target)exitWith{};
+_target reveal player;
+if((animationState _target)=="AmovPercMstpSsurWnonDnon")exitWith{[_target,"AidlPercMstpSnonWnonDnon_AI"]remoteExec["switchMove"]};
+_dir=_target getRelDir player;
+_chance=10;
+if((_dir>90)AND(_dir<270))then{_chance=70};
+if(((primaryWeapon _target)=="")AND((handgunWeapon _target)==""))then{_chance=90};
+_count={alive _x}count(units(group _target));
+_chance=_chance-(_count*10);
+if(fleeing _target)then{_chance=_chance+50};
+if(_chance>95)then{_chance=95};
+if(_chance<5)then{_chance=5};
+if((random 100)>_chance)exitWith{};
+[_target]remoteExec["DMP_fnc_Surrender"];

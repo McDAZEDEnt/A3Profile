@@ -1,0 +1,25 @@
+if((count entities"DMP_DFC")>0)exitWith{};
+// Chooses random area of an AO and creates a new, smaller AO at that position
+private["_module","_positions"];
+_module=selectRandom((entities"dmp_SubAO")call BIS_fnc_arrayShuffle);
+_positions=[];
+if((_module getVariable"dmpLocations")=="TRUE")then{_positions=_positions+dmpLocations};
+if((_module getVariable"dmpCompounds")=="TRUE")then{_positions=_positions+dmpCompounds};
+if((_module getVariable"dmpRemoteAreas")=="TRUE")then{_positions=_positions+dmpRemoteAreas};
+if((_module getVariable"dmpRemoteAreas")=="TRUE")then{_positions=_positions+dmpRemoteAreas};
+dmpRemoteDistance=_module getVariable"dmpRemoteDistance";
+dmpRemoteSize=_module getVariable"dmpRemoteSize";
+dmpRemoteIncrement=_module getVariable"dmpRemoteIncrement";
+if((count _positions)==0)exitWith{};
+dmpRadius=_module getVariable"dmpRadius";
+dmpCenter=selectRandom _positions;
+if((_module getVariable"dmpCircle")=="TRUE")then{"dmpAOmarker"setMarkerShapeLocal"ELLIPSE"}else{"dmpAOmarker"setMarkerShapeLocal"RECTANGLE"};
+dmpLocations=[];
+dmpCompounds=[];
+dmpRemoteAreas=[];
+{deleteMarker _x}forEach dmpDebugMarkers;
+"dmpAOmarker"setMarkerPosLocal dmpCenter;
+"dmpAOmarker"setMarkerSize[dmpRadius,dmpRadius];
+_done=["dmpAOmarker"]execVM"DMP\Scripts\Map\Locations.sqf";waitUntil{scriptDone _done};
+_done=["dmpAOmarker"]execVM"DMP\Scripts\Map\RemoteAreas.sqf";waitUntil{scriptDone _done};
+{[_x,"dmpAOmarker"]call dmp_fnc_Compounds}forEach dmpRemoteAreas;
