@@ -9,12 +9,6 @@ if not "%1"=="am_admin" (
     exit /b
 )
 
-git stash
-
-git config --global branch.autosetuprebase always
-git checkout main
-git pull origin
-
 taskkill /f /im "Dropbox.exe"
 taskkill /f /im "DropboxUpdate.exe"
 net stop DbxSvc
@@ -28,8 +22,12 @@ cd /d "%ROOTDIR%"
 del /s /q /f .vars.Arma3Profile
 del /s /q /f %NewName%.Arma3Profile
 del /s /q /f %NewName%.3den.Arma3Profile
-ren %OldName%.Arma3Profile %NewName%.Arma3Profile
-ren %OldName%.3den.Arma3Profile %NewName%.3den.Arma3Profile
+git stash
+git config --global branch.autosetuprebase always
+git checkout main
+git pull origin
+ren McDAZED.Arma3Profile %NewName%.Arma3Profile
+ren McDAZED.3den.Arma3Profile %NewName%.3den.Arma3Profile
 cd ..\
 ren %OldName% %NewName%
 pause
