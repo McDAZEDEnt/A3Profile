@@ -21,5 +21,7 @@ cd /d "%USERPROFILE%/Documents/Arma 3 - Other Profiles/%CurrDirName%"
 del /s /q /f %CurrDirName%.vars.Arma3Profile
 ren %CurrDirName%.Arma3Profile %name%.Arma3Profile
 ren %CurrDirName%.3den.Arma3Profile %name%.3den.Arma3Profile
-cd /d "%USERPROFILE%/Documents/Arma 3 - Other Profiles"
+cd /d "%ROOTDIR%"
+cd ..\
 ren %CurrDirName% %name%
+pause
