@@ -9,13 +9,17 @@ if not "%1"=="am_admin" (
     exit /b
 )
 
-taskkill /f /im "git-bash.exe"
-taskkill /f /im "git.exe"
-taskkill /f /im "mintty.exe"
-taskkill /f /im "bash.exe"
-taskkill /F /IM explorer.exe & start explorer
+git stash
+
+git config --global branch.autosetuprebase always
+git checkout main
+git pull origin
+
+taskkill /f /im "Dropbox.exe"
+taskkill /f /im "DropboxUpdate.exe"
 net stop DbxSvc
 sc stop DbxSvc
+taskkill /F /IM explorer.exe & start explorer
 
 echo Enter new profile name:
 set /p NewName=	-)
