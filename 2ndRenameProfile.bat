@@ -9,8 +9,11 @@ if not "%1"=="am_admin" (
     exit /b
 )
 
-taskkill /f /im "Dropbox.exe"
-taskkill /f /im "DropboxUpdate.exe"
+taskkill /f /im "git-bash.exe"
+taskkill /f /im "git.exe"
+taskkill /f /im "mintty.exe"
+taskkill /f /im "bash.exe"
+taskkill /F /IM explorer.exe & start explorer
 net stop DbxSvc
 sc stop DbxSvc
 
