@@ -1,1 +1,0 @@
-[] call RYD_CamSwitchOn;
