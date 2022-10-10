@@ -1,18 +1,19 @@
 //////Sector Spawn Activation
-Blufor present - radius trigger
+Anybody present - 250m radius trigger
 call{this}
 server only
 
 Sync to NR6 Spawn Module for opfor - asset compiler
 NR6 expression:
-(group _this) = _wp
-[_wp,250,15,[],[getpos secttrig],false] spawn lambs_wp_fnc_taskCreep;
+_sec = [getPos sector_1];
+_wp = (group _this);
+sleep 8;
+[_wp,_sec,250,[],false,true,4,false] call lambs_wp_fnc_taskGarrison;
 
 no timer
 
-//////Zone declaration??
-Guarded by OPFOR
-Nothing else
+//////
+
 
 //////QRF
 Skip waypoint
@@ -29,3 +30,12 @@ transport:
 move (on vehicle pos) - transport unload - move - land
 
 countdown 5 - 10 - 15
+
+//////ZBE
+sleep 15;
+(group this) setVariable ["zbe_cacheDisabled",true];
+
+doStop this;
+
+sleep 15;
+(group this) setVariable ["zbe_cacheDisabled",false];
