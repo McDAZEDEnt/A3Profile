@@ -1,0 +1,31 @@
+//////Sector Spawn Activation
+Blufor present - radius trigger
+call{this}
+server only
+
+Sync to NR6 Spawn Module for opfor - asset compiler
+NR6 expression:
+(group _this) = _wp
+[_wp,250,15,[],[getpos secttrig],false] spawn lambs_wp_fnc_taskCreep;
+
+no timer
+
+//////Zone declaration??
+Guarded by OPFOR
+Nothing else
+
+//////QRF
+Skip waypoint
+Seized by BLUFOR - Detected by OPFOR
+this
+local
+
+'set waypoint activation' connected to 'hold' waypoint on qrf squad.
+
+inf:
+hold - get in - lambs taskcreep
+
+transport:
+move (on vehicle pos) - transport unload - move - land
+
+countdown 5 - 10 - 15
