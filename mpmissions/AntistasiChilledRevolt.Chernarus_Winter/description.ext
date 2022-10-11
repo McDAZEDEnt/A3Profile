@@ -5,9 +5,6 @@ OnLoadMission = $STR_antistasi_mission_info_chernawinter_blurb_text;
 briefingName = $STR_antistasi_mission_info_chernawinter_mapname_text;
 overviewText = $STR_antistasi_mission_info_chernawinter_description_text;
 
-// Disable vehicle randomization for the mission
-disableRandomization[] = {"allVehicles"};
-
 class CfgFunctions
 {
     #include "MissionDescription\CfgFunctionsContents.hpp"
