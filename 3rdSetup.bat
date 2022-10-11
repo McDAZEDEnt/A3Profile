@@ -25,14 +25,12 @@ cd /d "%Arma3%/!Workshop"
 del /s /q /f "@CBA_A3\*"
 :: DELETE ACE
 del /s /q /f "@ace_x\*"
-:: DELETE M3MORY
-del /s /q /f "@memory\*"
 :: DELETE NR6
 del /s /q /f "@NR6 PACK - HAL Evolved\*"
 :: DELETE REALENGINE
 del /s /q /f "@Realengine\*"
-:: DELETE SEM
-del /s /q /f "@SEM\*"
+:: DELETE FACTIONS
+del /s /q /f "@factions\*"
 :: Refresh !workshop
 cd /d "%Arma3%"
 rd /s /q !Workshop
