@@ -46,3 +46,6 @@ del /s /q /f *real_fix_factions.pbo
 del /s /q /f *real_fix_weapons.pbo
 del /s /q /f *real_uniform_unlock.pbo
 del /s /q /f *real_sfx_inventory_sounds.pbo
+
+cd "%arma3% Tools\DSSignFile"
+DSUtils.exe
