@@ -1,0 +1,27 @@
+The Arma 3 launcher will open in a few seconds.
+Step 1. Import the "FullModded.html" preset into the launcher.
+Step 2. Repair all broken mods (red squares)
+(Image reference -  howto1.jpg & howto2.jpg)
+Step 3. Close the launcher
+When you are finished, press the 'Enter' button.
+
+El lanzador de Arma 3 se abrirá en unos segundos.
+Paso 1. Importe el ajuste preestablecido "FullModded.html" en el lanzador.
+Paso 2. Repara todas las modificaciones rotas (cuadrados rojos)
+(Imagen de referencia - howto1.jpg & howto2.jpg)
+Paso 3. Cierra el lanzador
+Cuando haya terminado, presione el botón 'Enter'.
+
+////
+
+A white pop up will appear after you press 'Enter'.
+Answer 'Yes' to the prompt, and confirm the changes.
+
+Aparecerá una ventana emergente blanca después de presionar 'Enter'.
+Responda 'Sí' al aviso y confirme los cambios.
+
+////
+
+~~~~~~~~~¡READ CAREFULLY!~~~~~~~~~
+
+~~~~~~~¡LEA CUIDADOSAMENTE!~~~~~~~
