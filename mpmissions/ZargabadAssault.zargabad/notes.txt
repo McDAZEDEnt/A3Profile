@@ -5,10 +5,7 @@ server only
 
 Sync to NR6 Spawn Module for opfor - asset compiler
 NR6 expression:
-_sec = [getPos sector_1];
-_wp = (group _this);
-sleep 8;
-[_wp,_sec,250,[],false,true,4,false] call lambs_wp_fnc_taskGarrison;
+{addSwitchableUnit _x} forEach units group _this;
 
 no timer
 
@@ -21,13 +18,13 @@ Seized by BLUFOR - Detected by OPFOR
 this
 local
 
-'set waypoint activation' connected to 'hold' waypoint on qrf squad.
+'set waypoint activation' connected to 'hold' waypoint on qrf squad and transport.
 
 inf:
 hold - get in - lambs taskcreep
 
 transport:
-move (on vehicle pos) - transport unload - move - land
+hold - transport unload - move - land
 
 countdown 5 - 10 - 15
 
@@ -39,3 +36,9 @@ doStop this;
 
 sleep 15;
 (group this) setVariable ["zbe_cacheDisabled",false];
+
+
+////playable composition init
+{ if ((vehicle _x != _x) && (driver vehicle _x == _x)) exitWith { group _x selectLeader _x; }; } forEach units group _this;
+
+doStop this;
