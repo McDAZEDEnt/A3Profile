@@ -11,6 +11,7 @@ if not "%1"=="am_admin" (
 taskkill /f /im "Dropbox.exe"
 
 cd /d "%ROOTDIR%"
+rd /s /q ACE3
 del /s /q /f *.bisign
 :: ACE
 del /s /q /f *ace_.vs.pbo
