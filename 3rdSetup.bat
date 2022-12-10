@@ -25,13 +25,9 @@ echo .
 echo ~~~~~~~~~!!!!!!!!!~~~~~~~~~
 echo ~~~~~~~~~READ CAREFULLY!~~~~~~~~~
 echo .
-echo The Arma 3 launcher will open in a few seconds.
-echo Step 1. Import the "FullModded.html" preset into the launcher.
-echo Step 2. Repair all broken mods (red squares)
-echo (Image reference -  howto1.jpg & howto2.jpg)
-echo Step 3. Close the launcher
-echo When you are finished, press the 'Enter' button.
-echo .
+echo Follow steps in HowTo1.jpg and HowTo2.jpg
+echo Repair NR6, ace_x, Realengine
+echo.
 start steam://rungameid/107410
 pause
 TASKKILL /F /IM steam.exe

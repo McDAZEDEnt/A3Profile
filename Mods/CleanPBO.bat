@@ -15,7 +15,7 @@ rd /s /q ACE3
 del /s /q /f *.bisign
 :: ACE
 del /s /q /f *ace_.vs.pbo
-del /s /q /f *ace_ai.pbo
+::del /s /q /f *ace_ai.pbo
 del /s /q /f *ace_aircraft.pbo
 del /s /q /f *ace_fcs.pbo
 del /s /q /f *ace_fire.pbo
@@ -29,7 +29,7 @@ del /s /q /f *ace_norearm.pbo
 del /s /q /f *ace_noradio.pbo
 del /s /q /f *ace_marker*.pbo
 del /s /q /f *ace_map*.pbo
-del /s /q /f *ace_medical*.pbo
+::del /s /q /f *ace_medical*.pbo
 del /s /q /f *ace_quickmount.pbo
 del /s /q /f *ace_field_rations.pbo
 del /s /q /f *ace_volume.pbo
