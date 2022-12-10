@@ -20,22 +20,6 @@ echo .
 pause
 cd /d "%ROOTDIR%"
 hugepages.reg
-:: REPAIR
-attrib -h "%Arma3%/!Workshop"
-cd /d "%Arma3%/!Workshop"
-:: DELETE CBA
-del /s /q /f "@CBA_A3\*"
-:: DELETE ACE
-del /s /q /f "@ace_x\*"
-:: DELETE NR6
-del /s /q /f "@NR6 PACK - HAL Evolved\*"
-:: DELETE REALENGINE
-del /s /q /f "@Realengine\*"
-:: DELETE FACTIONS
-del /s /q /f "@factions\*"
-:: Refresh !workshop
-cd /d "%Arma3%"
-rd /s /q !Workshop
 :: Repair in launcher
 echo .
 echo ~~~~~~~~~!!!!!!!!!~~~~~~~~~
