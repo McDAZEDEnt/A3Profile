@@ -1,1 +1,1 @@
-git clone --depth 1 --branch release-3.15.1 https://github.com/acemod/ACE3.git
+git clone --depth 1 --branch release https://github.com/acemod/ACE3.git

@@ -8,11 +8,7 @@ if not "%1"=="am_admin" (
     powershell -Command "Start-Process -Verb RunAs -FilePath '%0' -ArgumentList 'am_admin'"
     exit /b
 )
-
 taskkill /f /im "Dropbox.exe"
-taskkill /f /im "DropboxUpdate.exe"
-net stop DbxSvc
-sc stop DbxSvc
 
 cd /d "%ROOTDIR%"
 del /s /q /f *.bisign
@@ -47,5 +43,5 @@ del /s /q /f *real_fix_weapons.pbo
 del /s /q /f *real_uniform_unlock.pbo
 del /s /q /f *real_sfx_inventory_sounds.pbo
 
-cd "%arma3% Tools\DSSignFile"
+cd /d "%arma3% Tools\DSSignFile"
 DSUtils.exe
