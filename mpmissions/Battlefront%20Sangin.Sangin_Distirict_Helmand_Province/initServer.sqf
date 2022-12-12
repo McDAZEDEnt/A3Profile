@@ -9,7 +9,6 @@ intelLevel = 1;
 // Add Mobile Respawn Points (vehicles) for BLUFOR side
 [west, westMobileRespawn1, "Mobile Respawn Vehicle 1"] call BIS_fnc_addRespawnPosition;
 [west, westMobileRespawn2, "Mobile Respawn Vehicle 2"] call BIS_fnc_addRespawnPosition;
-[west, westMobileRespawn3, "Mobile Respawn Vehicle 3"] call BIS_fnc_addRespawnPosition;
 
 
 // Set mission's time multiplier
@@ -32,7 +31,7 @@ addMissionEventHandler ["EntityKilled",{
             {
               [(side (group _killer)),-(["killPenalty", 1] call BIS_fnc_getParamValue), false] call BIS_fnc_respawnTickets;
               civsKilledByPlayer = 0;
-              [format ["Your side lost %1 Repsawn Tickets because you killed %2 Civilian(s)/Friendly-ies",["killPenalty", 30] call BIS_fnc_getParamValue, ["civCountPenalty", 1] call BIS_fnc_getParamValue]] remoteExec ["hint", side _killer, false];
+              [format ["You lost a Repsawn Ticket. %1 left",[side _killer] call BIS_fnc_respawnTickets]] remoteExec ["hint", side _killer, false];
             };
         } else {
               enemiesKilledByPlayer = enemiesKilledByPlayer + 1;
@@ -40,7 +39,7 @@ addMissionEventHandler ["EntityKilled",{
                 {
                   [(side (group _killer)), (["killReward", 1] call BIS_fnc_getParamValue), false] call BIS_fnc_respawnTickets;
                   enemiesKilledByPlayer = 0;
-                  [format ["You earned %1 Repsawn Ticket(s) because you killed %2 enemy/ies.", ["killReward", 2] call BIS_fnc_getParamValue, ["enemyCountReward", 5] call BIS_fnc_getParamValue]] remoteExec ["hint", side _killer, false];
+                  [format ["You earned a Repsawn Ticket. Now you have %1", [side _killer] call BIS_fnc_respawnTickets]] remoteExec ["hint", side _killer, false];
                 };
             };
         };
@@ -51,22 +50,24 @@ addMissionEventHandler ["EntityKilled",{
 // Randomize enemy commander's (main objective) position
 private _randomOcp = getPos (selectRandom [ocp1,ocp2,ocp3,ocp4,ocp5,ocp6,ocp7,ocp8]);
 opforCommander setPos _randomOcp;
-_randomOcp = nil;
 
 
 // Create the hold action that players can buy intel for enemy commander!
-[intelObject] execVM "scripts\buyIntel.sqf";
-[recruitObject] execVM "scripts\recruitOperator.sqf";
-[recruitObject] execVM "scripts\recruitGrenadier.sqf";
-[recruitObject] execVM "scripts\killAITeamMembers.sqf";
-[ACELogisticsComputer] execVM "scripts\spawnWheelHoldAction.sqf";
-[ACELogisticsComputer] execVM "scripts\spawnTrackHoldAction.sqf";
+[intelMachine] execVM "scripts\buyIntel.sqf";
+[recruitMachine] execVM "scripts\recruitOperator.sqf";
+[recruitMachine] execVM "scripts\recruitGrenadier.sqf";
+[recruitMachine] execVM "scripts\killAITeamMembers.sqf";
+
+
 
 // Add Respawn inventories
-[west, ["operator", -1, -1]] call BIS_fnc_addRespawnInventory;
-[west, ["grenadier", 1, -1]] call BIS_fnc_addRespawnInventory;
-[west, ["medic", 1, -1]] call BIS_fnc_addRespawnInventory;
-[west, ["engineer", 1, -1]] call BIS_fnc_addRespawnInventory;
-[west, ["marksman", 1, -1]] call BIS_fnc_addRespawnInventory;
-[west, ["patrolCommander", 1, -1]] call BIS_fnc_addRespawnInventory;
-[west, ["lmgGunner", 1, -1]] call BIS_fnc_addRespawnInventory;
+[missionNamespace, ["operator", -1, -1]] call BIS_fnc_addRespawnInventory;
+[missionNamespace, ["grenadier", 2, -1]] call BIS_fnc_addRespawnInventory;
+[missionNamespace, ["medic", 1, -1]] call BIS_fnc_addRespawnInventory;
+[missionNamespace, ["engineer", 1, -1]] call BIS_fnc_addRespawnInventory;
+[missionNamespace, ["marksman", 1, -1]] call BIS_fnc_addRespawnInventory;
+[missionNamespace, ["patrolCommander", 1, -1]] call BIS_fnc_addRespawnInventory;
+[missionNamespace, ["doomMarksman", -1, -1]] call BIS_fnc_addRespawnInventory;
+[missionNamespace, ["doomRifleman", -1, -1]] call BIS_fnc_addRespawnInventory;
+[missionNamespace, ["doomAT", -1, -1]] call BIS_fnc_addRespawnInventory;
+[missionNamespace, ["doomHMG", -1, -1]] call BIS_fnc_addRespawnInventory;

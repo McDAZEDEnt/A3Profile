@@ -2,7 +2,7 @@ params["_machine"];
 
 [
 	_machine,											// Object the action is attached to
-	"Delete AI Team Members",										// Title of the action
+	"Kill AI Team Members",										// Title of the action
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_forceRespawn_ca.paa",	// Idle icon shown on screen
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_forceRespawn_ca.paa",	// Progress icon shown on screen
 	"_this distance _target < 5",						// Condition for the action to be shown
