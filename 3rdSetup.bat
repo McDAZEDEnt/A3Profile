@@ -25,6 +25,7 @@ echo .
 echo ~~~~~~~~~!!!!!!!!!~~~~~~~~~
 echo ~~~~~~~~~READ CAREFULLY!~~~~~~~~~
 echo .
+echo DO NOT PROCEED UNTIL AFTER THE LAUNCHER OPENS!!
 echo Follow steps in HowTo1.jpg and HowTo2.jpg
 echo Repair NR6, ace_x, Realengine
 echo.
