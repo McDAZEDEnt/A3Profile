@@ -46,8 +46,6 @@ cd /d "%arma3%"
 attrib -h "%Arma3%/!Workshop"
 ROBOCOPY "%ROOTDIR%/Mods/Signed" "%arma3%/!Workshop" *.bisign /E
 ROBOCOPY "%ROOTDIR%/Mods/Signed" "%arma3%/!Workshop" *.bikey /E
-ROBOCOPY "%ROOTDIR%/HeadlessKit/My Headless Kit" "%arma3%/My Headless Kit/" /E
-ROBOCOPY "%ROOTDIR%/HeadlessKit" "%arma3%" steam_appid.txt /E
 :: PROFILE
 rmdir /S /Q "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/"
 mkdir "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Users"
