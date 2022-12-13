@@ -14,4 +14,8 @@
 // Specifying "B_Heli" would stop all units with that class type from transferring to HCs
 // However, if you specify "BLUE1", "NAVYBLUE10" will also be ignored
 
-[true,60,false,false,30,5,true,["Commander","Nomad"]] execVM "headless.sqf";
+[true,5,false,true,15,2,true,["Commander","Nomad"]] execVM "WerthlesHeadless.sqf";
+enableSaving [false,false];
+
+//On Playable Unit Group init:
+//(group this) setVariable ["zbe_cacheDisabled",true];
