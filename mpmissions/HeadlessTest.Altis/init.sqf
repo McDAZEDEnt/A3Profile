@@ -14,6 +14,6 @@
 // Specifying "B_Heli" would stop all units with that class type from transferring to HCs
 // However, if you specify "BLUE1", "NAVYBLUE10" will also be ignored
 
-[true,5,true,true,15,1,true,["Kingsmen","B_Heli_Transport_01_camo_F"]] execVM "WerthlesHeadless.sqf";
+[true,45,false,true,45,1,true,["Commander","Nomad"]] execVM "WerthlesHeadless.sqf";
 
 enableSaving [false,false];
