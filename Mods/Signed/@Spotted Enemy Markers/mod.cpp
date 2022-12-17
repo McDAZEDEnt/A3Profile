@@ -1,0 +1,10 @@
+name = "Spotted Enemy Markers";
+author = "Murmur";
+picture = "logo_sem.paa";
+actionName = "Workshop";
+action = "https://steamcommunity.com/sharedfiles/filedetails/?id=2711783042";
+logo = "logo_sem.paa";
+logoOver = "logo_sem.paa";
+tooltip = "Spotted Enemy Markers";
+tooltipOwned = "Spotted Enemy Markers";
+overview = "Places a marker over last known enemy locations.";
