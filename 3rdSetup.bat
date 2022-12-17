@@ -51,7 +51,9 @@ rmdir /S /Q "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profi
 mkdir "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Users"
 mklink /j "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Users/%CurrDirName%" "%USERPROFILE%/Documents/Arma 3 - Other Profiles/%CurrDirName%"
 cd /d "%ROOTDIR%"
-ROBOCOPY "%ROOTDIR%/Mods/config.Arma3Profile" "%ROOTDIR%/Mods/%a3name%.Arma3Profile"
+del *.Arma3Profile
+robocopy "%ROOTDIR%/Mods" "%ROOTDIR%" *.Arma3Profile
+ren "config.Arma3Profile" "%a3name%.Arma3Profile"
 del /s /q /f *.vars.Arma3Profile
 del /s /q /f Arma3.cfg
 del /s /q /f BISProfile.json
