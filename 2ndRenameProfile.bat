@@ -23,7 +23,6 @@ del /s /q /f .vars.Arma3Profile
 del /s /q /f %NewName%.Arma3Profile
 del /s /q /f %NewName%.3den.Arma3Profile
 git stash
-git config --global branch.autosetuprebase always
 git checkout main
 git pull origin
 ren McDAZED.Arma3Profile %NewName%.Arma3Profile
