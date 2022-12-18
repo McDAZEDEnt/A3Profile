@@ -55,8 +55,9 @@ mkdir hc
 mkdir server
 cd /d "%ROOTDIR%"
 del *.Arma3Profile
-robocopy "%ROOTDIR%/Mods" "%ROOTDIR%" *.Arma3Profile
+robocopy "%ROOTDIR%/userconfig" "%ROOTDIR%" *.Arma3Profile
 ren "config.Arma3Profile" "%a3name%.Arma3Profile"
+ren "config.3den.Arma3Profile" "%a3name%.3den.Arma3Profile"
 del /s /q /f *.vars.Arma3Profile
 del /s /q /f Arma3.cfg
 del /s /q /f BISProfile.json
