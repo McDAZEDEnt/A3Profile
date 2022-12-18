@@ -27,3 +27,11 @@ _randomPos = nil;
 
 //Unlimited vehicle ammo for init box
 // -- [_this] execVM "fnc\infiniteVehAmmo.sqf";
+
+//Sector + HAL link (Blufor seizure)
+// -- Get sector ownership with trigger somehow
+// -- (group leaderHQ) setVariable ["rydhq_taken", []]
+
+//Sector + HAL link (Opfor seizure)
+// -- Get sector ownership with trigger somehow
+// -- (group leaderHQB) setVariable ["rydhq_taken", []]
