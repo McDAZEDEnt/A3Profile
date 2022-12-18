@@ -13,7 +13,6 @@ taskkill /f /im "Dropbox.exe"
 cd /d "%ROOTDIR%"
 del /s /q /f *.bisign
 :: ACE
-del /s /q /f *ace_.vs.pbo
 ::del /s /q /f *ace_ai.pbo
 del /s /q /f *ace_aircraft.pbo
 del /s /q /f *ace_fcs.pbo

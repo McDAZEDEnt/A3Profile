@@ -1,5 +1,5 @@
-respawnOnStart=0;
-disableRandomization[] = {"allVehicles"};
+respawnOnStart=1;
+disableRandomization[] = {"Air"};
 
 class CfgDebriefing
 {  
@@ -17,4 +17,5 @@ class CfgDebriefing
 	};
 };
 
+//From Respawn Loadout Generator
 #include "fnc\loadouts.ext"

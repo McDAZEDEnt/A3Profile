@@ -1,8 +1,13 @@
 //Tracking squad respawn marker
+sleep 45;
 while {true} do {
 "respawn_west" setmarkerpos getpos persist1;
-sleep 10;
+sleep 45;
 };
+
+//Respawn loadouts
+{[west, _x] call BIS_fnc_addRespawnInventory;} 
+forEach ["FTL","ARM","GRN","MED","RMAT","DMK","UAV","SPL"];
 
 //Opfor commander random spawn.
 private _randomPos = getPos (selectRandom [coPos_1,coPos_2,coPos_3,coPos_4]);
@@ -17,11 +22,11 @@ _randomPos = nil;
 //redco init box
 // -- this action ["SwitchWeapon", this, this, -1];doStop this;
 
-//co capped trigger
+//CO capped trigger
 // -- call{redco in thisList;}
 // -- ["coCapped", true, 2] call BIS_fnc_endMission;
 
-//co killed led trigger
+//CO killed led trigger
 // -- !alive redco == false
 // -- ["coKilled", true, 2] call BIS_fnc_endMission;
 
