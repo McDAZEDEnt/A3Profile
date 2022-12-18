@@ -50,6 +50,9 @@ ROBOCOPY "%ROOTDIR%/Mods/Signed" "%arma3%/!Workshop" *.bikey /E
 rmdir /S /Q "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/"
 mkdir "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Users"
 mklink /j "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Users/%CurrDirName%" "%USERPROFILE%/Documents/Arma 3 - Other Profiles/%CurrDirName%"
+cd /d "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles"
+mkdir hc
+mkdir server
 cd /d "%ROOTDIR%"
 del *.Arma3Profile
 robocopy "%ROOTDIR%/Mods" "%ROOTDIR%" *.Arma3Profile

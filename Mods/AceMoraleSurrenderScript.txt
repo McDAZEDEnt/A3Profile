@@ -1,0 +1,8 @@
+_eventhandler = this spawn	{
+waitUntil	{
+			sleep 2;
+			fleeing (leader _this) && morale (leader _this) <= 0
+			};
+_this action ["Eject", vehicle _this];
+["ace_captives_setSurrendered",[_this,true]] call CBA_fnc_globalEvent;
+							};

@@ -1,0 +1,11 @@
+version=54;
+name="HAL Core";
+author="McDAZED";
+category="EdSubcat_Default";
+requiredAddons[]=
+{
+	"nr6_zbe_cache",
+	"A3_Characters_F",
+	"NR6_HAL",
+	"Werthles_WHK"
+};

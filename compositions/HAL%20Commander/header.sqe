@@ -1,9 +1,8 @@
 version=54;
-name="RHQ Setup";
+name="HAL Commander";
 author="McDAZED";
 category="EdSubcat_Default";
 requiredAddons[]=
 {
-	"nr6_tools",
-	"Desert"
+	"NR6_HAL"
 };

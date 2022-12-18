@@ -47,18 +47,5 @@ class CustomAttributes
 			};
 		};
 	};
-	class Attribute3
-	{
-		property="EnableEnvironment";
-		expression="enableEnvironment _value;";
-		class Value
-		{
-			class data
-			{
-				singleType="BOOL";
-				value=0;
-			};
-		};
-	};
-	nAttributes=4;
+	nAttributes=3;
 };
