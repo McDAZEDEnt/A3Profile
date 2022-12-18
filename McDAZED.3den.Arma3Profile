@@ -1,0 +1,51 @@
+version=1;
+class EngineAttributes
+{
+	saveBinarized=0;
+	autosaveTime=-1000;
+	cameraCopyTerrain=1;
+	placeCompositionInLayer=0;
+};
+class CustomAttributes
+{
+	class Attribute0
+	{
+		property="RecompileFunctions";
+		expression="true";
+		class Value
+		{
+			class data
+			{
+				singleType="BOOL";
+				value=1;
+			};
+		};
+	};
+	class Attribute1
+	{
+		property="ENH_DynamicViewDistance";
+		expression="call ENH_fnc_dynamicViewDistance";
+		class Value
+		{
+			class data
+			{
+				singleType="BOOL";
+				value=1;
+			};
+		};
+	};
+	class Attribute2
+	{
+		property="StartMap";
+		expression="true";
+		class Value
+		{
+			class data
+			{
+				singleType="BOOL";
+				value=1;
+			};
+		};
+	};
+	nAttributes=3;
+};

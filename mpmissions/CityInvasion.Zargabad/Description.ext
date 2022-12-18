@@ -1,0 +1,20 @@
+respawnOnStart=0;
+disableRandomization[] = {"allVehicles"};
+
+class CfgDebriefing
+{  
+	class coKilled
+	{
+		title = "Mission Complicated.";
+		subtitle = "PLA Commander is dead.";
+		description = "We were supposed to capture him alive. This will crumble the entire operation.";
+	};  
+	class coCapped
+	{
+		title = "Mission Complete!";
+		subtitle = "PLA Commander was captured";
+		description = "The PLA's top ranking officer in Zargabad just revealed crucial intel...";
+	};
+};
+
+#include "fnc\loadouts.ext"

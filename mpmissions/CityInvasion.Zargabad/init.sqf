@@ -1,1 +1,0 @@
-_scriptHandle = [] execVM "fnc\respawnmkr.sqf";
