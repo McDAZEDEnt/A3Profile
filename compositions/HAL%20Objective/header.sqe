@@ -4,6 +4,6 @@ author="McDAZED";
 category="EdSubcat_Default";
 requiredAddons[]=
 {
-	"A3_Modules_F_Multiplayer",
-	"nr6_hal"
+	"nr6_hal",
+	"A3_Modules_F_Multiplayer"
 };

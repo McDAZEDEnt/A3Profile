@@ -4,7 +4,6 @@ class EngineAttributes
 	saveBinarized=0;
 	autosaveTime=-1000;
 	cameraCopyTerrain=1;
-	placeCompositionInLayer=0;
 };
 class CustomAttributes
 {

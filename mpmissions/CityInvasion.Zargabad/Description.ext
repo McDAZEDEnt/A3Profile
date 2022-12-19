@@ -8,12 +8,29 @@ class CfgDebriefing
 		title = "Mission Complicated.";
 		subtitle = "PLA Commander is dead.";
 		description = "We were supposed to capture him alive. This will crumble the entire operation.";
-	};  
+		pictureBackground = "";
+		picture = "mil_warning_noShadow";
+		pictureColor[] = { 0.5, 0.0, 0.0, 1 };
+	}; 
 	class coCapped
 	{
 		title = "Mission Complete!";
 		subtitle = "PLA Commander was captured";
 		description = "The PLA's top ranking officer in Zargabad just revealed crucial intel...";
+		pictureBackground = "";
+		picture = "mil_flag_noShadow";
+		pictureColor[] = { 0.0, 0.3, 0.6, 1 };
+	};
+};
+
+class CfgFunctions
+{
+	class CityInvasionFNC
+	{
+		class fnc
+		{
+			class CI_fnc_sectorCapped {file = "fn_sectorCapped.sqf";};
+		};
 	};
 };
 

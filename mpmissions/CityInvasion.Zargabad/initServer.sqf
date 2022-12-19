@@ -1,13 +1,12 @@
-//Tracking squad respawn marker
-sleep 45;
-while {true} do {
-"respawn_west" setmarkerpos getpos persist1;
-sleep 45;
-};
-
 //Respawn loadouts
-{[west, _x] call BIS_fnc_addRespawnInventory;} 
-forEach ["FTL","ARM","GRN","MED","RMAT","DMK","UAV","SPL"];
+[west, ["FTL", -1, -1]] call BIS_fnc_addRespawnInventory;
+[west, ["ARM", 1, -1]] call BIS_fnc_addRespawnInventory;
+[west, ["GRN", 1, -1]] call BIS_fnc_addRespawnInventory;
+[west, ["MED", 1, -1]] call BIS_fnc_addRespawnInventory;
+[west, ["RMAT", 1, -1]] call BIS_fnc_addRespawnInventory;
+[west, ["DMK", 1, -1]] call BIS_fnc_addRespawnInventory;
+[west, ["UAV", 1, -1]] call BIS_fnc_addRespawnInventory;
+[west, ["SPL", 1, -1]] call BIS_fnc_addRespawnInventory;
 
 //Opfor commander random spawn.
 private _randomPos = getPos (selectRandom [coPos_1,coPos_2,coPos_3,coPos_4]);
@@ -27,16 +26,18 @@ _randomPos = nil;
 // -- ["coCapped", true, 2] call BIS_fnc_endMission;
 
 //CO killed led trigger
-// -- !alive redco == false
+// -- alive redco == false
 // -- ["coKilled", true, 2] call BIS_fnc_endMission;
 
 //Unlimited vehicle ammo for init box
 // -- [_this] execVM "fnc\infiniteVehAmmo.sqf";
 
-//Sector + HAL link (Blufor seizure)
-// -- Get sector ownership with trigger somehow
-// -- (group leaderHQ) setVariable ["rydhq_taken", []]
+//In sector expression
+// -- [_this select 1, halObj] call CI_fnc_sectorCapped;
 
-//Sector + HAL link (Opfor seizure)
-// -- Get sector ownership with trigger somehow
-// -- (group leaderHQB) setVariable ["rydhq_taken", []]
+//Tracking squad respawn marker
+private _players = (group persist1);
+while {true} do {
+sleep 40;
+"respawn_west" setMarkerPos getWPPos [_players, 1];
+};
