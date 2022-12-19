@@ -1,5 +1,7 @@
 params["_vehicle"];
 
+sleep 5;
+
 _vehicle addEventHandler ["fired", {
   params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
 

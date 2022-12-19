@@ -4,5 +4,6 @@ author="McDAZED";
 category="EdSubcat_Default";
 requiredAddons[]=
 {
-	"drongosmappopulation"
+	"drongosmappopulation",
+	"A3_Ui_F"
 };

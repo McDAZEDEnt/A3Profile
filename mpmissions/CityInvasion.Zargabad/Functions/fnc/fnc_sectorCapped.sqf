@@ -1,5 +1,7 @@
 params [["_ownerSide", sideUnknown, [sideUnknown]], ["_halObj", objNull, [objNull]]];
 
+sleep 5;
+
 // Re-write to make it universal. Have to try to use [side leaderHQ, side leaderHQB... side leaderHQn]
 private _westCaps = (group leaderHQ) getVariable "RydHQ_Taken";
 private _eastCaps = (group leaderHQB) getVariable "RydHQ_Taken";
