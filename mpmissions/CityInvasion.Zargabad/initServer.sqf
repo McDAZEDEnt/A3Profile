@@ -30,14 +30,13 @@ _randomPos = nil;
 // -- ["coKilled", true, 2] call BIS_fnc_endMission;
 
 //Unlimited vehicle ammo for init box
-// -- [_this] execVM "fnc\infiniteVehAmmo.sqf";
+// -- [_this] execVM "Functions\fnc\infiniteVehAmmo.sqf";
 
 //In sector expression
 // -- [_this select 1, halObj] call CI_fnc_sectorCapped;
 
 //Tracking squad respawn marker
-private _players = (group persist1);
 while {true} do {
 sleep 40;
-"respawn_west" setMarkerPos getWPPos [_players, 1];
+"respawn_west" setMarkerPos persist1;
 };

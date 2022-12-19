@@ -25,14 +25,14 @@ class CfgDebriefing
 
 class CfgFunctions
 {
-	class CityInvasionFNC
+	class CI
 	{
 		class fnc
 		{
-			class CI_fnc_sectorCapped {file = "fn_sectorCapped.sqf";};
+			class sectorCapped {file = "Functions\fnc\fn_sectorCapped.sqf";};
 		};
 	};
 };
 
 //From Respawn Loadout Generator
-#include "fnc\loadouts.ext"
+#include "Functions\fnc\loadouts.ext"
