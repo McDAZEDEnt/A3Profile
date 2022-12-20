@@ -1,19 +1,3 @@
-uniformClass = "VSM_M81_Crye_SS_Camo";
-
-backpack = "VSM_M81_Backpack_Kitbag";
-
-weapons[] = {"hgun_P07_F","arifle_SCAR_short_khaki_F","Throw","Put"};
-
-magazines[] = {"16Rnd_9x21_Mag","30Rnd_556x45_Stanag","HandGrenade","HandGrenade","HandGrenade","HandGrenade","ACE_M84","ACE_M84","SmokeShell","SmokeShell","SmokeShell","SmokeShellYellow","SmokeShellRed",
-"DemoCharge_Remote_Mag","DemoCharge_Remote_Mag","APERSTripMine_Wire_Mag","APERSTripMine_Wire_Mag","APERSBoundingMine_Range_Mag","APERSBoundingMine_Range_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag",
-"ClaymoreDirectionalMine_Remote_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag",
-"20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag",
-"20Rnd_762x51_Mag","20Rnd_762x51_Mag"};
-
-items[] = {"ACE_adenosine","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing",
-"ACE_fieldDressing","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage",
-"ACE_elasticBandage","ACE_elasticBandage","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot",
-"ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_epinephrine","ACE_EarPlugs","ACE_MapTools","ACE_morphine","ACE_tourniquet","ACE_salineIV","ACE_salineIV_500",
-"ACE_salineIV_500","ACE_splint","ToolKit","MineDetector","ACE_M26_Clacker","ACE_EntrenchingTool","ACE_DefusalKit"};
-
-linkedItems[] = {"VSM_FAPC_Operator_M81","VSM_M81_OPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","optic_aco","acc_flashlight"};
+version https://git-lfs.github.com/spec/v1
+oid sha256:19df0822042740e9c0ddf02ce3958b38432946b33d059a3c1b4f29e35362ebc7
+size 1893

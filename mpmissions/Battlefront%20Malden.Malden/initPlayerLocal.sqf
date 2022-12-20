@@ -1,15 +1,3 @@
-params ["_player", "_didJIP"];
-
-[_player,""] call BIS_fnc_setUnitInsignia;
-[_player,"sf"] call BIS_fnc_setUnitInsignia;
-
-// Event Handler to add the left shoulder patch again after players close the arsenal!
-[missionNamespace, "arsenalClosed", {
-
-  [player,""] call BIS_fnc_setUnitInsignia;
-  [player,"sf"] call BIS_fnc_setUnitInsignia;
-
-}] call BIS_fnc_addScriptedEventHandler;
-
-uiSleep 60;
-[] call BIS_fnc_showMissionStatus;
+version https://git-lfs.github.com/spec/v1
+oid sha256:12da9e3402250c649c019bc8d948b19c646254977e910e4932591393bf534291
+size 442

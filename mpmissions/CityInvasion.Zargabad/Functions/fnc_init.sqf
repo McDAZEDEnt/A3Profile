@@ -2,3 +2,4 @@ fnc_autoLoad = compile preprocessFileLineNumbers "Functions\fnc\fnc_autoLoad.sqf
 fnc_autoSave = compile preprocessFileLineNumbers "Functions\fnc\fnc_autoSave.sqf";publicVariable "fnc_autoSave";
 fnc_heal = compile preprocessFileLineNumbers "Functions\fnc\fnc_heal.sqf";publicVariable "fnc_heal";
 fnc_sectorCapped = compile preprocessFileLineNumbers "Functions\fnc\fnc_sectorCapped.sqf";publicVariable "fnc_sectorCapped";
+fnc_infiniteVehAmmo = compile preprocessFileLineNumbers "Functions\fnc\fnc_infiniteVehAmmo.sqf";publicVariable "fnc_infiniteVehAmmo";

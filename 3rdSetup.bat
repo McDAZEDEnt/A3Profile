@@ -33,7 +33,7 @@ start steam://rungameid/107410
 pause
 TASKKILL /F /IM steam.exe
 TASKKILL /F /IM arma3launcher.exe
-:: USERCONFIG
+:: userconfig and mission symlink
 cd /d "%arma3%"
 rmdir /s /q "%arma3%/userconfig"
 rmdir /s /q "%arma3%/mpmissions"
@@ -41,25 +41,25 @@ rmdir /s /q "%arma3%/z"
 rmdir /s /q "%arma3%/x"
 mklink /J "%arma3%/userconfig" "%ROOTDIR%/userconfig"
 mklink /J "%arma3%/mpmissions" "%ROOTDIR%/mpmissions"
-:: UNHIDE !WORKSHOP
+:: UNHIDE !WORKSHOP & Copy missing keys
 cd /d "%arma3%"
 attrib -h "%Arma3%/!Workshop"
 ROBOCOPY "%ROOTDIR%/Mods/Signed" "%arma3%/!Workshop" *.bisign /E
 ROBOCOPY "%ROOTDIR%/Mods/Signed" "%arma3%/!Workshop" *.bikey /E
-:: PROFILE
+:: profiles setup
 rmdir /S /Q "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/"
 mkdir "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Users"
 mklink /j "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Users/%CurrDirName%" "%USERPROFILE%/Documents/Arma 3 - Other Profiles/%CurrDirName%"
 cd /d "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles"
 mkdir hc
 mkdir server
+:: make profile from template
 cd /d "%ROOTDIR%"
 del *.Arma3Profile
+del Arma3.cfg
+del BISProfile.json
 robocopy "%ROOTDIR%/userconfig" "%ROOTDIR%" *.Arma3Profile
-ren "config.Arma3Profile" "%a3name%.Arma3Profile"
-ren "config.3den.Arma3Profile" "%a3name%.3den.Arma3Profile"
-del /s /q /f *.vars.Arma3Profile
-del /s /q /f Arma3.cfg
-del /s /q /f BISProfile.json
+ren "config.Arma3Profile" "%CurrDirName%.Arma3Profile"
+ren "config.3den.Arma3Profile" "%CurrDirName%.3den.Arma3Profile"
 call FoV.exe
 EXIT

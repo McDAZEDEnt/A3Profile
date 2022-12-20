@@ -1,27 +1,3 @@
-uniformClass = "VSM_M81_Crye_SS_Camo";
-
-backpack = "VSM_M81_Backpack_Compact";
-
-weapons[] = {"arifle_SCAR_short_khaki_F","hgun_P07_F","Throw","Put"};
-
-magazines[] = {"16Rnd_9x21_Mag","30Rnd_556x45_Stanag","HandGrenade","HandGrenade","HandGrenade","HandGrenade","ACE_M84","ACE_M84","SmokeShell","SmokeShell","SmokeShell","SmokeShellYellow","SmokeShellRed",
-"16Rnd_9x21_Mag","16Rnd_9x21_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag",
-"20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag",
-"20Rnd_762x51_Mag"};
-
-items[] = {"ACE_adenosine","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing",
-    "ACE_fieldDressing","ACE_fieldDressing","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage",
-    "ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot",
-    "ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_epinephrine","ACE_EarPlugs","ACE_MapTools","ACE_morphine","ACE_tourniquet",
-    "ACE_salineIV","ACE_salineIV_500","ACE_salineIV_500","ACE_splint","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage",
-    "ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage",
-    "ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage",
-    "ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage",
-    "ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage",
-    "ACE_elasticBandage","ACE_elasticBandage","ACE_adenosine","ACE_adenosine","ACE_adenosine","ACE_adenosine","ACE_adenosine","ACE_EarPlugs","ACE_EarPlugs","ACE_EarPlugs","ACE_EarPlugs","ACE_EarPlugs",
-    "ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_morphine","ACE_morphine","ACE_morphine","ACE_morphine","ACE_morphine","ACE_morphine","ACE_morphine","ACE_morphine",
-    "ACE_morphine","ACE_morphine","ACE_morphine","ACE_morphine","ACE_morphine","ACE_morphine","ACE_morphine","ACE_salineIV","ACE_salineIV","ACE_splint","ACE_splint","ACE_splint","ACE_splint",
-    "ACE_splint","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_surgicalKit","ACE_salineIV_500","ACE_elasticBandage","ACE_elasticBandage",
-    "ACE_salineIV","ACE_salineIV_250","ACE_salineIV_500"};
-
-linkedItems[] = {"VSM_FAPC_Operator_M81","VSM_M81_OPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","acc_flashlight","optic_aco"};
+version https://git-lfs.github.com/spec/v1
+oid sha256:5442e38afdb59ce86554f982f2ef482bd98c28e6cafd69267cae9d9d9c897b31
+size 3542

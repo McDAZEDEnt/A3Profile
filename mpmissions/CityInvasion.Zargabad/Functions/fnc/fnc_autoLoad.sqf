@@ -5,5 +5,4 @@ if (!savingEnabled) then
 {
 	enableSaving true;
 };
-sleep 5;
 loadGame;

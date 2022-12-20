@@ -23,21 +23,34 @@ class CfgDebriefing
 	class coCapped
 	{
 		title = "Mission Complete!";
-		subtitle = "PLA Commander was captured";
+		subtitle = "PLA Commander was captured alive.";
 		description = "The PLA's top ranking officer in Zargabad just revealed crucial intel...";
 		pictureBackground = "";
 		picture = "loc_help";
 		pictureColor[] = { 0.0, 0.3, 0.6, 1 };
 	};
+	class saved
+	{
+		title = "Mission Saved";
+		subtitle = "";
+		description = "";
+		pictureBackground = "";
+		picture = "loc_download";
+		pictureColor[] = { 1.0, 0.7, 0.0, 1 };
+	};
 };
 
 class CfgFunctions
 {
-	class CI
+	class preInit
 	{
 		class fnc
 		{
-			class sectorCapped {file = "Functions\fnc\fn_sectorCapped.sqf";};
+			class isLoaded
+			{
+				preInit	= 1;
+				file = "Functions\fnc\preInit_fnc_isLoaded.sqf";
+			};
 		};
 	};
 };
