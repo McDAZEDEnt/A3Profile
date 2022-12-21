@@ -1,24 +1,14 @@
 ////////////////////////////////////////// Compile functions
 [] call compile preprocessFileLineNumbers "Functions\fnc_init.sqf";
 ////////////////////////////////////////// Init server - global
-
 //Respawn loadouts
 
 {[west, _x, 1, -1] call BIS_fnc_addRespawnInventory;} 
 forEach ["MED","DMK","FTL","GRN","RAT","ARM","SPR","SPT"];
 
-//[west, ["FTL", 1, -1]] call BIS_fnc_addRespawnInventory;
-//[west, ["ARM", 1, -1]] call BIS_fnc_addRespawnInventory;
-//[west, ["GRN", 1, -1]] call BIS_fnc_addRespawnInventory;
-//[west, ["MED", 1, -1]] call BIS_fnc_addRespawnInventory;
-//[west, ["RAT", 1, -1]] call BIS_fnc_addRespawnInventory;
-//[west, ["DMK", 1, -1]] call BIS_fnc_addRespawnInventory;
-//[west, ["UAV", 1, -1]] call BIS_fnc_addRespawnInventory;
-//[west, ["SPR", 1, -1]] call BIS_fnc_addRespawnInventory;
-
 ////////////////////////////////////////// Init server - 'isLoaded' assignment
-
 //Convert 'nil' to 'false' for 'isLoaded'
+
 private _var = missionNamespace getVariable "isLoaded";
 if (isNil "_var") then {
 
@@ -41,11 +31,12 @@ redco setPosATL _randomPos;
 missionNamespace setVariable ["coPos", _randompos];publicVariable"coPos";
 
 //Start
-sleep 5;
 dmpWaitForGo=FALSE;publicVariable"dmpWaitForGo";
 hint "New Game started successfully...";
 
 };
+
+
 
 
 
@@ -55,18 +46,24 @@ hint "New Game started successfully...";
 if (isLoaded == true) then {
 
 //Start
-sleep 5;
 dmpWaitForGo=TRUE;publicVariable"dmpWaitForGo";
 deleteVehicle bluspawn;
-hint "Saved Game loaded successfully!";
+redco setPosATL coPos;
+hint "Saved Game loaded!";
 
 };
 
-
-
-
 ////////////////////////////////////////// GLOBAL
 
+
+//Event handlers
+[redco] call fnc_loseGame;
+[redco] call fnc_surrender;
+[bluco] call fnc_surrender;
+{[_x] call fnc_vehRefill} forEach vehicles;
+{[_x,true] call fnc_disableTasks} forEach AllUnits;
+
+//debug marker for redco pos
 "respawn_east" setMarkerPos redco;
 
 //Tracking squad respawn marker
@@ -74,3 +71,4 @@ while {!isNil "persist1"} do {
 	"respawn_west" setMarkerPos persist1;
 	sleep 30;
 };
+
