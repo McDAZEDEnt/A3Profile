@@ -11,7 +11,6 @@ dmpWaitForGo=TRUE;publicVariable"dmpWaitForGo";
 (group LeaderHQB) setVariable ['RydHQ_ResetNow',false];
 sleep 5;
 //Save to profile
-saveMissionProfileNamespace;
 saveProfileNamespace;
 saveGame;
 //endMission
