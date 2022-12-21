@@ -1,7 +1,7 @@
 
 //CO auto surrender - redco init box
 
-[redco] call fnc_fleeSurrender;
+[_this] call fnc_fleeSurrender;
 
 ////////////////////////////////////////// TRIGGERS
 

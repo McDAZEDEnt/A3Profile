@@ -39,7 +39,6 @@ redco setPosATL _randomPos;
 
 // Save CO position variable
 missionNamespace setVariable ["coPos", _randompos];publicVariable"coPos";
-_randompos = nil;
 
 //Start
 sleep 5;
