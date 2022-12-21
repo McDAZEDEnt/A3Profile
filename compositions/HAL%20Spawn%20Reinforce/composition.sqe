@@ -1,0 +1,178 @@
+version=54;
+center[]={4006.084,19.121,3349.8359};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Marker";
+		position[]={0,0,0};
+		name="blu";
+		markerType="ELLIPSE";
+		type="";
+		colorName="ColorBlue";
+		fillName="FDiagonal";
+		a=100;
+		b=100;
+		id=4491;
+		atlOffset=-0.00022125244;
+	};
+	class Item1
+	{
+		dataType="Logic";
+		class PositionInfo
+		{
+			position[]={0,0.00022125244,0};
+		};
+		name="bluspawn";
+		id=4492;
+		type="NR6_Reiforcements_Module";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="NR6_Reiforcements_Module__Threshold";
+				expression="_this setVariable ['_Threshold',_value,true];";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
+						value=1;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="NR6_Reiforcements_Module__rStrgt";
+				expression="_this setVariable ['_rStrgt',_value,true];";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
+						value=5;
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="NR6_Reiforcements_Module__RejoinPoint";
+				expression="_this setVariable ['_RejoinPoint',_value,true];";
+				class Value
+				{
+					class data
+					{
+						singleType="STRING";
+						value="";
+					};
+				};
+			};
+			class Attribute3
+			{
+				property="NR6_Reiforcements_Module__faction";
+				expression="_this setVariable ['_faction',_value,true];";
+				class Value
+				{
+					class data
+					{
+						singleType="STRING";
+						value="custom";
+					};
+				};
+			};
+			class Attribute4
+			{
+				property="NR6_Reiforcements_Module__Pool";
+				expression="_this setVariable ['_Pool',_value,true];";
+				class Value
+				{
+					class data
+					{
+						singleType="STRING";
+						value="blupool";
+					};
+				};
+			};
+			class Attribute5
+			{
+				property="NR6_Reiforcements_Module__side";
+				expression="_this setVariable ['_side',_value,true];";
+				class Value
+				{
+					class data
+					{
+						singleType="STRING";
+						value="west";
+					};
+				};
+			};
+			class Attribute6
+			{
+				property="NR6_Reiforcements_Module__ExtraArgs";
+				expression="_this setVariable ['_ExtraArgs',_value,true];";
+				class Value
+				{
+					class data
+					{
+						singleType="STRING";
+						value="";
+					};
+				};
+			};
+			class Attribute7
+			{
+				property="NR6_Reiforcements_Module__sidetick";
+				expression="_this setVariable ['_sidetick',_value,true];";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
+						value=1000;
+					};
+				};
+			};
+			class Attribute8
+			{
+				property="NR6_Reiforcements_Module__TDecay";
+				expression="_this setVariable ['_TDecay',_value,true];";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
+						value=-1;
+					};
+				};
+			};
+			class Attribute9
+			{
+				property="NR6_Reiforcements_Module__playerRange";
+				expression="_this setVariable ['_playerRange',_value,true];";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
+						value=15;
+					};
+				};
+			};
+			class Attribute10
+			{
+				property="NR6_Reiforcements_Module__SpawnRadius";
+				expression="_this setVariable ['_SpawnRadius',_value,true];";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
+						value=100;
+					};
+				};
+			};
+			nAttributes=11;
+		};
+	};
+};
