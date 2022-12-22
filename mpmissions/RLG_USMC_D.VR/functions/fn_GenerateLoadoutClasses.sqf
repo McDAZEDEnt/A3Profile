@@ -34,7 +34,7 @@ private _catstr = "";
 	};
 } forEach allUnits;
 
-_str = "// {[west, _x] call BIS_fnc_addRespawnInventory;} "+endl+"// forEach "+str STEFF_LOADOUT_CLASSES_LIST+";"+endl+ "class CfgRespawnInventory"+endl+"{"+endl+_catstr+"};"+endl;
+_str = "// {[west, _x, 1, -1] call BIS_fnc_addRespawnInventory;} "+endl+"// forEach "+str STEFF_LOADOUT_CLASSES_LIST+";"+endl+ "class CfgRespawnInventory"+endl+"{"+endl+_catstr+"};"+endl;
 
 _catstr = "class CfgRoles"+endl+"{"+endl;
 {

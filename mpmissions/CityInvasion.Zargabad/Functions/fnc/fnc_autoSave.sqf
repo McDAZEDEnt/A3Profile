@@ -7,7 +7,6 @@ if (!savingEnabled) then
 };
 //DMP & HAL on hold
 dmpWaitForGo=TRUE;publicVariable"dmpWaitForGo";
-sleep 5;
 //Save to profile
 saveProfileNamespace;
 saveGame;

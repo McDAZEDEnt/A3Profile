@@ -1,6 +1,6 @@
 params["_unit","_isDisabled"];
-_unit = (_this select 0)
-_isDisabled = (_this select 1)
+_unit = (_this select 0);
+_isDisabled = (_this select 1);
 
 if not (
 

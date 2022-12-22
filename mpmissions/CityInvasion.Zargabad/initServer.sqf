@@ -3,8 +3,8 @@
 ////////////////////////////////////////// Init server - global
 //Respawn loadouts
 
-{[west, _x, 1, -1] call BIS_fnc_addRespawnInventory;} 
-forEach ["MED","DMK","FTL","GRN","RAT","ARM","SPR","SPT"];
+{[west,_x,-1,-1] call BIS_fnc_addRespawnInventory;}
+forEach ["ARM","MED","GRN","DMK","RAT","FTL","SPT","SPR"];
 
 ////////////////////////////////////////// Init server - 'isLoaded' assignment
 //Convert 'nil' to 'false' for 'isLoaded'
@@ -53,13 +53,19 @@ hint "Saved Game loaded!";
 
 };
 
+
+
+
+
+
 ////////////////////////////////////////// GLOBAL
 
+//Transport only
+cargoOnly synchronizeObjectsAdd [veh1,bluhq];
 
 //Event handlers
 [redco] call fnc_loseGame;
 [redco] call fnc_surrender;
-[bluco] call fnc_surrender;
 {[_x] call fnc_vehRefill} forEach vehicles;
 {[_x,true] call fnc_disableTasks} forEach AllUnits;
 
@@ -67,8 +73,9 @@ hint "Saved Game loaded!";
 "respawn_east" setMarkerPos redco;
 
 //Tracking squad respawn marker
-while {!isNil "persist1"} do {
-	"respawn_west" setMarkerPos persist1;
+while {!isNil "FTL"} do 
+{
+	"respawn_west" setMarkerPos FTL;
 	sleep 30;
 };
 
