@@ -1,6 +1,9 @@
 ////////////////////////////////////////// Compile functions
 [] call compile preprocessFileLineNumbers "Functions\fnc_init.sqf";
 ////////////////////////////////////////// Init server - global
+
+m3mory_skip = nil
+
 //Respawn loadouts
 
 {[west,_x,-1,-1] call BIS_fnc_addRespawnInventory;}
