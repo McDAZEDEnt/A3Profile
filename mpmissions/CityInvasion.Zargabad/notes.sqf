@@ -10,11 +10,15 @@ call{redco in thisList;}
 //condition - radio message alpha
 [] call fnc_autoSave;
 
-//Support vehicle init box
-[_this] call fnc_infiniteVehAmmo;
-
 //vehicle despawn trigger area
 {{deleteVehicle _x} foreach crew _x} foreach thislist;
 
 //NR6 expression for friendly spawns
 [_this,false] call fnc_disableTasks; [_this] call fnc_vehRefill;
+
+
+https://community.bistudio.com/wiki/BIS_fnc_trackMissionTime
+
+https://community.bistudio.com/wiki/Objects.sav
+
+https://community.bistudio.com/wiki/saveMissionProfileNamespace

@@ -8,6 +8,10 @@ _man addEventHandler ["FiredNear",
 	_firer = (_this select 1);
 	_distance = (_this select 2);
 
-	[_unit, true] call ACE_captives_fnc_setSurrendered;
-
+	if 
+	(_distance < 10)
+	then
+	{
+		[_unit, true] call ACE_captives_fnc_setSurrendered;
+	};
 }];

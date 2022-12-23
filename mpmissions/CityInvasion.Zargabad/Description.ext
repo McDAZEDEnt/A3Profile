@@ -6,6 +6,8 @@ overviewText 		= "Capture the enemy Commander alive, no matter the cost...";
 overviewPicture 	= "Functions\fnc\loadScreen.jpg";
 LoadScreen 			= "Functions\fnc\loadScreen.jpg";
 
+missionGroup = "m1_CityInvasion";
+
 respawnOnStart = -1;
 disableRandomization[] = {"Air"};
 
