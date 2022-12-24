@@ -8,6 +8,9 @@ LoadScreen 			= "Functions\fnc\loadScreen.jpg";
 
 missionGroup = "m1_CityInvasion";
 
+//From Respawn Loadout Generator
+#include "Functions\fnc\loadouts.ext"
+
 respawnOnStart = -1;
 disableRandomization[] = {"Air"};
 
@@ -42,20 +45,50 @@ class CfgDebriefing
 	};
 };
 
-class CfgFunctions
-{
-	class preInit
-	{
-		class fnc
-		{
-			class isLoaded
-			{
-				preInit	= 1;
-				file = "Functions\fnc\preInit_fnc_isLoaded.sqf";
-			};
-		};
-	};
+class CfgFunctions {
+    #include "Modules\grad-persistence\cfgFunctions.hpp"
 };
 
-//From Respawn Loadout Generator
-#include "Functions\fnc\loadouts.ext"
+class CfgGradPersistence {
+    missionTag = "m1_CityInvasion";
+    loadOnMissionStart = 1;
+    missionWaitCondition = "true";
+    playerWaitCondition = "true";
+
+    saveUnits = 2;
+    saveVehicles = 1;
+    saveContainers = 1;
+    saveStatics = 1;
+    saveGradFortificationsStatics = 0;
+    saveMarkers = 1;
+    saveTasks = 0;
+    saveTriggers = 1;
+
+    savePlayerInventory = 1;
+    savePlayerDamage = 0;
+    savePlayerPosition = 1;
+    savePlayerMoney = 0;
+
+    saveTeamAccounts = 0;
+
+    blacklist[] = {
+        "",
+        ""
+    };
+
+    class customVariables 
+	{
+        class SavedState 
+		{
+            varName = "isSaved";
+            varNamespace = "mission";
+            public = 1;
+    	};
+
+		class coPosition 
+		{
+            varName = "coPos";
+            varNamespace = "mission";
+            public = 1;
+    	};
+}};

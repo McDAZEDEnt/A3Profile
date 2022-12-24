@@ -1,21 +1,36 @@
 ////////////////////////////////////////// Compile functions
 [] call compile preprocessFileLineNumbers "Functions\fnc_init.sqf";
 ////////////////////////////////////////// Init server - global
+m3mory_skip = nil;
 
-m3mory_skip = nil
+if (isServer) then {
+	"respawn_west" setMarkerAlpha 1;
+	"respawn_east" setMarkerAlpha 1;
+	"blu" setMarkerAlpha 1;
+	"red" setMarkerAlpha 1;
+	"ao" setMarkerAlpha 1;
+};
 
-//Respawn loadouts
+if (!isServer) then {
+	"respawn_west" setMarkerAlpha 0;
+	"respawn_east" setMarkerAlpha 0;
+	"blu" setMarkerAlpha 0;
+	"red" setMarkerAlpha 0;
+	"ao" setMarkerAlpha 0;
+	{[west,_x,-1,-1] call BIS_fnc_addRespawnInventory;}
+	forEach ["ARM","MED","GRN","DMK","RAT","FTL","SPT","SPR"];
 
-{[west,_x,-1,-1] call BIS_fnc_addRespawnInventory;}
-forEach ["ARM","MED","GRN","DMK","RAT","FTL","SPT","SPR"];
+};
 
-////////////////////////////////////////// Init server - 'isLoaded' assignment
-//Convert 'nil' to 'false' for 'isLoaded'
 
-private _var = missionNamespace getVariable "isLoaded";
+
+////////////////////////////////////////// Init server - 'isSaved' assignment
+//Convert 'nil' to 'false' for 'isSaved'
+
+private _var = missionNamespace getVariable "isSaved";
 if (isNil "_var") then {
 
-	missionNamespace setVariable ["isLoaded", false];publicVariable"isLoaded";
+	missionNamespace setVariable ["isSaved", false];publicVariable"isSaved";
 	_var = false;
 	};
 
@@ -24,7 +39,8 @@ if (isNil "_var") then {
 
 ////////////////////////////////////////// Init server - start new game
 
-if (isLoaded == false) then {
+if (isSaved == false) then 
+{
 
 //Opfor commander random spawn.
 private _randomPos = getPosATL (selectRandom [coPos_1,coPos_2,coPos_3,coPos_4]);
@@ -46,13 +62,15 @@ hint "New Game started successfully...";
 
 ////////////////////////////////////////// Init server - resume saved game
 
-if (isLoaded == true) then {
+if (isSaved == true) then 
+{
 
 //Start
 dmpWaitForGo=TRUE;publicVariable"dmpWaitForGo";
 deleteVehicle bluspawn;
 redco setPosATL coPos;
 hint "Saved Game loaded!";
+[] call grad_persistence_fnc_loadMission;
 
 };
 
@@ -81,4 +99,3 @@ while {!isNil "FTL"} do
 	"respawn_west" setMarkerPos FTL;
 	sleep 30;
 };
-

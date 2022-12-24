@@ -1,5 +1,4 @@
-//"respawn_west" setMarkerAlpha 0;
-//"respawn_east" setMarkerAlpha 0;
-"blu" setMarkerAlpha 0;
-"red" setMarkerAlpha 0;
-"ao" setMarkerAlpha 0;
+//Respawn loadouts
+
+{[west,_x,-1,-1] call BIS_fnc_addRespawnInventory;}
+forEach ["ARM","MED","GRN","DMK","RAT","FTL","SPT","SPR"];

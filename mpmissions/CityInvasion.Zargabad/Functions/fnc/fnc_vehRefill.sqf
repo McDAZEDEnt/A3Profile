@@ -9,7 +9,6 @@ _vehicle addEventHandler ["FiredNear",
   (_unit == _firer)
   then
   {
-    sleep 5;
     _unit setVehicleAmmo 1;
     _unit setFuel 1;
   };
