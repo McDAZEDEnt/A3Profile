@@ -1,4 +1,5 @@
 ////////////////////////////////////////// TRIGGERS
+call{this} in all condition boxes
 
 //CO captured trigger
 //condition
@@ -14,11 +15,7 @@ call{redco in thisList;}
 {{deleteVehicle _x} foreach crew _x} foreach thislist;
 
 //NR6 expression for friendly spawns
-[_this,false] call fnc_disableTasks; [_this] call fnc_vehRefill;
+[_this,false] call fnc_disableTasks;[_this] call fnc_vehRefill;
 
-
-https://community.bistudio.com/wiki/BIS_fnc_trackMissionTime
-
-https://community.bistudio.com/wiki/Objects.sav
-
-https://community.bistudio.com/wiki/saveMissionProfileNamespace
+//On sector expression
+[_this select 1, HalObj] call fnc_sectorCapped;

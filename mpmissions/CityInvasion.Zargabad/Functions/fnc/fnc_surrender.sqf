@@ -1,5 +1,7 @@
 params["_man"];
 
+_man setCaptive true;
+
 _man addEventHandler ["FiredNear",
 
 {
@@ -9,7 +11,7 @@ _man addEventHandler ["FiredNear",
 	_distance = (_this select 2);
 
 	if 
-	(_distance < 10)
+	(_distance < 15 && isPlayer _firer)
 	then
 	{
 		[_unit, true] call ACE_captives_fnc_setSurrendered;

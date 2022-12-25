@@ -1,9 +1,9 @@
 ////////////////////////////////////////// Compile functions
 [] call compile preprocessFileLineNumbers "Functions\fnc_init.sqf";
 ////////////////////////////////////////// Init server - global
-m3mory_skip = nil;
+m3mory_skip = true;
 
-if (isServer) then {
+if (isServer && hasInterface) then { //Markers enabled for player host
 	"respawn_west" setMarkerAlpha 1;
 	"respawn_east" setMarkerAlpha 1;
 	"blu" setMarkerAlpha 1;
@@ -11,7 +11,7 @@ if (isServer) then {
 	"ao" setMarkerAlpha 1;
 };
 
-if (!isServer) then {
+if (!isServer && hasInterface) then { //Markers disabled for connected players
 	"respawn_west" setMarkerAlpha 0;
 	"respawn_east" setMarkerAlpha 0;
 	"blu" setMarkerAlpha 0;
@@ -19,8 +19,8 @@ if (!isServer) then {
 	"ao" setMarkerAlpha 0;
 	{[west,_x,-1,-1] call BIS_fnc_addRespawnInventory;}
 	forEach ["ARM","MED","GRN","DMK","RAT","FTL","SPT","SPR"];
-
 };
+
 
 
 
@@ -28,11 +28,11 @@ if (!isServer) then {
 //Convert 'nil' to 'false' for 'isSaved'
 
 private _var = missionNamespace getVariable "isSaved";
-if (isNil "_var") then {
-
+if (isNil "_var") then 
+{
 	missionNamespace setVariable ["isSaved", false];publicVariable"isSaved";
 	_var = false;
-	};
+};
 
 
 
@@ -50,12 +50,9 @@ redco setPosATL _randomPos;
 missionNamespace setVariable ["coPos", _randompos];publicVariable"coPos";
 
 //Start
-dmpWaitForGo=FALSE;publicVariable"dmpWaitForGo";
+missionNamespace setVariable ["dmpWaitForGo",false];publicVariable"dmpWaitForGo";
 hint "New Game started successfully...";
-
 };
-
-
 
 
 
@@ -64,30 +61,23 @@ hint "New Game started successfully...";
 
 if (isSaved == true) then 
 {
-
 //Start
-dmpWaitForGo=TRUE;publicVariable"dmpWaitForGo";
+missionNamespace setVariable ["dmpWaitForGo",true];publicVariable"dmpWaitForGo";
 deleteVehicle bluspawn;
 redco setPosATL coPos;
-hint "Saved Game loaded!";
+sleep 15;
 [] call grad_persistence_fnc_loadMission;
-
+hint "Saved Game loaded!";
 };
-
-
 
 
 
 
 ////////////////////////////////////////// GLOBAL
 
-//Transport only
-cargoOnly synchronizeObjectsAdd [veh1,bluhq];
-
-//Event handlers
+//init functions
 [redco] call fnc_loseGame;
 [redco] call fnc_surrender;
-{[_x] call fnc_vehRefill} forEach vehicles;
 {[_x,true] call fnc_disableTasks} forEach AllUnits;
 
 //debug marker for redco pos
@@ -96,6 +86,8 @@ cargoOnly synchronizeObjectsAdd [veh1,bluhq];
 //Tracking squad respawn marker
 while {!isNil "FTL"} do 
 {
+	{cargoOnly synchronizeObjectsAdd [_x,bluhq]} foreach vehicles;
+	{[_x] call fnc_vehRefill} forEach vehicles;
 	"respawn_west" setMarkerPos FTL;
 	sleep 30;
 };

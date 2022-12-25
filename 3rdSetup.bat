@@ -56,6 +56,7 @@ mkdir server
 :: make profile from template
 cd /d "%ROOTDIR%"
 del *.Arma3Profile
+del *.vars
 del Arma3.cfg
 del BISProfile.json
 robocopy "%ROOTDIR%/userconfig" "%ROOTDIR%" *.Arma3Profile
