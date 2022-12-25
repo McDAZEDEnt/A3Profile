@@ -1,5 +1,7 @@
 ////////////////////////////////////////// TRIGGERS
-call{this} in all condition boxes
+
+//in all condition boxes
+call{this}
 
 //CO captured trigger
 //condition
@@ -15,7 +17,8 @@ call{redco in thisList;}
 {{deleteVehicle _x} foreach crew _x} foreach thislist;
 
 //NR6 expression for friendly spawns
-[_this,false] call fnc_disableTasks;[_this] call fnc_vehRefill;
+[_this,bluhq] call fnc_halUnits;
+[_this,redhq] call fnc_halUnits;
 
 //On sector expression
 [_this select 1, HalObj] call fnc_sectorCapped;

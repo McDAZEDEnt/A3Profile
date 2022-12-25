@@ -1,3 +1,6 @@
+//called inside sector module, runs when owner changes and updates NR6 HAL
+//Huge thanks to ARES for this one!
+
 params [["_ownerSide", sideUnknown, [sideUnknown]], ["_halObj", objNull, [objNull]]];
 
 // Re-write to make it universal. Have to try to use [side leaderHQ, side leaderHQB... side leaderHQn]

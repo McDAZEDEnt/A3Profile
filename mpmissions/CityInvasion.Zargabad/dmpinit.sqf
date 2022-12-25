@@ -1,0 +1,1 @@
+[_this] call fnc_unitsRed;
