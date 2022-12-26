@@ -1,0 +1,29 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Antistasi",
+            "type": "process",
+            "options": {
+                "cwd": ""
+            },
+            "command": "arma3_x64.exe",
+            "args": [
+                "${workspaceFolder}\\A3A\\addons\\maps\\Antistasi_Takistan.takistan\\mission.sqm",
+                "-mod=!Workshop\\@CBA_A3;!Workshop\\@ace_x;!Workshop\\@CUP Terrains - Core;!Workshop\\@CUP Terrains - Maps;!Workshop\\@CUP Terrains - Maps 2.0;!Workshop\\@RHSAFRF;!Workshop\\@RHSUSAF;!Workshop\\@RHSGREF;!Workshop\\@RHSSAF;!Workshop\\@PERSIST - RCO;!Workshop\\@Spyder Addons;@Antistasi",
+                "-debug",
+                "-skipIntro",
+                "-filePatching",
+                "-noSplash",
+                "-showScriptErrors"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

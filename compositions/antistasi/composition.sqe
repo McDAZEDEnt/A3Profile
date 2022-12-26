@@ -1,37 +1,50 @@
 version=54;
-center[]={5403.4092,-185.96997,17911.941};
+center[]={0,-185.97,0};
 class items
 {
-	items=3;
+	items=4;
 	class Item0
 	{
 		dataType="Trigger";
-		position[]={0,0.00021362305,-0.001953125};
+		position[]={0,0,0};
+		class Attributes
+		{
+			text=" End Mission";
+			condition="call{this}";
+			onActivation="[] spawn A3A_fnc_persistentSave; " \n "saveProfileNamespace; " \n """hcDown"" call BIS_fnc_endMissionServer;";
+			sizeA=0;
+			sizeB=0;
+			activationBy="INDIA";
+			isServerOnly=1;
+			triggerInterval=1;
+		};
+		id=2525;
+		type="EmptyDetector";
+	};
+	class Item1
+	{
+		dataType="Trigger";
+		position[]={0,0,0};
 		class Attributes
 		{
 			text=" Save Game";
 			condition="call{this}";
-			onActivation="persist1 = commanderX;publicVariable""persist1""; " \n " " \n "RCOP_VehicleCratesToSave =  " \n "[ " \n " ""I_G_Offroad_01_F"",  " \n " ""I_G_Offroad_01_armed_F"",  " \n " ""I_E_Offroad_01_F"",  " \n " ""rhsgref_tla_g_offroad"",  " \n " ""rhsgref_tla_g_offroad_armed"",  " \n " ""B_G_Offroad_01_F"",  " \n " ""B_G_Offroad_01_armed_F"",  " \n " ""B_GEN_Offroad_01_gen_F"" " \n "];publicVariable""RCOP_VehicleCratesToSave""; " \n "RCOP_permittedMines = [""""];publicVariable""RCOP_permittedMines""; " \n "RCOP_FOBObjects = [""""];publicVariable""RCOP_FOBObjects""; " \n " " \n "[[true],""RCOP\RCOPersist\RCOPsaving.sqf""] remoteExec [""execVM"",0]; " \n " " \n "[] spawn A3A_fnc_persistentSave; " \n " " \n """hcDown"" call BIS_fnc_endMissionServer;";
-			sizeA=100;
-			sizeB=100;
+			onActivation="[] spawn A3A_fnc_persistentSave; " \n "saveProfileNamespace;";
+			sizeA=0;
+			sizeB=0;
+			repeatable=1;
 			activationBy="HOTEL";
 			isServerOnly=1;
 			triggerInterval=1;
 		};
-		id=2490;
+		id=2526;
 		type="EmptyDetector";
-		atlOffset=-262.84799;
 	};
-	class Item1
+	class Item2
 	{
 		dataType="Logic";
-		class PositionInfo
-		{
-			position[]={0,0,-0.001953125};
-		};
-		id=2498;
+		id=2527;
 		type="SpyderAddons_sup_loadout";
-		atlOffset=-262.84821;
 		class CustomAttributes
 		{
 			class Attribute0
@@ -76,23 +89,71 @@ class items
 			nAttributes=3;
 		};
 	};
-	class Item2
+	class Item3
 	{
-		dataType="Trigger";
-		position[]={0,0.00021362305,-0.001953125};
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.0048828125,0.89164734,-0.037109375};
+		};
+		side="Empty";
+		flags=4;
 		class Attributes
 		{
-			text=" Load Game";
-			condition="call{this}";
-			onActivation="persist1 = commanderX;publicVariable""persist1""; " \n " " \n "RCOP_VehicleCratesToSave =  " \n "[ " \n " ""I_G_Offroad_01_F"",  " \n " ""I_G_Offroad_01_armed_F"",  " \n " ""I_E_Offroad_01_F"",  " \n " ""rhsgref_tla_g_offroad"",  " \n " ""rhsgref_tla_g_offroad_armed"",  " \n " ""B_G_Offroad_01_F"",  " \n " ""B_G_Offroad_01_armed_F"",  " \n " ""B_GEN_Offroad_01_gen_F"" " \n "];publicVariable""RCOP_VehicleCratesToSave""; " \n "RCOP_permittedMines = [""""];publicVariable""RCOP_permittedMines""; " \n "RCOP_FOBObjects = [""""];publicVariable""RCOP_FOBObjects""; " \n " " \n "[[0,1,0,0,0,1,false],""RCOP\RCOPersist\RCOPcrateFiller.sqf""] remoteExec [""execVM"",0];";
-			sizeA=100;
-			sizeB=100;
-			activationBy="INDIA";
-			isServerOnly=1;
-			triggerInterval=1;
+			name="boxX";
 		};
-		id=2511;
-		type="EmptyDetectorAreaR50";
-		atlOffset=-262.84799;
+		id=2528;
+		type="IG_supplyCrate_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						singleType="STRING";
+						value="[[[[""arifle_MXC_Black_ACO_Pointer_Snds_F""],[1]],[[""30Rnd_65x39_caseless_black_mag""],[5]],[[""I_UavTerminal""],[1]],[[""I_UAV_01_backpack_F""],[1]]],false]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						singleType="BOOL";
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+};
+class connections
+{
+	class LinkIDProvider
+	{
+		nextID=1;
+	};
+	class Links
+	{
+		items=1;
+		class Item0
+		{
+			linkID=0;
+			item0=2527;
+			item1=2528;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
 	};
 };

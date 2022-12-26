@@ -35,10 +35,13 @@ TASKKILL /F /IM steam.exe
 TASKKILL /F /IM arma3launcher.exe
 :: userconfig and mission symlink
 cd /d "%arma3%"
+rmdir /s /q "%userprofile%/Documents/Arma 3"
 rmdir /s /q "%arma3%/userconfig"
 rmdir /s /q "%arma3%/mpmissions"
 rmdir /s /q "%arma3%/z"
 rmdir /s /q "%arma3%/x"
+rmdir /s /q "%ROOTDIR%/Saved"
+rmdir /s /q "%ROOTDIR%/UserSaved"
 mklink /J "%arma3%/userconfig" "%ROOTDIR%/userconfig"
 mklink /J "%arma3%/mpmissions" "%ROOTDIR%/mpmissions"
 :: UNHIDE !WORKSHOP & Copy missing keys

@@ -4,5 +4,7 @@ author="McDAZED";
 category="EdSubcat_Default";
 requiredAddons[]=
 {
-	"sup_loadout"
+	"sup_loadout",
+	"A3_Weapons_F_Ammoboxes",
+	"ace_cargo"
 };
