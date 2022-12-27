@@ -11,13 +11,18 @@
             },
             "command": "arma3_x64.exe",
             "args": [
-                "${workspaceFolder}\\A3A\\addons\\maps\\Antistasi_Takistan.takistan\\mission.sqm",
+                "${workspaceFolder}\\A3A\\addons\\maps\\Antistasi_Altis.Altis\\mission.sqm",
                 "-mod=!Workshop\\@CBA_A3;!Workshop\\@ace_x;!Workshop\\@CUP Terrains - Core;!Workshop\\@CUP Terrains - Maps;!Workshop\\@CUP Terrains - Maps 2.0;!Workshop\\@RHSAFRF;!Workshop\\@RHSUSAF;!Workshop\\@RHSGREF;!Workshop\\@RHSSAF;!Workshop\\@PERSIST - RCO;!Workshop\\@Spyder Addons;@Antistasi",
                 "-debug",
                 "-skipIntro",
                 "-filePatching",
                 "-noSplash",
-                "-showScriptErrors"
+                "-showScriptErrors",
+                "-hugePages",
+                "-setThreadCharacteristics",
+                "-exThreads=7",
+                "-malloc=system",
+                "-limitFPS=60"
             ],
             "group": {
                 "kind": "build",
