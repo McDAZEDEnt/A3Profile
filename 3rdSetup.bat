@@ -55,7 +55,6 @@ mkdir "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Us
 mklink /j "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Users/%CurrDirName%" "%USERPROFILE%/Documents/Arma 3 - Other Profiles/%CurrDirName%"
 cd /d "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles"
 mkdir hc
-mkdir server
 :: make profile from template
 cd /d "%ROOTDIR%"
 del *.Arma3Profile
