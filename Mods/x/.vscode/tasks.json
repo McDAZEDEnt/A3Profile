@@ -12,7 +12,36 @@
             "command": "arma3_x64.exe",
             "args": [
                 "${workspaceFolder}\\A3A\\addons\\maps\\Antistasi_Altis.Altis\\mission.sqm",
-                "-mod=!Workshop\\@CBA_A3;!Workshop\\@ace_x;!Workshop\\@CUP Terrains - Core;!Workshop\\@CUP Terrains - Maps;!Workshop\\@CUP Terrains - Maps 2.0;!Workshop\\@RHSAFRF;!Workshop\\@RHSUSAF;!Workshop\\@RHSGREF;!Workshop\\@RHSSAF;!Workshop\\@PERSIST - RCO;!Workshop\\@Spyder Addons;@Antistasi",
+                "-mod=!Workshop\\@CBA_A3;!Workshop\\@ace_x;!Workshop\\@CUP Terrains - Core;!Workshop\\@CUP Terrains - Maps;!Workshop\\@CUP Terrains - Maps 2.0;!Workshop\\@RHSAFRF;!Workshop\\@RHSUSAF;!Workshop\\@RHSGREF;!Workshop\\@RHSSAF;!Workshop\\@PERSIST - RCO;!Workshop\\@Spotted Enemy Markers;!Workshop\\@Spyder Addons;!Workshop\\@WeaponSights Zoom;@Antistasi",
+                "-debug",
+                "-skipIntro",
+                "-filePatching",
+                "-noSplash",
+                "-showScriptErrors",
+                "-hugePages",
+                "-setThreadCharacteristics",
+                "-exThreads=7",
+                "-malloc=system",
+                "-limitFPS=60"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+
+
+        {
+            "label": "mpmissions",
+            "type": "process",
+            "options": {
+                "cwd": ""
+            },
+            "command": "arma3_x64.exe",
+            "args": [
+                "${workspaceFolder}\\mpmissions\\CityInvasion.Zargabad\\mission.sqm",
+                "-mod=!Workshop\\@CBA_A3;!Workshop\\@Spotted Enemy Markers;!Workshop\\@WeaponSights Zoom",
                 "-debug",
                 "-skipIntro",
                 "-filePatching",

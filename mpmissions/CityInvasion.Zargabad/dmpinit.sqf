@@ -1,1 +1,2 @@
-[_this] call fnc_unitsRed;
+_veh = vehicle _this;
+[_veh] call fnc_vehRefill; [_veh] call fnc_unitsRed;

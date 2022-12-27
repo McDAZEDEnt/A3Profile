@@ -76,7 +76,6 @@ hint "Saved Game loaded!";
 
 [redco] call fnc_loseGame;
 [redco] call fnc_surrender;
-[tr1] call fnc_transport;
 
 //debug marker for redco pos
 "respawn_east" setMarkerPos redco;

@@ -1,21 +1,3 @@
-//mission declarations
-onLoadMission		= "Capture the enemy Commander alive, no matter the cost...";
-onLoadName			= "Take Back Zargabad";
-dev 				= "dev";
-author				= "McDAZED";
-overviewText 		= "Capture the enemy Commander alive, no matter the cost...";
-overviewPicture 	= "Functions\fnc\loadScreen.jpg";
-LoadScreen 			= "Functions\fnc\loadScreen.jpg";
-respawnOnStart 		= -1;
-
-//Configs seperated to ease readibility
-#include "Functions\fnc\desc_loadouts.ext"
-#include "Functions\fnc\desc_vehicles.ext"
-#include "Functions\fnc\desc_debrief.ext"
-#include "Functions\fnc\desc_grad.ext"
-
-//define grad persistence function
-class CfgFunctions 
-{
-    #include "Modules\grad-persistence\cfgFunctions.hpp"
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa84732f40da614009c746e4b92ba91c27488046fc07e390b13406e5a11a6bb9
+size 559
