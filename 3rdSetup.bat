@@ -45,6 +45,8 @@ rmdir /s /q "%ROOTDIR%/UserSaved"
 mklink /J "%arma3%/userconfig" "%ROOTDIR%/userconfig"
 mklink /J "%arma3%/mpmissions" "%ROOTDIR%/mpmissions"
 :: UNHIDE !WORKSHOP & Copy missing keys
+cd /d "%arma3%/keys"
+del /s /q /f *.*
 cd /d "%arma3%"
 attrib -h "%Arma3%/!Workshop"
 ROBOCOPY "%ROOTDIR%/Mods/Signed" "%arma3%/!Workshop" *.bisign /E
