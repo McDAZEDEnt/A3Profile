@@ -63,10 +63,7 @@ if (isSaved == true) then
 {
 //Start
 missionNamespace setVariable ["dmpWaitForGo",true];publicVariable"dmpWaitForGo";
-deleteVehicle bluspawn;
 redco setPosATL coPos;
-sleep 15;
-[] call grad_persistence_fnc_loadMission;
 hint "Saved Game loaded!";
 };
 
