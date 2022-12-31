@@ -9,5 +9,6 @@ missionNamespace setVariable ["dmpWaitForGo",true];publicVariable"dmpWaitForGo";
 missionNamespace setVariable ["isSaved",true];publicVariable"isSaved";
 //Save persistence data to profile
 saveProfileNamespace;
+saveMissionProfileNamespace;
 //endMission
 "saved" call BIS_fnc_endMissionServer;

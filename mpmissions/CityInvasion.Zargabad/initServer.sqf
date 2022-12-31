@@ -2,8 +2,6 @@
 [] call compile preprocessFileLineNumbers "Functions\fnc_init.sqf";
 ////////////////////////////////////////// Init server - global
 
-m3mory_skip = true; //turns off m3mory
-
 //Editor markers visible for player host debug
 if (isServer && hasInterface) then
 {
@@ -23,8 +21,8 @@ if (!isServer && hasInterface) then
 	"red" setMarkerAlpha 0;
 	"ao" setMarkerAlpha 0;
 	//Add player loadouts
-	{[west,_x,-1,-1] call BIS_fnc_addRespawnInventory;}
-	forEach ["ARM","MED","GRN","DMK","RAT","FTL","SPT","SPR"];
+	//{[west,_x,-1,-1] call BIS_fnc_addRespawnInventory;}
+	//forEach ["ARM","MED","GRN","DMK","RAT","FTL","SPT","SPR"];
 };
 
 ////////////////////////////////////////// Init server - 'isSaved' assignment
@@ -36,7 +34,6 @@ if (isNil "_var") then
 	missionNamespace setVariable ["isSaved", false];publicVariable"isSaved";
 	_var = false;
 };
-
 
 
 
@@ -64,6 +61,7 @@ if (isSaved == true) then
 //Start
 missionNamespace setVariable ["dmpWaitForGo",true];publicVariable"dmpWaitForGo";
 redco setPosATL coPos;
+[[1,1,1,1,false],"RCOP\RCOPersist\RCOPcrateFiller.sqf"] remoteExec ["execVM",0];
 hint "Saved Game loaded!";
 };
 
@@ -75,11 +73,11 @@ hint "Saved Game loaded!";
 [redco] call fnc_surrender;
 
 //debug marker for redco pos
-"respawn_east" setMarkerPos redco;
+//"respawn_east" setMarkerPos redco;
 
 //Tracking squad respawn marker
-while {!isNil "FTL"} do 
-{
-	"respawn_west" setMarkerPos FTL;
-	sleep 30;
-};
+//while {!isNil "FTL"} do 
+//{
+//	"respawn_west" setMarkerPos FTL;
+//	sleep 30;
+//};

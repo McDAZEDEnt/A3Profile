@@ -10,7 +10,9 @@ call{redco in thisList;}
 "coCapped" call BIS_fnc_endMissionServer;
 
 //SaveGame trigger
-//condition - radio message alpha
+//condition
+waitUntil {RCOPsaveComplete == 1};
+//activation
 [] call fnc_autoSave;
 
 //vehicle despawn trigger area
@@ -25,8 +27,9 @@ _veh = vehicle _this;
 [_veh] call fnc_vehRefill;
 [_veh] call fnc_unitsRed;
 
-//RCO vehicles
+//RCOP vehicles
 [_this] call fnc_noTasks;
 
 //On sector expression
 [_this select 1, HalObj] call fnc_sectorCapped;
+
