@@ -38,28 +38,19 @@ cd /d "%arma3%"
 rmdir /s /q "%userprofile%/Documents/Arma 3"
 rmdir /s /q "%arma3%/userconfig"
 rmdir /s /q "%arma3%/mpmissions"
+rmdir /s /q "%arma3%/keys"
 rmdir /s /q "%arma3%/z"
 rmdir /s /q "%arma3%/x"
 rmdir /s /q "%ROOTDIR%/Saved"
 rmdir /s /q "%ROOTDIR%/UserSaved"
 mklink /J "%arma3%/userconfig" "%ROOTDIR%/userconfig"
 mklink /J "%arma3%/mpmissions" "%ROOTDIR%/mpmissions"
-mklink /J "%arma3%/x/" "%ROOTDIR%/Mods/x/"
+mklink /J "%arma3%/keys" "%ROOTDIR%/Mods/keys"
+mklink /J "%arma3%/x" "%ROOTDIR%/Mods/x"
 mklink /J "%arma3%/x/mpmissions" "%ROOTDIR%/mpmissions"
 :: UNHIDE !WORKSHOP & Copy missing keys
-cd /d "%arma3%/keys"
-del /s /q /f *.*
-cd /d "%arma3%"
 attrib -h "%Arma3%/!Workshop"
-ROBOCOPY "%ROOTDIR%/Mods/Signed" "%arma3%/!Workshop" *.bisign /E
-ROBOCOPY "%ROOTDIR%/Mods/Signed" "%arma3%/!Workshop" *.bikey /E
-:: profiles setup
-rmdir /S /Q "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/"
-mkdir "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Users"
-mklink /j "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles/Users/%CurrDirName%" "%USERPROFILE%/Documents/Arma 3 - Other Profiles/%CurrDirName%"
-cd /d "%USERPROFILE%/Documents/Arma 3 - Other Profiles/Arma3Launcher/profiles"
-mkdir hc
-mkdir srv
+ROBOCOPY "%ROOTDIR%/Mods/!Workshop" "%arma3%/!Workshop" *.bisign /E
 :: make profile from template
 cd /d "%ROOTDIR%"
 del *.Arma3Profile
