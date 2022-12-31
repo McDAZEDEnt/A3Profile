@@ -44,6 +44,8 @@ rmdir /s /q "%ROOTDIR%/Saved"
 rmdir /s /q "%ROOTDIR%/UserSaved"
 mklink /J "%arma3%/userconfig" "%ROOTDIR%/userconfig"
 mklink /J "%arma3%/mpmissions" "%ROOTDIR%/mpmissions"
+mklink /J "%arma3%/x/" "%ROOTDIR%/Mods/x/"
+mklink /J "%arma3%/x/mpmissions" "%ROOTDIR%/mpmissions"
 :: UNHIDE !WORKSHOP & Copy missing keys
 cd /d "%arma3%/keys"
 del /s /q /f *.*
