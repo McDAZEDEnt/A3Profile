@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:51011ba3c7855732ff0928636ed1ca9e0583511b1dc962755dbab591915efe0c
-size 235
+private ["_logic","_Commanders","_Leader","_prefix"];
+
+_logic = (_this select 0);
+
+
+{
+	if not ((typeOf _x) == "NR6_HAL_Leader_Module") then {
+		(group _x) setVariable ["Ryd_NoReports",true];
+	};
+} foreach (synchronizedObjects _logic);

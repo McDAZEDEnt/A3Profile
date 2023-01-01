@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f8b59b7e8638aa2a89664629ed71166e1f8ef8ac34a2ada02a55f9446f77ba41
-size 128
+//<'nr6_tools.pbo' properties via Mikero's dos tools, dll version 8.90>
+prefix=NR6_Tools;
+//PboType=Arma Addon;
+//</properties>

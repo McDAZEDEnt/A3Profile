@@ -1,3 +1,56 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cf46dfa5112768b416276b025f9476da069495a81e80985af8ca442db8bfbb8a
-size 1016
+_SCRname = "Rev";
+
+private ["_HQ","_players","_KnU","_ldr","_dst","_friends","_enemies"];
+
+_HQ = _this select 0;
+
+_players = [];
+_friends = (_HQ getVariable ["RydHQ_Friends",[]]);
+_enemies = (_HQ getVariable ["RydHQ_KnEnemies",[]]);
+
+if (_HQ getVariable ["RydHQ_KnowTL",true]) then 
+	{
+		{
+		if (isPlayer (leader _x)) then {_players pushBack _x};
+		}
+	foreach _friends;
+	};
+
+for [{_z = 0},{_z < (count _enemies)},{_z = _z + 1}] do
+	{
+	_KnU = _enemies select _z;
+
+		{
+		if ((_x knowsAbout _KnU) > 0.01) then 
+			{
+				{
+				_x reveal [_KnU,2]
+				} 
+			foreach ([_HQ] + _players);
+
+			if (RydxHQ_NEAware > 0) then
+				{
+					{
+					_ldr = vehicle (leader _x);
+					_dst = _ldr distance (vehicle _KnU); 
+					if (_dst < RydxHQ_NEAware) then
+						{
+						_x reveal [_KnU,2]
+						}
+					}
+				foreach _friends;
+				}
+			}
+		}
+	foreach _friends 
+	};
+
+for [{_z = 0},{_z < (count _friends)},{_z = _z + 1}] do
+	{
+	_KnU = _friends select _z;
+
+		{
+		_x reveal [(vehicle (leader _KnU)),4]
+		} 
+	foreach ([_HQ] + _players)
+	};

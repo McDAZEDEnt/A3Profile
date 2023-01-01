@@ -1,3 +1,48 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:62009cfb851f11ed3e030adf7b62795466c4448b3c6ce48b3c295596edbcc799
-size 1555
+###############################
+# Git Line Endings            #
+###############################
+
+# Set default behaviour to automatically normalize line endings.
+* text=auto
+# Force batch scripts to always use CRLF line endings so that if a repo is accessed
+# in Windows via a file share from Linux, the scripts will work.
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
+# Force bash scripts to always use LF line endings so that if a repo is accessed
+# in Unix via a file share from Windows, the scripts will work.
+*.sh text eol=lf
+
+###############################
+# Git Large File System (LFS) #
+###############################
+
+# Enable LFS for all files and exclude text #
+
+*.* filter=lfs diff=lfs merge=lfs -text
+*.arma3profile !filter !diff !merge
+*.bat !filter !diff !merge
+*.bikey !filter !diff !merge
+*.bisign !filter !diff !merge
+*.c !filter !diff !merge
+*.cfg !filter !diff !merge
+*.cmd !filter !diff !merge
+*.cpp !filter !diff !merge
+*.cs !filter !diff !merge
+*.h !filter !diff !merge
+*.hpp !filter !diff !merge
+*.ini !filter !diff !merge
+*.json !filter !diff !merge
+*.log !filter !diff !merge
+*.md !filter !diff !merge
+*.ps1 !filter !diff !merge
+*.reg !filter !diff !merge
+*.sh !filter !diff !merge
+*.sqf !filter !diff !merge
+*.txt !filter !diff !merge
+*.uproject !filter !diff !merge
+.gitattributes !filter !diff !merge
+.gitignore !filter !diff !merge
+
+# UE5 locks #
+*.uasset filter=lfs diff=lfs merge=lfs -text lockable
+*.umap filter=lfs diff=lfs merge=lfs -text lockable

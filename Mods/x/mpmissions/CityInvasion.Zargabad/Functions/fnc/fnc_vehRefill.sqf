@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fd1a518f506f5cb538814f134149e970a46e400d396af74590f26d20f0437f8a
-size 320
+params["_vehicle"];
+
+_vehicle addEventHandler ["FiredNear",
+{
+  params ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gunner"];
+  _unit = (_this select 0);
+  _firer = (_this select 1);
+  if
+  (_unit == _firer)
+  then
+  {
+    _unit setVehicleAmmo 1;
+    _unit setFuel 1;
+  };
+}];

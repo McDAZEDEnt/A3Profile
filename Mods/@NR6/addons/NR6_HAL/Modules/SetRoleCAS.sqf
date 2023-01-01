@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e47f95aa16a7fb1055651473284b2193444ccac2827b2e721e0de0f92b36f640
-size 1260
+private ["_logic","_Commanders","_Leader","_prefix"];
+
+_logic = (_this select 0);
+_Commanders = [];
+
+{
+	if ((typeOf _x) == "NR6_HAL_Leader_Module") then {_Commanders pushback _x};
+} foreach (synchronizedObjects _logic);
+
+{
+	_Leader = (_x getvariable "LeaderType");
+
+	if (_Leader == "LeaderHQ") then {_prefix = "RydHQ_"};
+	if (_Leader == "LeaderHQB") then {_prefix = "RydHQB_"};
+	if (_Leader == "LeaderHQC") then {_prefix = "RydHQC_"};
+	if (_Leader == "LeaderHQD") then {_prefix = "RydHQD_"};
+	if (_Leader == "LeaderHQE") then {_prefix = "RydHQE_"};
+	if (_Leader == "LeaderHQF") then {_prefix = "RydHQF_"};
+	if (_Leader == "LeaderHQG") then {_prefix = "RydHQG_"};
+	if (_Leader == "LeaderHQH") then {_prefix = "RydHQH_"};
+
+	waitUntil {sleep 0.5; (not (isNil _Leader))};
+	_Leader = call compile _Leader;
+
+	if (call compile ("isNil " + "'" + _prefix + "RCAS" + "'")) then {
+	
+		call compile (_prefix + "RCAS" + " = " + "[]");
+		
+	};
+
+	{
+		if not (_x isKindOf "Logic") then {
+			_x call compile (_prefix + "NoAttack" + " pushback " + "(group _this)");
+		} else {
+			_x setVariable ["_ExtraArgs",(_logic getVariable ["_ExtraArgs",""]) + "; " + _prefix + "RCAS" + " pushback " + "(group _this)"];
+		};
+
+	} foreach (synchronizedObjects _logic);
+
+} foreach _Commanders;

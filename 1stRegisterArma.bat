@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7f272633cb798935f00797766f6de6a5da0ec20c53ec5c032718c97cc4000756
-size 353
+@echo off
+set ROOTDIR=%~dp0
+set ROOTDIR=%ROOTDIR:~0,-1%
+if not "%1"=="am_admin" (
+    powershell -Command "Start-Process -Verb RunAs -FilePath '%0' -ArgumentList 'am_admin'"
+    exit /b
+)
+
+echo	Where is Arma 3 installed? (filepath with no quotes)
+echo	(If unsure, open Steam and right click on Arma 3.)
+set /p A3=	-)
+setx Arma3 "%A3%"
+
+echo	Done!
+pause

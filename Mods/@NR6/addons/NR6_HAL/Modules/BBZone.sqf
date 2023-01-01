@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4f2a34ff50c7df88995a325f6869ac150e616bedc6f97a034a4c399e1cc0831d
-size 346
+private ["_logic","_Commanders","_Leader","_prefix","_area","_trig"];
+
+_logic = (_this select 0);
+
+_area = _logic getvariable ["objectArea",[0,0,0,true,0]];
+
+_trig = createTrigger ["EmptyDetector",getpos _logic];
+_trig setTriggerArea [_area select 0,_area select 1, _area select 2, _area select 3];
+
+_trig call compile ("RydBB_MC" + " = _this");

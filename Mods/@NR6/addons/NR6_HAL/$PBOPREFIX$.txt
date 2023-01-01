@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:09a15064c732519fb872e50caf6a5fcca09bf3cd1e042bf694eb1dc0316b7a83
-size 124
+//<'nr6_hal.pbo' properties via Mikero's dos tools, dll version 8.90>
+prefix=NR6_HAL;
+//PboType=Arma Addon;
+//</properties>

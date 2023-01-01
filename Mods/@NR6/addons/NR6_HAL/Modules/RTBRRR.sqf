@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:282bf6b4f40028c6d5a8f8aaa246595ee475dacf7ba892a754cd07d52ebd7087
-size 347
+private ["_logic","_Commanders","_Leader","_prefix"];
+
+_logic = (_this select 0);
+
+
+
+
+{
+	if not (_x isKindOf "Logic") then {
+		(group _x) setVariable ["Ryd_RRR",true];
+	} else {
+		_x setVariable ["_ExtraArgs",(_logic getVariable ["_ExtraArgs",""]) + "; (group _this) setVariable [""Ryd_RRR"",true];"];
+	};
+
+} foreach (synchronizedObjects _logic);

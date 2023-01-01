@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7df5fde55626c495c183affac3aefb9041d7b0f310fcbb58ae6fd54817920b36
-size 136
+//<'nr6_zbe_cache.pbo' properties via Mikero's dos tools, dll version 8.90>
+prefix=NR6_zbe_cache;
+//PboType=Arma Addon;
+//</properties>

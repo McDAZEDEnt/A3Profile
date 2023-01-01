@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dc4c6cd648f1aa153ef8217545f47cb3be37446eac5f3cc84fe38b3b8a1db15d
-size 387
+private ["_logic","_Commanders"];
+
+_logic = (_this select 0);
+_Commanders = [];
+
+{
+	if ((typeOf _x) == "NR6_HAL_BBLeader_Objective_Module") then {_Commanders pushback _x};
+} foreach (synchronizedObjects _logic);
+
+_Leader = (_logic getvariable "Owned");
+
+if (_Leader == "A") then {_logic setvariable ["AreaTakenA",true]};
+if (_Leader == "B") then {_logic setvariable ["AreaTakenB",true]};

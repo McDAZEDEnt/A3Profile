@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d3fe19daacf98fe81e3c4c5411c081cd309776fc32764274251317aaee98265f
-size 373
+
+redco setCaptive true;
+
+redco addEventHandler ["FiredNear",
+
+{
+	params ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gunner"];
+	_unit = (_this select 0);
+	_firer = (_this select 1);
+	_distance = (_this select 2);
+
+	if 
+	(_distance < 15 && isPlayer _firer)
+	then
+	{
+		[_unit, true] call ACE_captives_fnc_setSurrendered;
+	};
+}];

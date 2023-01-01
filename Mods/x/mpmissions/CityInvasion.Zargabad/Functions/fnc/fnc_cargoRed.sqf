@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7c57c075de5164687c6daf1bea55f44f749dbfcf537317a52b2356abdbd5e1b0
-size 274
+params ["_unit"];
+_unit = (_this select 0);
+_veh = vehicle _unit;
+
+{ if ((vehicle _x != _x) && (driver vehicle _x == _x)) exitWith { group _x selectLeader _x; }; } forEach units group _unit;
+
+_veh allowCrewInImmobile true;
+
+cargoOnlyB synchronizeObjectsAdd [_veh];

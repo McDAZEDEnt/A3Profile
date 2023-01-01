@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cac66c8121a258ead3639a517d7fd0474bac5b875b54b424fcf9c06982c23f4a
-size 115
+git lfs install
+git lfs untrack ".gitattributes"
+git lfs untrack ".gitignore"
+git reset
+git add --all
+git add .gitattributes
+git add .gitignore
+git commit -am "commit"
+git push

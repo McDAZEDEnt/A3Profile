@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1b2c4bcd27142f4cc56a51918cc75dccb6c9a1ebf6ffb6a7f093517e225a55e8
-size 573
+@echo off
+set ROOTDIR=%~dp0
+set ROOTDIR=%ROOTDIR:~0,-1%
+cd /d "%ROOTDIR%"
+for %%I in (.) do set OldName=%%~nxI
+echo %OldName%
+if not "%1"=="am_admin" (
+    powershell -Command "Start-Process -Verb RunAs -FilePath '%0' -ArgumentList 'am_admin'"
+    exit /b
+)
+
+taskkill /f /im "Dropbox.exe"
+taskkill /f /im "DropboxUpdate.exe"
+net stop DbxSvc
+sc stop DbxSvc
+
+echo Enter new profile name:
+set /p NewName=	-)
+setx a3name "%NewName%"
+cd /d "%ROOTDIR%"
+git stash
+git checkout main
+git pull origin
+taskkill /F /IM explorer.exe & start explorer
+cd ..\
+ren %OldName% %NewName%
+pause

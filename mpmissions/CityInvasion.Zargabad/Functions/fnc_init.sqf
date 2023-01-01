@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3e4e494895fc7310811d8a3f1413f94b7526d55b42b3e418e782bb59b7edc55f
-size 965
+//defines mission specific functions
+fnc_autoSave = compile preprocessFileLineNumbers "Functions\fnc\fnc_autoSave.sqf";publicVariable "fnc_autoSave";
+fnc_cargoBlu = compile preprocessFileLineNumbers "Functions\fnc\fnc_cargoBlu.sqf";publicVariable "fnc_cargoBlu";
+fnc_cargoRed = compile preprocessFileLineNumbers "Functions\fnc\fnc_cargoRed.sqf";publicVariable "fnc_cargoRed";
+fnc_loseGame = compile preprocessFileLineNumbers "Functions\fnc\fnc_loseGame.sqf";publicVariable "fnc_loseGame";
+fnc_noTasks = compile preprocessFileLineNumbers "Functions\fnc\fnc_noTasks.sqf";publicVariable "fnc_noTasks";
+fnc_sectorCapped = compile preprocessFileLineNumbers "Functions\fnc\fnc_sectorCapped.sqf";publicVariable "fnc_sectorCapped";
+fnc_surrender = compile preprocessFileLineNumbers "Functions\fnc\fnc_surrender.sqf";publicVariable "fnc_surrender";
+fnc_vehRefill = compile preprocessFileLineNumbers "Functions\fnc\fnc_vehRefill.sqf";publicVariable "fnc_vehRefill";

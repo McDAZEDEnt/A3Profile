@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:497b30dc561da5bc3f5eb23f52a012727edceb3b8b52cd6710d99aed11422504
-size 297
+private ["_logic"];
+
+_logic = (_this select 0);
+
+RydBB_CustomObjOnly = (_logic getvariable "RydBB_CustomObjOnly");
+RydBB_LRelocating = (_logic getvariable "RydBB_LRelocating");
+
+RydBB_MainInterval = (_logic getvariable "RydBB_MainInterval");
+//RydBB_BBOnMap = (_logic getvariable "RydBB_BBOnMap");

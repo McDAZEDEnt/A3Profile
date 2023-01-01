@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d2042343dde23fe00f924e0f2a0a9ca3761b1509687e85c9e97446cdae00b580
-size 970
+private ["_logic","_Commanders","_Leader","_prefix"];
+
+_logic = (_this select 0);
+_Commanders = [];
+
+{
+	if ((typeOf _x) == "NR6_HAL_Leader_Module") then {_Commanders pushback _x};
+} foreach (synchronizedObjects _logic);
+
+{
+	_Leader = (_x getvariable "LeaderType");
+
+	if (_Leader == "LeaderHQ") then {_prefix = "RydHQ_"};
+	if (_Leader == "LeaderHQB") then {_prefix = "RydHQB_"};
+	if (_Leader == "LeaderHQC") then {_prefix = "RydHQC_"};
+	if (_Leader == "LeaderHQD") then {_prefix = "RydHQD_"};
+	if (_Leader == "LeaderHQE") then {_prefix = "RydHQE_"};
+	if (_Leader == "LeaderHQF") then {_prefix = "RydHQF_"};
+	if (_Leader == "LeaderHQG") then {_prefix = "RydHQG_"};
+	if (_Leader == "LeaderHQH") then {_prefix = "RydHQH_"};
+
+	_Leader = call compile _Leader;
+
+	_logic call compile (_prefix + "MAtt" + " = " + str (_logic getvariable "RydHQ_MAtt"));
+	_logic call compile (_prefix + "Personality" + " = " + str (_logic getvariable "RydHQ_Personality"));
+
+} foreach _Commanders;

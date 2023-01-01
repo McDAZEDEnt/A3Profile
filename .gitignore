@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5a3b81ea09faa43ecb3cf517f64f460ff290b8442bca8bbf63ff1cb6a007d62e
-size 146
+*.vars
+Arma3.cfg
+BISProfile.json
+McDAZED.Arma3Profile
+McDAZED.vars.Arma3Profile
+McDAZED.3den.Arma3Profile
+Saved/
+UserSaved/
+missions/
+Screenshots/
