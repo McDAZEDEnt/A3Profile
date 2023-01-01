@@ -1,5 +1,5 @@
 git lfs uninstall
+git rm --cached -r .
 git reset --hard
-git rm --cached
 git lfs install
 git lfs pull

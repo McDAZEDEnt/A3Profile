@@ -1,5 +1,5 @@
 git push
-git reset
+git reset .
 git lfs track "*"
 git add --all
 git add .gitattributes
