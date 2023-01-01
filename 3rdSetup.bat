@@ -9,6 +9,8 @@ if not "%1"=="am_admin" (
     exit /b
 )
 
+start "" push.sh
+
 attrib -h "%Arma3%/!Workshop"
 rd /s /q "%Arma3%/!Workshop"
 
