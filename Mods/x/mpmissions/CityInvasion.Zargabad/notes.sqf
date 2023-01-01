@@ -21,15 +21,18 @@ waitUntil {RCOPsaveComplete == 1};
 //Placed units init box + supports
 _veh = vehicle _this;
 [_veh] call fnc_vehRefill;
-[_veh] call fnc_unitsBlu;
+[_veh] call fnc_cargoBlu;
 or
 _veh = vehicle _this;
 [_veh] call fnc_vehRefill;
-[_veh] call fnc_unitsRed;
+[_veh] call fnc_cargoRed;
 
 //RCOP vehicles
 [_this] call fnc_noTasks;
 
 //On sector expression
 [_this select 1, HalObj] call fnc_sectorCapped;
+
+//Make Driver squad leader
+{ if ((vehicle _x != _x) && (driver vehicle _x == _x)) exitWith { group _x selectLeader _x; }; } forEach units group _this;
 

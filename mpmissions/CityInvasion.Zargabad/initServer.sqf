@@ -5,8 +5,6 @@
 //Editor markers visible for player host debug
 if (isServer && hasInterface) then
 {
-	"respawn_west" setMarkerAlpha 1;
-	"respawn_east" setMarkerAlpha 1;
 	"blu" setMarkerAlpha 1;
 	"red" setMarkerAlpha 1;
 	"ao" setMarkerAlpha 1;
@@ -15,8 +13,6 @@ if (isServer && hasInterface) then
 //Editor markers invisible for connected players
 if (!isServer && hasInterface) then
 {
-	"respawn_west" setMarkerAlpha 0;
-	"respawn_east" setMarkerAlpha 0;
 	"blu" setMarkerAlpha 0;
 	"red" setMarkerAlpha 0;
 	"ao" setMarkerAlpha 0;
@@ -72,12 +68,9 @@ hint "Saved Game loaded!";
 [redco] call fnc_loseGame;
 [redco] call fnc_surrender;
 
-//debug marker for redco pos
-//"respawn_east" setMarkerPos redco;
+while {true} do
+{
+{_x allowCrewInImmobile true } foreach vehicles;
+sleep 30;
+};
 
-//Tracking squad respawn marker
-//while {!isNil "FTL"} do 
-//{
-//	"respawn_west" setMarkerPos FTL;
-//	sleep 30;
-//};
