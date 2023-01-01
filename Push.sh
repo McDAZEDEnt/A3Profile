@@ -1,8 +1,8 @@
 git push
 git reset
-git lfs track "*.*"
+git lfs track "*"
+git add --all
 git add .gitattributes
 git add .gitignore
-git add --all
 git commit -am "commit"
 git push

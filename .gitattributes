@@ -14,7 +14,7 @@
 # Git Large File System (LFS) #
 ###############################
 # Enable LFS for all files and exclude text #
-*.* filter=lfs diff=lfs merge=lfs -text
+* filter=lfs diff=lfs merge=lfs -text
 *.arma3profile !filter !diff !merge
 *.bat !filter !diff !merge
 *.bikey !filter !diff !merge
