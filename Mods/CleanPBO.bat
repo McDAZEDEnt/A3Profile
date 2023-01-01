@@ -29,15 +29,6 @@ del /s /q /f *ace_quickmount.pbo
 del /s /q /f *ace_field_rations.pbo
 del /s /q /f *ace_volume.pbo
 del /s /q /f *ace_zeus.pbo
-:: Realengine
-:: del /s /q /f *real_fix_weapons.pbo
-del /s /q /f *real_armor.pbo
-del /s /q /f *real_animations*.pbo
-del /s /q /f *real_fix_factions.pbo
-del /s /q /f *real_fix_flare_lights.pbo
-del /s /q /f *real_fix_ui.pbo
-del /s /q /f *real_fix_terrains.pbo
-del /s /q /f *real_uniform_unlock.pbo
 
 cd /d "%arma3% Tools\DSSignFile"
 DSUtils.exe

@@ -11,7 +11,7 @@ if not "%1"=="am_admin" (
 
 attrib -h "%arma3%/!Workshop"
 
-ROBOCOPY "%arma3%/!Workshop" "%ROOTDIR%/!Workshop" *.bisign /S
+ROBOCOPY "%arma3%/!Workshop" "%ROOTDIR%/!Workshop" *.arma.bisign /S
 
 attrib -h "%ROOTDIR%/!Workshop"
 
