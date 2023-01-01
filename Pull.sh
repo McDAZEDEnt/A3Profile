@@ -1,4 +1,4 @@
-git stash
-
-git checkout main
-git pull origin
+git lfs uninstall
+git reset --hard
+git lfs install
+git lfs pull
