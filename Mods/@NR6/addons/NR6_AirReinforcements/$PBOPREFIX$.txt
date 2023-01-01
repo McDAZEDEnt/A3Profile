@@ -1,4 +1,0 @@
-//<'nr6_airreinforcements.pbo' properties via Mikero's dos tools, dll version 8.90>
-prefix=NR6_AirReinforcements;
-//PboType=Arma Addon;
-//</properties>
