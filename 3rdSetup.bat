@@ -9,6 +9,9 @@ if not "%1"=="am_admin" (
     exit /b
 )
 
+attrib -h "%Arma3%/!Workshop"
+rd /s /q "%Arma3%/!Workshop"
+
 :: LARGE PAGES
 echo .
 echo ~~~~~~~~~!!!!!!!!!~~~~~~~~~
