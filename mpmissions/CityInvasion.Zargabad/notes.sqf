@@ -1,38 +1,35 @@
-////////////////////////////////////////// TRIGGERS
-
+//Server only
 //in all condition boxes
 call{this}
+//all triggers set to 1 second
 
 //CO captured trigger
 //condition
 call{redco in thisList;}
 //activation
 "coCapped" call BIS_fnc_endMissionServer;
+//countdown of 5 seconds
 
 //SaveGame trigger
 //condition
-waitUntil {RCOPsaveComplete == 1};
+call{RCOPsaveComplete == 1};
 //activation
 [] call fnc_autoSave;
+//countdown of 10 seconds
 
 //vehicle despawn trigger area
 {{deleteVehicle _x} foreach crew _x} foreach thislist;
 
-//Placed units init box + supports
-_veh = vehicle _this;
-[_veh] call fnc_vehRefill;
-[_veh] call fnc_cargoBlu;
+//Placed units init box + NR6 respawns
+[_this] call fnc_cargoBlu;
 or
-_veh = vehicle _this;
-[_veh] call fnc_vehRefill;
-[_veh] call fnc_cargoRed;
+[_this] call fnc_cargoRed;
+
+//Vehicle supports
+[_this] call fnc_vehRefill;
 
 //RCOP vehicles
 [_this] call fnc_noTasks;
 
-//On sector expression
-[_this select 1, HalObj] call fnc_sectorCapped;
-
-//Make Driver squad leader
-{ if ((vehicle _x != _x) && (driver vehicle _x == _x)) exitWith { group _x selectLeader _x; }; } forEach units group _this;
-
+//in sector expression box
+[_this select 1, HalVarName] call fnc_sectorCapped;

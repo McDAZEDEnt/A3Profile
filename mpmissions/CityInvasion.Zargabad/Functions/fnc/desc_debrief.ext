@@ -1,31 +1,3 @@
-// define mission endings - included in description.ext
-class CfgDebriefing
-{  
-	class coKilled
-	{
-		title = "Mission Complicated";
-		subtitle = "PLA Commander is dead.";
-		description = "We were supposed to capture him alive. This will crumble the entire operation.";
-		pictureBackground = "";
-		picture = "mil_warning_noShadow";
-		pictureColor[] = { 0.5, 0.0, 0.0, 1 };
-	}; 
-	class coCapped
-	{
-		title = "Mission Complete";
-		subtitle = "PLA Commander was captured alive.";
-		description = "The PLA's top ranking officer in Zargabad just revealed crucial intel...";
-		pictureBackground = "";
-		picture = "loc_help";
-		pictureColor[] = { 0.0, 0.3, 0.6, 1 };
-	};
-	class saved
-	{
-		title = "Mission Saved";
-		subtitle = "";
-		description = "";
-		pictureBackground = "";
-		picture = "loc_download";
-		pictureColor[] = { 1.0, 0.7, 0.0, 1 };
-	};
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:a25344027b606d7703d7befb3f129f510c9084f26df4f05f650eb3236af0098f
+size 878

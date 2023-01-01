@@ -1,8 +1,7 @@
-params["_man"];
 
-_man setCaptive true;
+redco setCaptive true;
 
-_man addEventHandler ["FiredNear",
+redco addEventHandler ["FiredNear",
 
 {
 	params ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gunner"];
