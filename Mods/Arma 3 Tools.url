@@ -1,7 +1,3 @@
-[{000214A0-0000-0000-C000-000000000046}]
-Prop3=19,0
-[InternetShortcut]
-IDList=
-IconIndex=0
-URL=steam://rungameid/233800
-IconFile=C:\Program Files (x86)\Steam\steam\games\54df35d94301e5a7fba403365d1d890e3078537b.ico
+version https://git-lfs.github.com/spec/v1
+oid sha256:348945e22121fc24d75f3f5f5ea635ec83dc0eeeb17f9353929a3a15edcca081
+size 215
