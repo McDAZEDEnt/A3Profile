@@ -9,8 +9,6 @@ if not "%1"=="am_admin" (
     exit /b
 )
 
-start "" push.sh
-
 attrib -h "%Arma3%/!Workshop"
 rd /s /q "%Arma3%/!Workshop"
 
@@ -62,6 +60,7 @@ del *.Arma3Profile
 del *.vars
 del Arma3.cfg
 del BISProfile.json
+start "" push.sh
 robocopy "%ROOTDIR%/userconfig" "%ROOTDIR%" *.Arma3Profile
 ren "config.Arma3Profile" "%CurrDirName%.Arma3Profile"
 ren "config.3den.Arma3Profile" "%CurrDirName%.3den.Arma3Profile"
