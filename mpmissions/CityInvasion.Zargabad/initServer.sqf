@@ -5,7 +5,6 @@
 //Editor markers invisible for connected players
 if (!isServer && hasInterface) then
 {
-	"blu" setMarkerAlpha 0;
 	"red" setMarkerAlpha 0;
 	"ao" setMarkerAlpha 0;
 	"respawn_west" setMarkerAlpha 0;

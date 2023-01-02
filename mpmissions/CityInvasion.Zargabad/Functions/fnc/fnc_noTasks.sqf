@@ -1,5 +1,9 @@
-params ["_unit"];
+params ["_thisVeh"];
+_thisVeh = (_this select 0);
+_crew = fullCrew _thisVeh;
 
-_unit = (_this select 0);
+noTasks synchronizeObjectsAdd [_thisVeh];
 
-noTasks synchronizeObjectsAdd [_unit];
+{
+	noTasks synchronizeObjectsAdd [_x];
+} forEach fullCrew _crew;

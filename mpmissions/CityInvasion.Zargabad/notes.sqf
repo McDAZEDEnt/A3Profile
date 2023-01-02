@@ -12,7 +12,7 @@ call{redco in thisList;}
 
 //SaveGame trigger
 //condition
-call{RCOPsaveComplete == 1};
+call{RCOPsaveComplete == 1;}
 //activation
 [] call fnc_autoSave;
 //countdown of 10 seconds
@@ -33,3 +33,6 @@ or
 
 //in sector expression box
 [_this select 1, HalVarName] call fnc_sectorCapped;
+
+//item to limit simplex access
+G_Respirator_yellow_F
