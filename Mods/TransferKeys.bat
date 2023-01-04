@@ -9,6 +9,8 @@ if not "%1"=="am_admin" (
     exit /b
 )
 
+rd /s /q "%ROOTDIR%/!Workshop"
+
 attrib -h "%arma3%/!Workshop"
 
 ROBOCOPY "%arma3%/!Workshop" "%ROOTDIR%/!Workshop" *.arma.bisign /S

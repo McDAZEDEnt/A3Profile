@@ -10,25 +10,50 @@ if not "%1"=="am_admin" (
 )
 taskkill /f /im "Dropbox.exe"
 
+:: Delete keys and git
 cd /d "%ROOTDIR%"
 del /s /q /f *.bisign
-:: ACE
-del /s /q /f *ace_aircraft.pbo
-del /s /q /f *ace_fcs.pbo
-del /s /q /f *ace_fire.pbo
-del /s /q /f *ace_hearing.pbo
-del /s /q /f *ace_intelitems.pbo
-del /s /q /f *ace_advanced_fatigue.pbo
-del /s /q /f *ace_gforces.pbo
-del /s /q /f *ace_minedetector.pbo
-del /s /q /f *ace_nametags.pbo
-del /s /q /f *ace_norearm.pbo
-del /s /q /f *ace_marker*.pbo
-del /s /q /f *ace_map*.pbo
-del /s /q /f *ace_quickmount.pbo
-del /s /q /f *ace_field_rations.pbo
-del /s /q /f *ace_volume.pbo
-del /s /q /f *ace_zeus.pbo
+FOR /d /r . %d IN (".git") DO @IF EXIST "%d" rd /s /q "%d"
+FOR /d /r . %d IN (".github") DO @IF EXIST "%d" rd /s /q "%d"
 
+:: @ace
+del /s /q /f *ace_aircraft*
+del /s /q /f *ace_fcs*
+del /s /q /f *ace_fire*
+del /s /q /f *ace_hearing*
+del /s /q /f *ace_intelitems*
+del /s /q /f *ace_advanced_fatigue*
+del /s /q /f *ace_gforces*
+del /s /q /f *ace_minedetector*
+del /s /q /f *ace_nametags*
+del /s /q /f *ace_norearm*
+del /s /q /f *ace_markers*
+del /s /q /f *ace_map*
+del /s /q /f *ace_quickmount*
+del /s /q /f *ace_field_rations*
+del /s /q /f *ace_volume*
+del /s /q /f *ace_zeus*
+
+:: ACE
+cd /d "%ROOTDIR%\ACE3\addons"
+rd /s /q aircraft
+rd /s /q fcs
+rd /s /q fire
+rd /s /q hearing
+rd /s /q intelitems
+rd /s /q advanced_fatigue
+rd /s /q gforces
+rd /s /q minedetector
+rd /s /q nametags
+rd /s /q norearm
+rd /s /q markers
+rd /s /q map
+rd /s /q map_gestures
+rd /s /q quickmount
+rd /s /q field_rations
+rd /s /q volume
+rd /s /q zeus
+
+:: Sign mods
 cd /d "%arma3% Tools\DSSignFile"
 DSUtils.exe
