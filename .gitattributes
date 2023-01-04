@@ -46,3 +46,5 @@
 # UE5 locks #
 *.uasset filter=lfs diff=lfs merge=lfs -text lockable
 *.umap filter=lfs diff=lfs merge=lfs -text lockable
+
+mission.sqm !filter !diff !merge lockable

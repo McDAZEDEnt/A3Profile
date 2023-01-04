@@ -11,7 +11,7 @@ class CustomAttributes
 	class Attribute0
 	{
 		property="StartRandom";
-		expression="false";
+		expression="true";
 		class Value
 		{
 			class data

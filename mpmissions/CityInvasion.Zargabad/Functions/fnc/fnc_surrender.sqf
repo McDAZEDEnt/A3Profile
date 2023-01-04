@@ -14,5 +14,9 @@ redco addEventHandler ["FiredNear",
 	then
 	{
 		[_unit, true] call ACE_captives_fnc_setSurrendered;
+	}
+	else
+	{
+		exitWith {};
 	};
 }];

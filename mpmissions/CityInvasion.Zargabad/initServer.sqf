@@ -53,7 +53,7 @@ redco setPosATL coPos;
 missionNamespace setVariable ["dmpWaitForGo",true];publicVariable"dmpWaitForGo";
 
 //RCOP
-[[],"RCOP\RCOPersist\RCOPcrateFiller.sqf"] remoteExec ["execVM",0];
+[["2","1","0","1","true"],"RCOP\RCOPersist\RCOPcrateFiller.sqf"] remoteExec ["execVM",0];
 
 //Start
 hint "Saved Game loaded!";
@@ -62,5 +62,7 @@ hint "Saved Game loaded!";
 
 ////////////////////////////////////////// GLOBAL
 
-[] call fnc_loseGame;
-[] call fnc_surrender;
+
+"respawn_east" setMarkerPos coPos;
+[redco] call fnc_loseGame;
+[redco] call fnc_surrender;

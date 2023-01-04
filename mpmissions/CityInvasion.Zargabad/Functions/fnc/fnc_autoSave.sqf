@@ -5,6 +5,9 @@ if (savingEnabled) then
 };
 //Pauses DMP spawning
 missionNamespace setVariable ["dmpWaitForGo",true];publicVariable"dmpWaitForGo";
+//Save date and time
+timestamp = dateToNumber date;publicVariable"timestamp";
+
 //isSaved variable
 missionNamespace setVariable ["isSaved",true];publicVariable"isSaved";
 //Save persistence data to profile
