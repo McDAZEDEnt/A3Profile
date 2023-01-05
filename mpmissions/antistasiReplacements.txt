@@ -4,3 +4,5 @@ rhsgref_5Rnd_792x57_kar98k >> rhs_mag_20rnd_762x51_m80_fnfal
 rhs_weap_kar98k >> rhs_weap_l1a1_wood
 rhs_weap_Izh18 >> rhs_weap_aks74n
 rhs_weap_tt33 >> rhsgref_l1a1_l2a2
+
+*_RHS_Reb_*
