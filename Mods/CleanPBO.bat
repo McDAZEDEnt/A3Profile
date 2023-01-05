@@ -52,6 +52,23 @@ rd /s /q quickmount
 rd /s /q field_rations
 rd /s /q volume
 
+cd /d "ACE3"
+del /s /q /f *.pbo
+cd /d "CBA_A3"
+del /s /q /f *.pbo
+
+md "%arma3%/x"
+md "%arma3%/z"
+md "P://x"
+md "P://z"
+
+mklink /J "P://x/cba" "%ROOTDIR%/CBA_A3"
+mklink /J "P://z/ace" "%ROOTDIR%/ACE3"
+mklink /J "P://x/A3A" "%ROOTDIR%/A3-Antistasi/A3A"
+mklink /J "%arma3%/x/cba" "%ROOTDIR%/CBA_A3"
+mklink /J "%arma3%/z/ace" "%ROOTDIR%/ACE3"
+mklink /J "%arma3%/x/A3A" "%ROOTDIR%/A3-Antistasi/A3A"
+
 :: Sign mods
 cd /d "%arma3% Tools\DSSignFile"
 DSUtils.exe
