@@ -10,9 +10,6 @@ if not "%1"=="am_admin" (
 )
 
 taskkill /f /im "Dropbox.exe"
-taskkill /f /im "DropboxUpdate.exe"
-net stop DbxSvc
-sc stop DbxSvc
 
 echo Enter new profile name:
 set /p NewName=	-)
