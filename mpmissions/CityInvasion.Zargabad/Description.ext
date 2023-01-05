@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d60e16f993a1b9616bb9bf52383f23d2de60bd6340c06c789b7ac0fa63ef111f
-size 507
+//mission declarations
+onLoadMission		= "Capture the enemy Commander alive, no matter the cost...";
+onLoadName			= "Take Back Zargabad";
+dev 				= "dev";
+author				= "McDAZED";
+overviewText 		= "Capture the enemy Commander alive, no matter the cost...";
+overviewPicture 	= "Functions\fnc\loadScreen.jpg";
+LoadScreen 			= "Functions\fnc\loadScreen.jpg";
+respawnOnStart 		= -1;
+
+//Configs seperated to ease readibility
+#include "Functions\fnc\desc_debrief.ext"
+#include "AFAR\UI\dialogs.hpp"
