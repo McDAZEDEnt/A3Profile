@@ -1,2 +1,0 @@
-PREP(replaceMagazineCargo);
-PREP(changeDisposableLauncherClass);
