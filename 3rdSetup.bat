@@ -46,6 +46,7 @@ rmdir /s /q "%arma3%/z"
 rmdir /s /q "P:/z"
 rmdir /s /q "%arma3%/x"
 rmdir /s /q "P:/x"
+rmdir /s /q "%arma3%/.vscode"
 rmdir /s /q "%ROOTDIR%/Saved"
 rmdir /s /q "%ROOTDIR%/UserSaved"
 mklink /J "%arma3%/userconfig" "%ROOTDIR%/userconfig"
@@ -63,6 +64,5 @@ del BISProfile.json
 robocopy "%ROOTDIR%/userconfig" "%ROOTDIR%" *.Arma3Profile
 ren "config.Arma3Profile" "%CurrDirName%.Arma3Profile"
 ren "config.3den.Arma3Profile" "%CurrDirName%.3den.Arma3Profile"
-start "" push.sh
 call FoV.exe
 EXIT

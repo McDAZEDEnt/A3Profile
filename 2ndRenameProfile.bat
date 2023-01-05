@@ -18,9 +18,6 @@ echo Enter new profile name:
 set /p NewName=	-)
 setx a3name "%NewName%"
 cd /d "%ROOTDIR%"
-git stash
-git checkout main
-git pull origin
 taskkill /F /IM explorer.exe & start explorer
 cd ..\
 ren %OldName% %NewName%
