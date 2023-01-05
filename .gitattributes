@@ -42,6 +42,7 @@
 *.sqm !filter !diff !merge lockable
 *.txt !filter !diff !merge
 *.uproject !filter !diff !merge
+*.xml !filter !diff !merge lockable
 .gitattributes !filter !diff !merge
 .gitignore !filter !diff !merge
 
