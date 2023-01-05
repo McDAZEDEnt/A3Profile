@@ -48,11 +48,11 @@ rmdir /s /q "%ROOTDIR%/Saved"
 rmdir /s /q "%ROOTDIR%/UserSaved"
 mklink /J "%arma3%/userconfig" "%ROOTDIR%/userconfig"
 mklink /J "%arma3%/mpmissions" "%ROOTDIR%/mpmissions"
-mklink /J "%arma3%/keys" "%ROOTDIR%/Mods/keys"
+mklink /J "%arma3%/keys" "%ROOTDIR%/userconfig/keys"
 mklink /J "%arma3%/x/mpmissions" "%ROOTDIR%/mpmissions"
 :: UNHIDE !WORKSHOP & Copy missing keys
 attrib -h "%Arma3%/!Workshop"
-ROBOCOPY "%ROOTDIR%/Mods/!Workshop" "%arma3%/!Workshop" *.bisign /E
+ROBOCOPY "%ROOTDIR%/userconfig/!Workshop" "%arma3%/!Workshop" *.bisign /E
 :: make profile from template
 cd /d "%ROOTDIR%"
 del *.Arma3Profile
