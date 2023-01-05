@@ -16,3 +16,4 @@ cd /d "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\!Work
 
 rd /s /q @ace_x
 rd /s /q @NR6
+rd /s /q @Antistasi
