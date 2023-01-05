@@ -38,7 +38,6 @@ TASKKILL /F /IM steam.exe
 TASKKILL /F /IM arma3launcher.exe
 :: userconfig and mission symlink
 cd /d "%arma3%"
-rmdir /s /q "%userprofile%/Documents/Arma 3"
 rmdir /s /q "%arma3%/userconfig"
 rmdir /s /q "%arma3%/mpmissions"
 rmdir /s /q "%arma3%/keys"
