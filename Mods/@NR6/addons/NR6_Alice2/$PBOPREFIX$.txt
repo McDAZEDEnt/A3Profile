@@ -1,0 +1,4 @@
+//<'nr6_alice2.pbo' properties via Mikero's dos tools, dll version 8.90>
+prefix=NR6_Alice2;
+//PboType=Arma Addon;
+//</properties>

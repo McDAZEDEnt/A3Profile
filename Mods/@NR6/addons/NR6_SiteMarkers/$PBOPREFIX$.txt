@@ -1,0 +1,4 @@
+//<'nr6_sitemarkers.pbo' properties via Mikero's dos tools, dll version 8.90>
+prefix=NR6_SiteMarkers;
+//PboType=Arma Addon;
+//</properties>

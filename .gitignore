@@ -1,0 +1,10 @@
+*.vars
+Arma3.cfg
+BISProfile.json
+McDAZED.Arma3Profile
+McDAZED.vars.Arma3Profile
+McDAZED.3den.Arma3Profile
+Saved/
+UserSaved/
+missions/
+Screenshots/
