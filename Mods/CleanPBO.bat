@@ -21,11 +21,10 @@ rd /s /q "P:/z"
 rd /s /q "%arma3%/x"
 rd /s /q "P:/x"
 rd /s /q "P:/.vscode"
-rd /s /q "%ROOTDIR%/ACE3/include/x"
+del /s /q /f "%ROOTDIR%/ACE3/include/x/*.*"
 
 md "P:/x"
 md "P:/z"
-md "%ROOTDIR%/ACE3/include/x"
 
 robocopy "%ROOTDIR%/CBA_A3" "%ROOTDIR%/ACE3/include/x/cba" *.* /S /M
 mklink /J "P://x/A3A" "%ROOTDIR%/A3-Antistasi/A3A"

@@ -12,7 +12,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     QGVAR(maxRange), "SLIDER",
     [LSTRING(maxRange_displayName), LSTRING(maxRange_description)],
     _category,
-    [0, 100, 4, 1],
+    [0, 50, 4, 1],
     1
 ] call CBA_fnc_addSetting;
 
