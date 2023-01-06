@@ -1,1 +1,0 @@
-class CBA_PIPItems {};
