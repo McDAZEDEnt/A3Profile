@@ -30,7 +30,7 @@ If the Fortify module is present in the mission, server admins can use chat comm
 
 ## 1.2 Adding custom presets
 
-There are three ways of adding custom presets to your mission, either via code, through desciption.ext or through config.
+There are two ways of adding custom presets to your mission, either via code or through desciption.ext.
 
 To add a preset via code you use the function `call ace_fortify_fnc_registerObjects`. Also enables Fortify.
 
@@ -52,11 +52,11 @@ To add a preset via code you use the function `call ace_fortify_fnc_registerObje
 * [west, 5000, [["Land_BagFence_Long_F", 5], ["Land_BagBunker_Small_F", 50]]] call ace_fortify_fnc_registerObjects
 ```
 
-Adding it through `description.ext` or config you use:
+Adding it through `description.ext` you use:
 
 ```cpp
 class ACEX_Fortify_Presets {
-    class TAG_MyPreset {
+    class myMissionObjects {
         displayName = "My Preset";
         objects[] = {
             {"Sandbag", 5},
@@ -66,7 +66,7 @@ class ACEX_Fortify_Presets {
 };
  ```
 
-Then you will have to set the mission preset to `TAG_MyPreset` by either using the Fortify editor module or the chat command: `#ace-fortify blufor TAG_MyPreset`.
+Then you will have to set the mission preset to `myMissionObjects` by either using the Fortify editor module or the chat command: `#ace-fortify blufor myMissionObjects`.
 
 ## 1.3 Adding custom deploy handlers
 

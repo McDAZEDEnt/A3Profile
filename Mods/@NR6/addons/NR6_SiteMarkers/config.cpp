@@ -9,10 +9,7 @@ class CfgPatches
 
 		};
 		requiredVersion=4.02;
-		requiredAddons[]=
-		{
-
-		};
+		requiredAddons[]={"cba_modules"};
 		version="4.02";
 		authors[]=
 		{
@@ -123,7 +120,7 @@ class CfgFunctions
 			class sitemarker
 			{
 				description="Sitemarker";
-				file="\NR6_SiteMarkers\SiteMarkNR6.sqf";
+				file="SiteMarkNR6.sqf";
 			};
 
 		};	

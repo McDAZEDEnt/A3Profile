@@ -1,4 +1,0 @@
-//<'nr6_hal.pbo' properties via Mikero's dos tools, dll version 8.90>
-prefix=NR6_HAL;
-//PboType=Arma Addon;
-//</properties>

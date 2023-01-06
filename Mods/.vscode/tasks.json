@@ -1,0 +1,54 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Antistasi",
+            "type": "process",
+            "options": {
+                "cwd": "${env:arma3}"
+            },
+            "command": "arma3_x64.exe",
+            "args": [
+                "P:\\x\\A3A\\addons\\maps\\Antistasi_Altis.Altis\\mission.sqm",
+                "-mod=!Workshop\\@CBA_A3;!Workshop\\@Pythia;!Workshop\\@7erra's Editing Extensions;!Workshop\\@Accurate Arsenal-Eden Icons;P:\\z\\ace;!Workshop\\@AGC - Advanced Garbage Collector;!Workshop\\@Arsenal Search;!Workshop\\@CUP Terrains - Core;!Workshop\\@CUP Terrains - Maps;!Workshop\\@CUP Terrains - Maps 2.0;!Workshop\\@Disable 3den Mission Preview Shortcut;!Workshop\\@Drongos Air Operations;!Workshop\\@Drongos Config Generator;!Workshop\\@Drongos Map Population;!Workshop\\@Drongos Smooth Operators;!Workshop\\@Eden Extended Objects;!Workshop\\@LAMBS_Danger.fsm;!Workshop\\@m3mory;!Workshop\\@Map Object Finder;!Workshop\\@NR6;!Workshop\\@PERSIST - RCO;!Workshop\\@RHSAFRF;!Workshop\\@RHSUSAF;!Workshop\\@RHSGREF;!Workshop\\@RHSSAF;!Workshop\\@Simplex Support Services;!Workshop\\@Spotted Enemy Markers;!Workshop\\@Spyder Addons;!Workshop\\@Werthles' Headless Module;!Workshop\\@ZEC - Zeus and Eden Templates - Building Compositions;!Workshop\\@ZEI - Zeus and Eden Interiors;P:\\x\\A3A",
+                "-debug",
+                "-name=McDAZED",
+                "-skipIntro",
+                "-filePatching",
+                "-noSplash",
+                "-showScriptErrors"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+        {
+            "label": "mpmissions",
+            "type": "process",
+            "options": {
+                "cwd": "${env:arma3}"
+            },
+            "command": "arma3_x64.exe",
+            "args": [
+                "${env:arma3}\\mpmissions\\AFAR_demo.Stratis\\mission.sqm",
+                "-mod=!Workshop\\@CBA_A3;!Workshop\\@Pythia;!Workshop\\@7erra's Editing Extensions;!Workshop\\@Accurate Arsenal-Eden Icons;P:\\z\\ace;!Workshop\\@AGC - Advanced Garbage Collector;!Workshop\\@Arsenal Search;!Workshop\\@CUP Terrains - Core;!Workshop\\@CUP Terrains - Maps;!Workshop\\@CUP Terrains - Maps 2.0;!Workshop\\@Disable 3den Mission Preview Shortcut;!Workshop\\@Drongos Air Operations;!Workshop\\@Drongos Config Generator;!Workshop\\@Drongos Map Population;!Workshop\\@Drongos Smooth Operators;!Workshop\\@Eden Extended Objects;!Workshop\\@LAMBS_Danger.fsm;!Workshop\\@m3mory;!Workshop\\@Map Object Finder;!Workshop\\@NR6;!Workshop\\@PERSIST - RCO;!Workshop\\@RHSAFRF;!Workshop\\@RHSUSAF;!Workshop\\@RHSGREF;!Workshop\\@RHSSAF;!Workshop\\@Simplex Support Services;!Workshop\\@Spotted Enemy Markers;!Workshop\\@Spyder Addons;!Workshop\\@Werthles' Headless Module;!Workshop\\@ZEC - Zeus and Eden Templates - Building Compositions;!Workshop\\@ZEI - Zeus and Eden Interiors",
+                "-debug",
+                "-name=McDAZED",
+                "-skipIntro",
+                "-filePatching",
+                "-noSplash",
+                "-showScriptErrors"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

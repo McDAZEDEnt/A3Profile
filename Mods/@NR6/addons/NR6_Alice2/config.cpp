@@ -9,10 +9,7 @@ class CfgPatches
 
 		};
 		requiredVersion=4.02;
-		requiredAddons[]=
-		{
-
-		};
+		requiredAddons[]={"cba_modules"};
 		version="4.02";
 		authors[]=
 		{
@@ -144,17 +141,17 @@ class CfgFunctions
 			class civilianSet
 	 		{
 				description = "Adds civilian unit to ALICE2 system.";
-				file = "\NR6_Alice2\data\scripts\fn_civilianSet.sqf";
+				file = "data/scripts/fn_civilianSet.sqf";
 			};
 			class civilianHit
 	 		{
 				description = "Decrease respect when ALICE2 civilian is hit (and commit cleanup when he dies).";
-				file = "\NR6_Alice2\data\scripts\fn_civilianHit.sqf";
+				file = "data/scripts/fn_civilianHit.sqf";
 			};
 			class civilianKilled
 	 		{
 				description = "Cleanup when civilian is killed.";
-				file = "\NR6_Alice2\data\scripts\fn_civilianKilled.sqf";
+				file = "data/scripts/fn_civilianKilled.sqf";
 			};
 		};
 	};
@@ -166,7 +163,7 @@ class CfgFunctions
 			class alice2
 			{
 				description="alice2";
-				file="\NR6_Alice2\data\scripts\main.sqf";
+				file="data/scripts/main.sqf";
 			};
 		};	
 	};

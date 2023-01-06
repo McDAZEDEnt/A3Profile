@@ -9,10 +9,7 @@ class CfgPatches
 
 		};
 		requiredVersion=4.02;
-		requiredAddons[]=
-		{
-
-		};
+		requiredAddons[]={"cba_modules"};
 		version="4.02";
 		authors[]=
 		{
@@ -150,7 +147,7 @@ class CfgFunctions
 			class cache
 			{
 				description="Nothing";
-				file="\NR6_zbe_cache\main.sqf";
+				file="main.sqf";
 			};
 		};	
 	};
