@@ -1,0 +1,73 @@
+OnLoadMission = "A procedurally generated campaign where you execute missions and gain resources to help BLUFOR capture the enemy zones. Play the way you want: be a SpecOps, a Squad Leader or control a small army, the choice is yours.";
+onLoadName = "DUWS_X v3.05";
+dev = "dev";
+author = "Killa Tomata - orig by Kibot/DUWS-R Team";
+overviewText = "A procedurally generated campaign where you execute missions and gain resources to help BLUFOR capture the enemy zones. Play the way you want: be a SpecOps, a Squad Leader or control a small army, the choice is yours.";
+overviewPicture = "DUWS_X.jpg";
+LoadScreen = "DUWS_X.jpg";
+
+//--------------------------------------------------------------
+//------------------------AIS INJURY----------------------------
+//--------------------------------------------------------------
+respawn = 3;
+respawnDialog = 1;
+respawndelay = 10;
+disabledAI = 1;
+enableDebugConsole = 1;
+allowFunctionsLog = 1;
+respawnOnStart=-1;
+
+#include "AIS\Effects\BarDlg.hpp"
+
+//--------------------------------------------------------------
+
+// TAW INIT BEGIN --
+#include "taw_vd\GUI.h"
+// TAW INIT END --
+
+class CfgFunctions
+{
+	#include "AIS\cfgFunctions.hpp"
+	#include "taw_vd\CfgFunctions.hpp"
+	#include "vcom\cfgFunctions.hpp"
+};
+
+//////////////////////////
+//////////////////////////
+
+#include "includes\debriefing.hpp"
+#include "includes\defines.hpp"
+#include "includes\squadmng.hpp"
+#include "includes\renamesquad.hpp"
+#include "includes\request_menu.hpp"
+#include "includes\request_fob_menu.hpp"
+#include "includes\fobmanager.hpp"
+#include "includes\notifications.hpp"
+#include "includes\enviro_menu.hpp"
+#include "includes\campaign_menu.hpp"
+#include "includes\hq_placement.hpp"
+#include "includes\sounds.hpp"
+#include "includes\custom_faction.hpp"
+#include "includes\AI_loadout_manager.hpp"
+#include "R3F_LOG\desc_include.h"
+#include "includes\remoteExec.hpp"
+#include "includes\operative_menu.hpp"
+
+//////////////////////////////////////
+// MODERN or WW2 or VIETNAM or SCIFI
+//////////////////////////////////////
+
+#include "includes\params_modern.hpp"
+#include "includes\supports_radio_modern.hpp"
+#include "includes\oper_identities_modern.hpp"
+
+//#include "includes\params_ww2.hpp"
+//#include "includes\supports_radio_ww2.hpp"
+//#include "includes\oper_identities_ww2.hpp"
+
+//#include "includes\params_vietnam.hpp"
+//#include "includes\supports_radio_ww2.hpp"
+//#include "includes\oper_identities_vietnam.hpp"
+
+
+
