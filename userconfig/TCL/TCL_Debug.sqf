@@ -55,4 +55,4 @@
   // ==============================================================
     // Choose ( True ) to enable Development Debug System.
     // True / False, default is False
-	TCL_Debug set [6, True];
+	TCL_Debug set [6, False];
