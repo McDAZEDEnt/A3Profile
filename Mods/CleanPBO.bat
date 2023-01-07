@@ -64,7 +64,6 @@ del /s /q /f *ace_microdagr*
 del /s /q /f *ace_minedetector*
 del /s /q /f *ace_movement*
 del /s /q /f *ace_mx2a*
-del /s /q /f *ace_nametags*
 del /s /q /f *ace_nightvision*
 del /s /q /f *ace_noidle*
 del /s /q /f *ace_norearm*
@@ -120,7 +119,6 @@ rd /s /q microdagr
 rd /s /q minedetector
 rd /s /q movement
 rd /s /q mx2a
-rd /s /q nametags
 rd /s /q nightvision
 rd /s /q noidle
 rd /s /q norearm
