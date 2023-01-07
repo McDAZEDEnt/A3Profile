@@ -9,7 +9,11 @@ rd /s /q "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\!W
 attrib -h "%arma3%\!Workshop"
 
 ROBOCOPY "%arma3%\!Workshop" "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\!Workshop" *.arma.bisign /S
-ROBOCOPY "%arma3%" "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\keys" *.bikey /S
+
+cd /d "%arma3%"
+for /r %d in (*.bikey) do copy "%d" "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\keys"
+
+pause
 
 attrib -h "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\!Workshop"
 
