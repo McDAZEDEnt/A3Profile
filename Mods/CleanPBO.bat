@@ -17,17 +17,16 @@ rd /s /q "%arma3%/x"
 rd /s /q "P:/x"
 rd /s /q "P:/.vscode"
 rd /s /q "%ROOTDIR%/ACE3/release"
-del /s /q /f "%ROOTDIR%/ACE3/include/x/*.*"
+rd /s /q "%ROOTDIR%/ACE3/include/x/cba"
 
 md "P:/x"
 md "P:/z"
 
 robocopy "%ROOTDIR%/CBA_A3" "%ROOTDIR%/ACE3/include/x/cba" *.* /S
+robocopy "%ROOTDIR%/ACE3/tools/pDummies" "P://" *.* /S
 mklink /J "P://x/A3A" "%ROOTDIR%/A3-Antistasi/A3A"
-robocopy "%ROOTDIR%/A3-Antistasi/Tools/Builder" "%ROOTDIR%/A3A/Tools/Builder" *.* /S
 mklink /J "P://z/NR6" "%ROOTDIR%/@NR6"
 mklink /J "P://.vscode" "%ROOTDIR%/.vscode"
-robocopy "%ROOTDIR%/ACE3/tools/pDummies" "P://" *.* /S
 
 :: delete ACE folders and pbo
 del /s /q /f *ace_advanced_ballistics*
