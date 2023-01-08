@@ -1,0 +1,67 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Antistasi",
+            "type": "process",
+            "options": {
+                "cwd": "${env:arma3}"
+            },
+            "command": "arma3_x64.exe",
+            "args": [
+                "P:\\x\\A3A\\addons\\maps\\Antistasi_Altis.Altis\\mission.sqm",
+                "-mod=!Workshop\\@CBA_A3;P:\\z\\ace;P:\\x\\A3A;!Workshop\\@CUP Terrains - Core;!Workshop\\@CUP Terrains - Maps;!Workshop\\@CUP Terrains - Maps 2.0;!Workshop\\@RHSAFRF;!Workshop\\@RHSUSAF;!Workshop\\@RHSGREF;!Workshop\\@RHSSAF",
+                "-debug",
+                "-name=McDAZED",
+                "-skipIntro",
+                "-filePatching",
+                "-noSplash",
+                "-showScriptErrors"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+        {
+            "label": "Build NR6",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": "pboProject",
+            "args": [
+                "P:\\z\\NR6",
+                "+M=P:\\z\\NR6",
+                "+N",
+                "+C",
+                "+K=${env:userprofile}\\Dropbox\\Save\\_Stray\\arma.biprivatekey"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+        {
+            "label": "Build ACE",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": "python",
+            "args": [
+                "z\\ace\\tools\\make.py"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
