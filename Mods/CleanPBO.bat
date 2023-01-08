@@ -16,7 +16,6 @@ rd /s /q "P:/z"
 rd /s /q "%arma3%/x"
 rd /s /q "P:/x"
 rd /s /q "P:/.vscode"
-rd /s /q "%ROOTDIR%/ACE3/release"
 rd /s /q "%ROOTDIR%/ACE3/include/x/cba"
 
 md "P:/x"
