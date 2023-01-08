@@ -1,1 +1,0 @@
-[]spawn compileFinal(preprocessFile"AFAR\init.sqf");
