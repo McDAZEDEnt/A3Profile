@@ -29,6 +29,7 @@
 *.cmd !filter !diff !merge
 *.cpp !filter !diff !merge
 *.cs !filter !diff !merge
+*.fsm !filter !diff !merge lockable
 *.ext !filter !diff !merge lockable
 *.h !filter !diff !merge
 *.hpp !filter !diff !merge
@@ -43,7 +44,7 @@
 *.sqm !filter !diff !merge lockable
 *.txt !filter !diff !merge
 *.uproject !filter !diff !merge
-*.xml !filter !diff !merge lockable
+*.xml !filter !diff !merge
 .gitattributes !filter !diff !merge
 .gitignore !filter !diff !merge
 
