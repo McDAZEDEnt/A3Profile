@@ -7,7 +7,5 @@ McDAZED.3den.Arma3Profile
 Saved/
 UserSaved/
 missions/
-!Saved/store.log
-!UserSaved/store.log
-!missions/store.log
+!*/store.log
 Screenshots/
