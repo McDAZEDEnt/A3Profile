@@ -1,8 +1,0 @@
-rhsgref_1Rnd_Slug >> rhs_30rnd_545x39_7u1_ak
-rhsgref_1Rnd_00Buck >> rhc_acc_okp7_dovetail
-rhsgref_5Rnd_792x57_kar98k >> rhs_mag_20rnd_762x51_m80_fnfal
-rhs_weap_kar98k >> rhs_weap_l1a1_wood
-rhs_weap_Izh18 >> rhs_weap_aks74n
-rhs_weap_tt33 >> rhsgref_l1a1_l2a2
-
-*_Reb_*
