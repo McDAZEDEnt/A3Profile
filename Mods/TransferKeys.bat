@@ -10,7 +10,7 @@ attrib -h "%arma3%\!Workshop"
 
 ROBOCOPY "%arma3%\!Workshop" "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\!Workshop" *.arma.bisign /S
 
-ROBOCOPY "%arma3%" "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\keys" *.bikey
+xcopy "%arma3%\*.bikey" "%userprofile%\Arma 3 - Other Profiles\%a3name%\userconfig\keys" /S
 
 attrib -h "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\!Workshop"
 
