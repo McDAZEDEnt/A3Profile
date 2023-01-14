@@ -4,18 +4,12 @@ if not "%1"=="am_admin" (
     exit /b
 )
 
-rd /s /q "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\!Workshop"
+cd /d "%arma3%"
 
 attrib -h "%arma3%\!Workshop"
 
-ROBOCOPY "%arma3%\!Workshop" "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\!Workshop" *.arma.bisign /S
-
-xcopy "%arma3%\*.bikey" "%userprofile%\Arma 3 - Other Profiles\%a3name%\userconfig\keys" /S
-
-attrib -h "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\!Workshop"
+for /r %d in (*.bikey) do copy "%d" "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\keys"
 
 cd /d "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\!Workshop"
 
-rd /s /q @ace_x
-rd /s /q @NR6
-rd /s /q @Antistasi
+pause
