@@ -16,7 +16,6 @@ rd /s /q "%Arma3%/!Workshop"
 
 :: LARGE PAGES
 cls
-timeout /t 2
 echo .
 echo ~~~~~~~~~!!!!!!!!!~~~~~~~~~
 echo ~~~~~~~~~READ CAREFULLY!~~~~~~~~~
@@ -24,13 +23,12 @@ echo .
 echo A white pop up will appear after you press 'Enter'.
 echo Answer 'Yes' to the prompt, and confirm the changes.
 echo .
+timeout /t 6
 pause
-timeout /t 4
 cd /d "%ROOTDIR%"
 hugepages.reg
 :: Repair in launcher
 cls
-timeout /t 2
 echo .
 echo ~~~~~~~~~!!!!!!!!!~~~~~~~~~
 echo ~~~~~~~~~READ CAREFULLY!~~~~~~~~~
@@ -40,7 +38,7 @@ echo Follow steps in HowTo1.jpg and HowTo2.jpg
 echo Repair 'NR6' and 'ace_x'
 echo.
 start steam://rungameid/107410
-timeout /t 4
+timeout /t 6
 pause
 TASKKILL /F /IM steam.exe
 TASKKILL /F /IM arma3launcher.exe
