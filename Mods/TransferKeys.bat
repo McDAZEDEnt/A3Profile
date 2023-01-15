@@ -10,6 +10,4 @@ attrib -h "%arma3%\!Workshop"
 
 for /r %%d in (*.bikey) do copy "%%d" "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\keys"
 
-cd /d "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\!Workshop"
-
 pause

@@ -34,10 +34,13 @@ echo ~~~~~~~~~!!!!!!!!!~~~~~~~~~
 echo ~~~~~~~~~READ CAREFULLY!~~~~~~~~~
 echo .
 echo DO NOT PROCEED UNTIL AFTER THE LAUNCHER OPENS!!
-echo Follow steps in HowTo1.jpg and HowTo2.jpg
-echo Repair 'NR6' and 'ace_x'
+echo 1. Select your mods inside browser and download html file.
+echo 2. Follow steps in HowTo1.jpg and HowTo2.jpg, using downloaded html.
+echo 3. Repair any broken mods.
+echo 4. Close the Launcher
 echo.
 start steam://rungameid/107410
+start "" https://arma3pregen.devs.space/?McDAZED=2918578873*,2918580772
 timeout /t 6
 pause
 TASKKILL /F /IM steam.exe
