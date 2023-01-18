@@ -1,26 +1,18 @@
-cd $env:arma3\!Workshop
+cd C:\Users\Public\arma3mods
 
-get-childitem -directory | foreach {rename-item $_ $_.name.replace(" ","")}
+Get-ChildItem * -Filter "*`[*`]*" | Rename-Item -NewName { $_.name -replace '\[','' -replace '\]','' }
 
+get-childitem -directory | foreach {rename-item $_ $_.name.replace(")","")}
 
-get-childitem -directory | foreach {rename-item $_ $_.name.replace("["," ")}
+get-childitem -directory | foreach {rename-item $_ $_.name.replace("-","")}
 
-get-childitem -directory | foreach {rename-item $_ $_.name.replace("]"," ")}
+get-childitem -directory | foreach {rename-item $_ $_.name.replace("!","")}
 
-get-childitem -directory | foreach {rename-item $_ $_.name.replace("("," ")}
+get-childitem -directory | foreach {rename-item $_ $_.name.replace("'","")}
 
-get-childitem -directory | foreach {rename-item $_ $_.name.replace(")"," ")}
+get-childitem -directory | foreach {rename-item $_ $_.name.replace(".","")}
 
-get-childitem -directory | foreach {rename-item $_ $_.name.replace("-"," ")}
-
-get-childitem -directory | foreach {rename-item $_ $_.name.replace("!"," ")}
-
-get-childitem -directory | foreach {rename-item $_ $_.name.replace("'"," ")}
-
-get-childitem -directory | foreach {rename-item $_ $_.name.replace("."," ")}
-
-
-get-childitem -directory | foreach {rename-item $_ $_.name.replace(" ","")}
+get-childitem -directory | foreach {rename-item $_ $_.name.replace(" ","_")}
 
 
 pause

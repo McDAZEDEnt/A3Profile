@@ -40,7 +40,6 @@ echo 3. Repair any broken mods.
 echo 4. Close the Launcher
 echo.
 start steam://rungameid/107410
-start "" https://arma3pregen.devs.space/?McDAZED=2918578873*,2918580772
 timeout /t 6
 pause
 TASKKILL /F /IM steam.exe
