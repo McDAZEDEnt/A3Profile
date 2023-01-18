@@ -734,7 +734,7 @@ if (_SpawnMode) exitwith {
         
     };
 
-sleep 100;
+sleep 60;
 
 _StartForces = (_side countSide allUnits);
 

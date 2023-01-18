@@ -12,6 +12,8 @@ robocopy "%ROOTDIR%/A3-Antistasi/build/A3A" "%ROOTDIR%/A3-Antistasi/A3A" *.* /S
 
 pause
 
+cd /d "%arma3% Tools\Publisher"
+
 :: ace
 PublisherCmd update /id:2867649409 /changeNote:change /path:P:\z\ace\release\@ace /nologo /nosummary
 :: Antistasi
