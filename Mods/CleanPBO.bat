@@ -23,7 +23,7 @@ md "P:/z"
 
 robocopy "%ROOTDIR%/CBA_A3" "%ROOTDIR%/ACE3/include/x/cba" *.* /S
 robocopy "%ROOTDIR%/ACE3/tools/pDummies" "P://" *.* /S
-mklink /J "P://x/A3A" "%ROOTDIR%/A3-Antistasi/A3A"
+mklink /J "P://x/A3A" "%ROOTDIR%/A3-Antistasi-Plus/A3A"
 mklink /J "P://z/NR6" "%ROOTDIR%/@NR6"
 mklink /J "P://.vscode" "%ROOTDIR%/.vscode"
 
@@ -45,6 +45,7 @@ del /s /q /f *ace_gforces*
 del /s /q /f *ace_goggles*
 del /s /q /f *ace_gunbag*
 del /s /q /f *ace_hearing*
+del /s /q /f *ace_hitreactions*
 del /s /q /f *ace_hunterkiller*
 del /s /q /f *ace_huntir*
 del /s /q /f *ace_intelitems*
@@ -59,6 +60,7 @@ del /s /q /f *ace_microdagr*
 del /s /q /f *ace_minedetector*
 del /s /q /f *ace_movement*
 del /s /q /f *ace_mx2a*
+del /s /q /f *ace_nametags*
 del /s /q /f *ace_nightvision*
 del /s /q /f *ace_noidle*
 del /s /q /f *ace_norearm*
@@ -100,6 +102,7 @@ rd /s /q gforces
 rd /s /q goggles
 rd /s /q gunbag
 rd /s /q hearing
+rd /s /q hitreactions
 rd /s /q hunterkiller
 rd /s /q huntir
 rd /s /q intelitems
@@ -114,6 +117,7 @@ rd /s /q microdagr
 rd /s /q minedetector
 rd /s /q movement
 rd /s /q mx2a
+rd /s /q nametags
 rd /s /q nightvision
 rd /s /q noidle
 rd /s /q norearm
