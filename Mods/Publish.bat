@@ -7,8 +7,8 @@ echo %CurrDirName%
 
 start steam://rungameid/
 
-Powershell.exe -executionpolicy remotesigned -File "%ROOTDIR%\A3-Antistasi\Tools\Builder\buildAddons.ps1
-robocopy "%ROOTDIR%/A3-Antistasi/build/A3A" "%ROOTDIR%/A3-Antistasi/A3A" *.* /S
+Powershell.exe -executionpolicy remotesigned -File "%ROOTDIR%\A3-Antistasi-Plus\Tools\Builder\buildAddons.ps1
+robocopy "%ROOTDIR%/A3-Antistasi-Plus/build/A3A-Plus" "%ROOTDIR%/A3-Antistasi-Plus/A3A" *.* /S
 
 pause
 
