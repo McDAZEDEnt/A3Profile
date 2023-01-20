@@ -11,22 +11,23 @@ if not "%1"=="am_admin" (
 taskkill /f /im "Dropbox.exe"
 
 :: Dev setup
-rd /s /q "%arma3%/z"
-rd /s /q "P:/z"
-rd /s /q "%arma3%/x"
-rd /s /q "P:/x"
-rd /s /q "P:/.vscode"
-rd /s /q "%ROOTDIR%/ACE3/include/x/cba"
+rd /s /q "%arma3%\z"
+rd /s /q "P:\z"
+rd /s /q "%arma3%\x"
+rd /s /q "P:\x"
+rd /s /q "P:\.vscode"
+rd /s /q "%ROOTDIR%\ACE3\include\x\cba"
 
-md "P:/x"
-md "P:/z"
+md "P:\x"
+md "P:\z"
 
-robocopy "%ROOTDIR%/CBA_A3" "%ROOTDIR%/ACE3/include/x/cba" *.* /S
-robocopy "%ROOTDIR%/ACE3/tools/pDummies" "P://" *.* /S
-robocopy "%ROOTDIR%/.vscode/z" "P://z" *$* /S
-mklink /J "P://x/A3A" "%ROOTDIR%/A3-Antistasi-Plus/A3A"
-mklink /J "P://z/NR6" "%ROOTDIR%/@NR6"
-mklink /J "P://.vscode" "%ROOTDIR%/.vscode"
+pause
+
+robocopy "%ROOTDIR%\CBA_A3" "%ROOTDIR%\ACE3\include\x\cba" *.* /S
+robocopy "%ROOTDIR%\ACE3\tools\pDummies" "P:\\" *.* /S
+mklink /J "P:\x\A3A" "%ROOTDIR%\A3-Antistasi-Plus\A3A"
+mklink /J "P:\z\NR6" "%ROOTDIR%\@NR6"
+mklink /J "P:\.vscode" "%ROOTDIR%\.vscode"
 
 :: delete ACE folders and pbo
 del /s /q /f *ace_advanced_ballistics*
@@ -85,7 +86,7 @@ del /s /q /f *ace_xm157*
 del /s /q /f *ace_yardage450*
 
 :: delete ACE folders and pbo
-cd /d "%ROOTDIR%/ACE3/Addons"
+cd /d "%ROOTDIR%\ACE3\Addons"
 rd /s /q advanced_ballistics
 rd /s /q advanced_fatigue
 rd /s /q aircraft
@@ -142,11 +143,13 @@ rd /s /q xm157
 rd /s /q yardage450
 
 :: ACE Setup
-cd /d "%ROOTDIR%/ACE3/tools"
+cd /d "%ROOTDIR%\ACE3\tools"
 python setup.py
 
-rd /s /q "%arma3%/z"
-rd /s /q "%arma3%/x"
+robocopy "P:\.vscode\z\ace" "P:\z\ace" * /S
+
+rd /s /q "%arma3%\z"
+rd /s /q "%arma3%\x"
 
 :: Sign mods
 ::cd /d "%arma3% Tools\DSSignFile"
