@@ -329,7 +329,7 @@ keySeagullDown[]={};
 keySeagullFastForward[]={};
 keySeagullForward[]={};
 keySeagullUp[]={};
-keySelectAll[]={41};
+keySelectAll[]={};
 keySelectGroupUnit0[]={68};
 keySelectGroupUnit1[]={59};
 keySelectGroupUnit2[]={60};
@@ -455,12 +455,12 @@ class DifficultyPresets
 	{
 		class Options
 		{
-			groupIndicators=1;
-			friendlyTags=1;
+			groupIndicators=0;
+			friendlyTags=0;
 			enemyTags=0;
 			detectedMines=1;
-			commands=1;
-			waypoints=1;
+			commands=2;
+			waypoints=2;
 			weaponInfo=1;
 			stanceIndicator=1;
 			reducedDamage=0;
@@ -483,8 +483,8 @@ class DifficultyPresets
 	};
 	class CustomAILevel
 	{
-		skillAI=0.34999999;
-		precisionAI=0.75;
+		skillAI=0.5;
+		precisionAI=0.5;
 	};
 };
 battleyeLicense=1;
@@ -511,16 +511,20 @@ controller="Default";
 sensitivity="Medium";
 singleVoice=0;
 vibrations=1;
-mouseSensitivityX=0.5;
-mouseSensitivityY=0.5;
 bootCampWarning=1;
+class ControllerSchemes
+{
+};
+version=2;
 headBob=0;
 floatingZoneArea=0;
+mouseSensitivityX=0.5;
+mouseSensitivityY=0.5;
 sceneComplexity=1300000;
 shadowZDistance=100;
 viewDistance=1000.0001;
 preferredObjectViewDistance=1000.0001;
-pipViewDistance=500.00006;
+pipViewDistance=500;
 terrainGrid=6.25;
 volumeCD=2.5;
 volumeFX=5;
