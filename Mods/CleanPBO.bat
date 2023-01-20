@@ -23,6 +23,7 @@ md "P:/z"
 
 robocopy "%ROOTDIR%/CBA_A3" "%ROOTDIR%/ACE3/include/x/cba" *.* /S
 robocopy "%ROOTDIR%/ACE3/tools/pDummies" "P://" *.* /S
+robocopy "%ROOTDIR%/.vscode/z" "P://z" *$* /S
 mklink /J "P://x/A3A" "%ROOTDIR%/A3-Antistasi-Plus/A3A"
 mklink /J "P://z/NR6" "%ROOTDIR%/@NR6"
 mklink /J "P://.vscode" "%ROOTDIR%/.vscode"
@@ -143,6 +144,9 @@ rd /s /q yardage450
 :: ACE Setup
 cd /d "%ROOTDIR%/ACE3/tools"
 python setup.py
+
+rd /s /q "%arma3%/z"
+rd /s /q "%arma3%/x"
 
 :: Sign mods
 ::cd /d "%arma3% Tools\DSSignFile"
