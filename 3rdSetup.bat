@@ -33,9 +33,11 @@ echo ~~~~~~~~~!!!!!!!!!~~~~~~~~~
 echo ~~~~~~~~~READ CAREFULLY!~~~~~~~~~
 echo .
 echo DO NOT PROCEED UNTIL AFTER THE LAUNCHER OPENS!!
-echo 1. Select your mods inside browser and download html file.
-echo 2. Follow steps in HowTo1.jpg and HowTo2.jpg, using downloaded html.
+echo 1. Import the 'Client.html' preset into the arma3 launcher
+echo 2. Follow steps in HowTo1.jpg and HowTo2.jpg.
 echo 3. Repair any broken mods.
+echo (There will be some red dependency errors due to modified ace3.)
+echo (This is normal behaviour, you can safely ignore it.)
 echo 4. Close the Launcher
 echo.
 start steam://rungameid/107410
