@@ -1,6 +1,0 @@
-profileNamespace getVariable ["cba_keybinding_registry_v3",0];
-
-profileNamespace setVariable ["cba_keybinding_registry_v3",pasteHere];
-
-profileNamespace setVariable ["cba_keybinding_registry_v3",pasteHere];
-saveProfileNamespace;

@@ -24,7 +24,6 @@ echo A white pop up will appear after you press 'Enter'.
 echo Answer 'Yes' to the prompt, and confirm the changes.
 echo .
 timeout /t 6
-pause
 cd /d "%ROOTDIR%"
 hugepages.reg
 :: Repair in launcher

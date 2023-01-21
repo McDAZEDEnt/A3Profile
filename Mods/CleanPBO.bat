@@ -43,6 +43,7 @@ del /s /q /f *ace_fcs*
 del /s /q /f *ace_field_rations*
 del /s /q /f *ace_fire*
 del /s /q /f *ace_flashlights*
+del /s /q /f *ace_flashsuppressors*
 del /s /q /f *ace_gforces*
 del /s /q /f *ace_goggles*
 del /s /q /f *ace_gunbag*
@@ -66,6 +67,7 @@ del /s /q /f *ace_nametags*
 del /s /q /f *ace_nightvision*
 del /s /q /f *ace_noidle*
 del /s /q /f *ace_norearm*
+del /s /q /f *ace_optics*
 del /s /q /f *ace_overheating*
 del /s /q /f *ace_parachute*
 del /s /q /f *ace_quickmount*
@@ -100,6 +102,7 @@ rd /s /q fcs
 rd /s /q field_rations
 rd /s /q fire
 rd /s /q flashlights
+rd /s /q flashsuppressors
 rd /s /q gforces
 rd /s /q goggles
 rd /s /q gunbag
@@ -123,6 +126,7 @@ rd /s /q nametags
 rd /s /q nightvision
 rd /s /q noidle
 rd /s /q norearm
+rd /s /q optics
 rd /s /q overheating
 rd /s /q parachute
 rd /s /q quickmount
