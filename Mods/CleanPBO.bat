@@ -31,6 +31,7 @@ mklink /J "P:\.vscode" "%ROOTDIR%\.vscode"
 
 :: delete ACE folders and pbo
 del /s /q /f *ace_advanced_ballistics*
+del /s /q /f *ace_ballistics*
 del /s /q /f *ace_advanced_fatigue*
 del /s /q /f *ace_aircraft*
 del /s /q /f *ace_atragmx*
@@ -67,7 +68,6 @@ del /s /q /f *ace_nametags*
 del /s /q /f *ace_nightvision*
 del /s /q /f *ace_noidle*
 del /s /q /f *ace_norearm*
-del /s /q /f *ace_optics*
 del /s /q /f *ace_overheating*
 del /s /q /f *ace_parachute*
 del /s /q /f *ace_quickmount*
@@ -86,11 +86,11 @@ del /s /q /f *ace_weather*
 del /s /q /f *ace_winddeflection*
 del /s /q /f *ace_xm157*
 del /s /q /f *ace_yardage450*
-del /s /q /f *ace_realisticnames*
 
 :: delete ACE folders and pbo
 cd /d "%ROOTDIR%\ACE3\Addons"
 rd /s /q advanced_ballistics
+rd /s /q ballistics
 rd /s /q advanced_fatigue
 rd /s /q aircraft
 rd /s /q atragmx
@@ -127,7 +127,6 @@ rd /s /q nametags
 rd /s /q nightvision
 rd /s /q noidle
 rd /s /q norearm
-rd /s /q optics
 rd /s /q overheating
 rd /s /q parachute
 rd /s /q quickmount
@@ -146,7 +145,6 @@ rd /s /q weather
 rd /s /q winddeflection
 rd /s /q xm157
 rd /s /q yardage450
-rd /s /q realisticnames
 
 :: ACE Setup
 cd /d "%ROOTDIR%\ACE3\tools"

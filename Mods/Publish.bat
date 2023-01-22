@@ -4,8 +4,12 @@ set ROOTDIR=%ROOTDIR:~0,-1%
 cd /d "%ROOTDIR%"
 for %%I in (.) do set CurrDirName=%%~nxI
 echo %CurrDirName%
+if not "%1"=="am_admin" (
+    powershell -Command "Start-Process -Verb RunAs -FilePath '%0' -ArgumentList 'am_admin'"
+    exit /b
+)
 
-start steam://rungameid/
+start "" "steam://rungameid/233800"
 
 Powershell.exe -executionpolicy remotesigned -File "%ROOTDIR%\A3-Antistasi-Plus\Tools\Builder\buildAddons.ps1
 robocopy "%ROOTDIR%/A3-Antistasi-Plus/build/A3A-Plus" "%ROOTDIR%/A3-Antistasi-Plus/A3A" *.* /S
