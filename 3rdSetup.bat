@@ -57,13 +57,14 @@ mklink /J "%arma3%/mpmissions" "%ROOTDIR%/mpmissions"
 mklink /J "%arma3%/keys" "%ROOTDIR%/userconfig/keys"
 :: UNHIDE !WORKSHOP & Copy missing keys
 attrib -h "%Arma3%/!Workshop"
-ROBOCOPY "%ROOTDIR%/userconfig/!Workshop" "%arma3%/!Workshop" *.bisign /E
+:: ROBOCOPY "%ROOTDIR%/userconfig/!Workshop" "%arma3%/!Workshop" *.bisign /E
 :: make profile from template
+cd /d "%userprofile%/Documents"
+rd /s /q "Arma 3"
+mkdir "Arma 3"
 cd /d "%ROOTDIR%"
 del *.Arma3Profile
 del *.vars
-del Arma3.cfg
-del BISProfile.json
 robocopy "%ROOTDIR%/userconfig" "%ROOTDIR%" *.Arma3Profile
 ren "config.Arma3Profile" "%CurrDirName%.Arma3Profile"
 ren "config.3den.Arma3Profile" "%CurrDirName%.3den.Arma3Profile"
