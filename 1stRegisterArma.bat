@@ -9,7 +9,7 @@ if not "%1"=="am_admin" (
 echo	Where is Arma 3 installed? (filepath with no quotes)
 echo	(If unsure, open Steam and right click on Arma 3.)
 set /p A3=	-)
-setx Arma3 "%A3%"
+setx arma3 "%A3%"
 
 echo	Done!
 pause
