@@ -33,7 +33,7 @@ echo ~~~~~~~~~!!!!!!!!!~~~~~~~~~
 echo ~~~~~~~~~READ CAREFULLY!~~~~~~~~~
 echo .
 echo DO NOT PROCEED UNTIL AFTER THE LAUNCHER OPENS!!
-echo 1. Import the 'Client.html' preset into the arma3 launcher
+echo 1. Import the 'ModList.html' preset into the arma3 launcher
 echo 2. Follow steps in HowTo1.jpg and HowTo2.jpg.
 echo 3. Repair any broken mods.
 echo (There will be some red dependency errors due to modified ace3.)

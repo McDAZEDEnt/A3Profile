@@ -466,7 +466,7 @@ class DifficultyPresets
 			reducedDamage=0;
 			staminaBar=1;
 			weaponCrosshair=0;
-			visionAid=0;
+			visionAid=1;
 			thirdPersonView=1;
 			cameraShake=1;
 			scoreTable=1;
@@ -477,7 +477,7 @@ class DifficultyPresets
 			mapContentMines=1;
 			autoReport=1;
 			multipleSaves=0;
-			tacticalPing=3;
+			tacticalPing=1;
 		};
 		aiLevelPreset="Custom";
 	};
