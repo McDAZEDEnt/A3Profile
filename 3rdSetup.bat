@@ -60,8 +60,13 @@ attrib -h "%Arma3%/!Workshop"
 :: ROBOCOPY "%ROOTDIR%/userconfig/!Workshop" "%arma3%/!Workshop" *.bisign /E
 :: make profile from template
 cd /d "%userprofile%/Documents"
-rd /s /q "Arma 3"
 mkdir "Arma 3"
+cd /d "%userprofile%/Documents/Arma 3"
+del /s /q /f "%username%.Arma3Profile"
+del /s /q /f "%username%.vars.Arma3Profile"
+del /s /q /f "%username%.3den.Arma3Profile"
+rd /s /q "Saved"
+rd /s /q "UserSaved"
 cd /d "%ROOTDIR%"
 del *.Arma3Profile
 del *.vars
