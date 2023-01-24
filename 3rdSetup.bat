@@ -56,7 +56,11 @@ mklink /J "%arma3%/userconfig" "%ROOTDIR%/userconfig"
 mklink /J "%arma3%/mpmissions" "%ROOTDIR%/mpmissions"
 mklink /J "%arma3%/keys" "%ROOTDIR%/userconfig/keys"
 :: UNHIDE !WORKSHOP & Copy missing keys
-attrib -h "%Arma3%/!Workshop"
+cd /d "%arma3%"
+attrib -h "%arma3%\!Workshop"
+rd /s /q "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\keys"
+mkdir "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\keys"
+for /r %%d in (*.bikey) do copy "%%d" "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\keys"
 :: ROBOCOPY "%ROOTDIR%/userconfig/!Workshop" "%arma3%/!Workshop" *.bisign /E
 :: make profile from template
 cd /d "%userprofile%/Documents"

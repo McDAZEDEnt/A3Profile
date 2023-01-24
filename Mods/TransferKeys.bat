@@ -8,6 +8,8 @@ cd /d "%arma3%"
 
 attrib -h "%arma3%\!Workshop"
 
+rd /s /q "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\keys"
+
 mkdir "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\keys"
 
 for /r %%d in (*.bikey) do copy "%%d" "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\keys"
