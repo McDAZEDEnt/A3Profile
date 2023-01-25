@@ -8,4 +8,4 @@ git add .gitignore
 git commit -am "commit"
 git push
 
-## read -p "Command Finished..."
+read -p "Command Finished..."
