@@ -329,7 +329,7 @@ keySeagullDown[]={};
 keySeagullFastForward[]={};
 keySeagullForward[]={};
 keySeagullUp[]={};
-keySelectAll[]={705888301};
+keySelectAll[]={705888301,87};
 keySelectGroupUnit0[]={68};
 keySelectGroupUnit1[]={59};
 keySelectGroupUnit2[]={60};
@@ -514,9 +514,31 @@ keyA3A_core_earPlugs[]={};
 keyA3A_core_customHintDismiss[]={14};
 keyA3A_core_commanderRebelMenu[]={15};
 keyA3A_core_projectileCameraEscape[]={};
-headBob=0;
+customScheme=1;
+controller="Default";
+sensitivity="Medium";
+vibrations=1;
+class ControllerSchemes
+{
+};
+keyemr_main_action[]={};
+keyemr_main_climb[]={};
+keyemr_main_jump[]={};
+keyemr_main_assist[]={};
+keyemr_main_holster[]={};
+keyemr_main_interact[]={};
+class JoysticksList
+{
+};
+class trackIRClass
+{
+	enabled=0;
+	ownSettings=1;
+};
 mouseSensitivityX=0.5;
 mouseSensitivityY=0.5;
+headBob=0;
+floatingZoneArea=0;
 sceneComplexity=1300000;
 shadowZDistance=100;
 viewDistance=1000.0001;
@@ -527,6 +549,7 @@ volumeCD=2.5;
 volumeFX=5;
 volumeSpeech=7.5;
 volumeVoN=5;
+singleVoice=0;
 vonRecThreshold=0.15000001;
 volumeMapDucking=0.5;
 gamma=1;
@@ -534,5 +557,10 @@ ppBrightness=0.89999998;
 ppContrast=0.89999998;
 ppSaturation=1.1999999;
 brightness=1.3;
-fovTop=1.00;
-fovLeft=1.00;
+fovTop=1.03;
+fovLeft=1.54;
+uiTopLeftX=0.2547619;
+uiTopLeftY=0.22499999;
+uiBottomRightX=0.74523807;
+uiBottomRightY=0.77499998;
+IGUIScale=0.55000001;
