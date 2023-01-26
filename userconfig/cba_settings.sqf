@@ -7,10 +7,10 @@ force ace_advanced_throwing_showThrowArc = true;
 
 // ACE Armor Adjuster
 force AAA_VAR_AI_ARMOR_COEF = 15;
-force AAA_VAR_ARMOR_THRESHOLD_VALUE = 0;
+force AAA_VAR_ARMOR_THRESHOLD_VALUE = 15;
 force AAA_VAR_BASE_ARMOR_VALUE = 0;
 force AAA_VAR_BLUFOR_ARMOR_COEF = 15;
-force AAA_VAR_CIV_ARMOR_COEF = 0;
+force AAA_VAR_CIV_ARMOR_COEF = 15;
 force AAA_VAR_DEBUG = false;
 force AAA_VAR_EXPLOSIVE_MULT = 0;
 force AAA_VAR_FORCE_BASE_ARMOR = false;
@@ -297,7 +297,7 @@ force ace_magazinerepack_timePerMagazine = 1;
 // ACE Medical
 force ace_medical_ai_enabledFor = 2;
 force ace_medical_AIDamageThreshold = 1;
-force ace_medical_bleedingCoefficient = 5;
+force ace_medical_bleedingCoefficient = 1;
 force ace_medical_blood_bloodLifetime = 900;
 force ace_medical_blood_enabledFor = 2;
 force ace_medical_blood_maxBloodObjects = 50;
@@ -345,7 +345,7 @@ force ace_medical_spontaneousWakeUpChance = 1;
 force ace_medical_spontaneousWakeUpEpinephrineBoost = 1;
 force ace_medical_statemachine_AIUnconsciousness = true;
 force ace_medical_statemachine_cardiacArrestBleedoutEnabled = false;
-force ace_medical_statemachine_cardiacArrestTime = 65;
+force ace_medical_statemachine_cardiacArrestTime = 150;
 force ace_medical_statemachine_fatalInjuriesAI = 1;
 force ace_medical_statemachine_fatalInjuriesPlayer = 1;
 force ace_medical_treatment_advancedBandages = 0;
@@ -358,7 +358,7 @@ force ace_medical_treatment_allowSelfPAK = 1;
 force ace_medical_treatment_allowSelfStitch = 0;
 force ace_medical_treatment_allowSharedEquipment = 0;
 force ace_medical_treatment_clearTrauma = 2;
-force ace_medical_treatment_consumePAK = 1;
+force ace_medical_treatment_consumePAK = 0;
 force ace_medical_treatment_consumeSurgicalKit = 0;
 force ace_medical_treatment_convertItems = 0;
 force ace_medical_treatment_cprSuccessChanceMax = 1;
@@ -429,6 +429,7 @@ force ace_trenches_smallEnvelopeRemoveDuration = 12;
 
 // ACE Uncategorized
 force ace_fastroping_requireRopeItems = false;
+force ace_hitreactions_minDamageToTrigger = 0.1;
 force ace_inventory_inventoryDisplaySize = 0;
 force ace_laser_dispersionCount = 0;
 force ace_laser_showLaserOnMap = 0;
@@ -564,7 +565,7 @@ force EnableDeadHide = true;
 force EnableHCOverride = true;
 force EnablePlayerHide = false;
 force EnableVehicleHide = true;
-ForceRenderDistance = 10;
+force ForceRenderDistance = 50;
 force HigherQualityAI = false;
 force HigherQualityDead = false;
 force HigherQualityPlayer = false;
@@ -572,12 +573,12 @@ force HigherQualityVehicles = false;
 
 // AWR Settings
 force awr_ai_goProne = true;
-force awr_ai_handgunChance = 0;
+force awr_ai_handgunChance = 100;
 force awr_ai_incapacitationType = 1;
 force awr_ai_isEnabled = true;
 force awr_ai_limbHandleMode = 1;
 force awr_ai_painThreshold = 0;
-force awr_ai_playFallAnimation = true;
+force awr_ai_playFallAnimation = false;
 force awr_ai_weaponHandleMode = 1;
 force awr_main_ai_armsDamageThreshold = 1;
 force awr_main_ai_bodyDamageThreshold = 1;
@@ -591,12 +592,12 @@ force awr_main_player_legsDamageThreshold = 1;
 force awr_player_concussionEnabled = true;
 force awr_player_concussionTime = 5;
 force awr_player_goProne = true;
-force awr_player_handgunChance = 0;
+force awr_player_handgunChance = 100;
 force awr_player_incapacitationType = 1;
 force awr_player_isEnabled = true;
 force awr_player_limbHandleMode = 1;
 force awr_player_painThreshold = 0;
-force awr_player_playFallAnimation = true;
+force awr_player_playFallAnimation = false;
 force awr_player_weaponHandleMode = 2;
 
 // Community Base Addons
@@ -604,7 +605,7 @@ cba_diagnostic_ConsoleIndentType = -1;
 force cba_diagnostic_watchInfoRefreshRate = 0.2;
 force cba_disposable_dropUsedLauncher = 2;
 force cba_disposable_replaceDisposableLauncher = true;
-cba_events_repetitionMode = 2;
+cba_events_repetitionMode = 1;
 force cba_network_loadoutValidation = 0;
 cba_optics_usePipOptics = false;
 cba_ui_notifyLifetime = 4;
@@ -653,78 +654,6 @@ force PDT_ENVG_Effect = "mwEffect";
 force improved_ace_arsenal_category_main_enableMedicalTab = true;
 force improved_ace_arsenal_category_main_enableSurvivalTab = false;
 force improved_ace_arsenal_category_main_enableToolTab = true;
-improved_ace_arsenal_category_main_medicalTabItemsKATSetting = "[
-""Attachable_Helistretcher"",
-""kat_aatKit"",""kat_accuvac"",""kat_AED"",""kat_X_AED"",""kat_crossPanel"",
-""kat_chestSeal"",""kat_larynx"",""kat_guedel"",""kat_Pulseoximeter"",""kat_stethoscope"",
-""kat_scalpel"",""kat_retractor"",""kat_clamp"",""kat_plate"",""kat_vacuum"",
-""kat_bloodIV_O"",""kat_bloodIV_A"",""kat_bloodIV_AB"",""kat_bloodIV_B"",
-""kat_bloodIV_O_N"",""kat_bloodIV_A_N"",""kat_bloodIV_AB_N"",""kat_bloodIV_B_N"",
-""kat_bloodIV_O_500"",""kat_bloodIV_A_500"",""kat_bloodIV_AB_500"",""kat_bloodIV_B_500"",
-""kat_bloodIV_O_N_500"",""kat_bloodIV_A_N_500"",""kat_bloodIV_AB_N_500"",""kat_bloodIV_B_N_500"",
-""kat_bloodIV_O_250"",""kat_bloodIV_A_250"",""kat_bloodIV_AB_250"",""kat_bloodIV_B_250"",
-""kat_bloodIV_O_N_250"",""kat_bloodIV_A_N_250"",""kat_bloodIV_AB_N_250"",""kat_bloodIV_B_N_250"",
-""KAT_Empty_bloodIV_250"",""KAT_Empty_bloodIV_500"",
-""kat_CarbonateItem"",""kat_PainkillerItem"",""kat_IV_16"",""kat_IO_FAST"",""kat_naloxone"",""kat_EACA"",""kat_TXA"",
-""kat_norepinephrine"",""kat_phenylephrine"",""kat_nitroglycerin"",""kat_amiodarone"",""kat_lidocaine"",""kat_atropine"",
-""kat_ketamine"",""kat_fentanyl"",""kat_nalbuphine"",""kat_lorazepam"",""kat_flumazenil"",""kat_etomidate"",
-""kat_phenylephrine_inject""
-]";
-improved_ace_arsenal_category_main_medicalTabItemsSetting = "[
-""FirstAidKit"",
-""Medikit"",
-""ACE_elasticBandage"",
-""ACE_packingBandage"",
-""ACE_quikclot"",
-""ACE_fieldDressing"",
-""ACE_bloodIV"",
-""ACE_bloodIV_500"",
-""ACE_bloodIV_250"",
-""ACE_plasmaIV"",
-""ACE_plasmaIV_500"",
-""ACE_plasmaIV_250"",
-""ACE_salineIV"",
-""ACE_salineIV_500"",
-""ACE_salineIV_250"",
-""ACE_epinephrine"",
-""ACE_morphine"",
-""ACE_adenosine"",
-""ACE_splint"",
-""ACE_tourniquet"",
-""ACE_bodyBag"",
-""ACE_surgicalKit"",
-""ACE_personalAidKit""
-]";
-improved_ace_arsenal_category_main_survivalTabItemsSetting = "[
-""ACE_Banana"",
-""ACE_Can_Franta"",
-""ACE_Can_RedGull"",
-""ACE_Can_Spirit"",
-""ACE_Canteen"",
-""ACE_Canteen_Empty"",
-""ACE_Canteen_Half"",
-""ACE_Humanitarian_Ration"",
-""ACE_MRE_BeefStew"",
-""ACE_MRE_ChickenTikkaMasala"",
-""ACE_MRE_ChickenHerbDumplings"",
-""ACE_MRE_CreamChickenSoup"",
-""ACE_MRE_CreamTomatoSoup"",
-""ACE_MRE_LambCurry"",
-""ACE_MRE_MeatballsPasta"",
-""ACE_MRE_SteakVegetables"",
-""ACE_Sunflower_Seeds"",
-""ACE_WaterBottle"",
-""ACE_WaterBottle_Empty"",
-""ACE_WaterBottle_Half""
-]";
-improved_ace_arsenal_category_main_toolTabItemsSetting = "[
-""MineDetector"",
-""ToolKit"",
-""ACE_DefusalKit"",
-""ACE_EntrenchingTool"",
-""ACE_Fortify"",
-""ACE_wirecutter""
-]";
 
 // LAMBS Danger
 force lambs_danger_cqbRange = 50;
@@ -758,7 +687,7 @@ force lambs_main_disableAIDodge = false;
 force lambs_main_disableAIFleeing = false;
 force lambs_main_disableAIGestures = false;
 force lambs_main_disableAutonomousMunitionSwitching = false;
-force lambs_main_disablePlayerGroupSuppression = true;
+force lambs_main_disablePlayerGroupSuppression = false;
 force lambs_main_indoorMove = 0;
 force lambs_main_maxRevealValue = 1;
 force lambs_main_minFriendlySuppressionDistance = 5;
@@ -807,8 +736,8 @@ force no_actions_main_UnloadUnconsciousUnits = true;
 
 // No More Aircraft Bouncing
 force NMAB_setting_classExclusionsStr = "";
-force NMAB_setting_pfxHelicopters = false;
-force NMAB_setting_pfxPlanes = false;
+force NMAB_setting_pfxHelicopters = true;
+force NMAB_setting_pfxPlanes = true;
 
 // Saro Tweak Map FPS
 force saroTweakMapFPS_var_building_percentage = 0;
@@ -886,7 +815,7 @@ force SQFB_opt_iconHeight = 0;
 force SQFB_opt_iconHeightVeh = 0;
 force SQFB_opt_iconHor = 0;
 force SQFB_opt_iconHorVeh = 0;
-force SQFB_opt_iconSize = 1.5;
+force SQFB_opt_iconSize = 1.2;
 force SQFB_opt_IFFCheckSolo = "always";
 force SQFB_opt_IFFHUDkey_Toggle = false;
 force SQFB_opt_lastKnownEnemyPositionOnly = "never";
@@ -896,7 +825,7 @@ force SQFB_opt_maxRange = 300;
 force SQFB_opt_maxRangeAir = 3000;
 force SQFB_opt_on = true;
 force SQFB_opt_outFOVindex = true;
-force SQFB_opt_profile = "default";
+force SQFB_opt_profile = "custom";
 force SQFB_opt_scaleText = true;
 force SQFB_opt_showClass = false;
 force SQFB_opt_showColor = true;
@@ -959,7 +888,7 @@ force SQFB_opt_sounds_squad = "none";
 // Task Force Arrowhead Radio
 force TF_default_radioVolume = 8;
 force TF_give_microdagr_to_soldier = true;
-force TF_give_personal_radio_to_regular_soldier = false;
+force TF_give_personal_radio_to_regular_soldier = true;
 force TF_no_auto_long_range_radio = true;
 force TF_same_dd_frequencies_for_side = true;
 force TF_same_lr_frequencies_for_side = true;

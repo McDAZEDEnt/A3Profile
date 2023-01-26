@@ -49,7 +49,6 @@ del /s /q /f *ace_gforces*
 del /s /q /f *ace_goggles*
 del /s /q /f *ace_gunbag*
 del /s /q /f *ace_hearing*
-del /s /q /f *ace_hitreactions*
 del /s /q /f *ace_hunterkiller*
 del /s /q /f *ace_huntir*
 del /s /q /f *ace_intelitems*
@@ -108,7 +107,6 @@ rd /s /q gforces
 rd /s /q goggles
 rd /s /q gunbag
 rd /s /q hearing
-rd /s /q hitreactions
 rd /s /q hunterkiller
 rd /s /q huntir
 rd /s /q intelitems
@@ -154,6 +152,9 @@ robocopy "P:\.vscode\z\ace" "P:\z\ace" * /S
 
 rd /s /q "%arma3%\z"
 rd /s /q "%arma3%\x"
+
+Powershell.exe -executionpolicy remotesigned -File "%ROOTDIR%\A3-Antistasi-Plus\Tools\Builder\buildAddons.ps1
+robocopy "%ROOTDIR%/A3-Antistasi-Plus/build/A3A-Plus" "%ROOTDIR%/A3-Antistasi-Plus/A3A" *.* /S
 
 :: Sign mods
 ::cd /d "%arma3% Tools\DSSignFile"
