@@ -15,9 +15,7 @@ echo Enter new profile name:
 set /p NewName=	-)
 setx a3name "%NewName%"
 
-taskkill /f /im Dropbox.exe
 taskkill /f /im explorer.exe
 start "" "%SystemRoot%\explorer.exe"
 start "" "%SystemRoot%\explorer.exe" "%userprofile%\Documents\Arma 3 - Other Profiles"
 ren %OldName% %NewName%
-

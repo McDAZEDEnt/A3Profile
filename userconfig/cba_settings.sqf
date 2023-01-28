@@ -145,10 +145,10 @@ force grenades_hatches_main_whitelistVehiclesSetting = "[]";
 
 // ACE Headless
 force acex_headless_delay = 15;
-force acex_headless_enabled = false;
-force acex_headless_endMission = 0;
-force acex_headless_log = false;
-force acex_headless_transferLoadout = 0;
+force acex_headless_enabled = true;
+force acex_headless_endMission = 2;
+force acex_headless_log = true;
+force acex_headless_transferLoadout = 1;
 
 // ACE Interaction
 force ace_interaction_disableNegativeRating = false;
@@ -565,7 +565,7 @@ force EnableDeadHide = true;
 force EnableHCOverride = true;
 force EnablePlayerHide = false;
 force EnableVehicleHide = true;
-force ForceRenderDistance = 50;
+ForceRenderDistance = 10;
 force HigherQualityAI = false;
 force HigherQualityDead = false;
 force HigherQualityPlayer = false;
@@ -654,6 +654,78 @@ force PDT_ENVG_Effect = "mwEffect";
 force improved_ace_arsenal_category_main_enableMedicalTab = true;
 force improved_ace_arsenal_category_main_enableSurvivalTab = false;
 force improved_ace_arsenal_category_main_enableToolTab = true;
+improved_ace_arsenal_category_main_medicalTabItemsKATSetting = "[
+""Attachable_Helistretcher"",
+""kat_aatKit"",""kat_accuvac"",""kat_AED"",""kat_X_AED"",""kat_crossPanel"",
+""kat_chestSeal"",""kat_larynx"",""kat_guedel"",""kat_Pulseoximeter"",""kat_stethoscope"",
+""kat_scalpel"",""kat_retractor"",""kat_clamp"",""kat_plate"",""kat_vacuum"",
+""kat_bloodIV_O"",""kat_bloodIV_A"",""kat_bloodIV_AB"",""kat_bloodIV_B"",
+""kat_bloodIV_O_N"",""kat_bloodIV_A_N"",""kat_bloodIV_AB_N"",""kat_bloodIV_B_N"",
+""kat_bloodIV_O_500"",""kat_bloodIV_A_500"",""kat_bloodIV_AB_500"",""kat_bloodIV_B_500"",
+""kat_bloodIV_O_N_500"",""kat_bloodIV_A_N_500"",""kat_bloodIV_AB_N_500"",""kat_bloodIV_B_N_500"",
+""kat_bloodIV_O_250"",""kat_bloodIV_A_250"",""kat_bloodIV_AB_250"",""kat_bloodIV_B_250"",
+""kat_bloodIV_O_N_250"",""kat_bloodIV_A_N_250"",""kat_bloodIV_AB_N_250"",""kat_bloodIV_B_N_250"",
+""KAT_Empty_bloodIV_250"",""KAT_Empty_bloodIV_500"",
+""kat_CarbonateItem"",""kat_PainkillerItem"",""kat_IV_16"",""kat_IO_FAST"",""kat_naloxone"",""kat_EACA"",""kat_TXA"",
+""kat_norepinephrine"",""kat_phenylephrine"",""kat_nitroglycerin"",""kat_amiodarone"",""kat_lidocaine"",""kat_atropine"",
+""kat_ketamine"",""kat_fentanyl"",""kat_nalbuphine"",""kat_lorazepam"",""kat_flumazenil"",""kat_etomidate"",
+""kat_phenylephrine_inject""
+]";
+improved_ace_arsenal_category_main_medicalTabItemsSetting = "[
+""FirstAidKit"",
+""Medikit"",
+""ACE_elasticBandage"",
+""ACE_packingBandage"",
+""ACE_quikclot"",
+""ACE_fieldDressing"",
+""ACE_bloodIV"",
+""ACE_bloodIV_500"",
+""ACE_bloodIV_250"",
+""ACE_plasmaIV"",
+""ACE_plasmaIV_500"",
+""ACE_plasmaIV_250"",
+""ACE_salineIV"",
+""ACE_salineIV_500"",
+""ACE_salineIV_250"",
+""ACE_epinephrine"",
+""ACE_morphine"",
+""ACE_adenosine"",
+""ACE_splint"",
+""ACE_tourniquet"",
+""ACE_bodyBag"",
+""ACE_surgicalKit"",
+""ACE_personalAidKit""
+]";
+improved_ace_arsenal_category_main_survivalTabItemsSetting = "[
+""ACE_Banana"",
+""ACE_Can_Franta"",
+""ACE_Can_RedGull"",
+""ACE_Can_Spirit"",
+""ACE_Canteen"",
+""ACE_Canteen_Empty"",
+""ACE_Canteen_Half"",
+""ACE_Humanitarian_Ration"",
+""ACE_MRE_BeefStew"",
+""ACE_MRE_ChickenTikkaMasala"",
+""ACE_MRE_ChickenHerbDumplings"",
+""ACE_MRE_CreamChickenSoup"",
+""ACE_MRE_CreamTomatoSoup"",
+""ACE_MRE_LambCurry"",
+""ACE_MRE_MeatballsPasta"",
+""ACE_MRE_SteakVegetables"",
+""ACE_Sunflower_Seeds"",
+""ACE_WaterBottle"",
+""ACE_WaterBottle_Empty"",
+""ACE_WaterBottle_Half""
+]";
+improved_ace_arsenal_category_main_toolTabItemsSetting = "[
+""MineDetector"",
+""ToolKit"",
+""ACE_DefusalKit"",
+""ACE_EntrenchingTool"",
+""ACE_Fortify"",
+""ACE_wirecutter""
+]";
 
 // LAMBS Danger
 force lambs_danger_cqbRange = 50;
@@ -802,12 +874,12 @@ force SSS_setting_useChatNotifications = false;
 
 // Squad Feedback - Settings 1
 force SQFB_opt_alternateOcclusionCheck = true;
-force SQFB_opt_AlwaysShowCritical = "always";
-force SQFB_opt_Arrows = true;
-force SQFB_opt_changeIconsToBlufor = false;
+SQFB_opt_AlwaysShowCritical = "always";
+SQFB_opt_Arrows = true;
+SQFB_opt_changeIconsToBlufor = false;
 force SQFB_opt_checkOcclusion = false;
-force SQFB_opt_enemySideColors = "never";
-force SQFB_opt_friendlySideColors = "never";
+SQFB_opt_enemySideColors = "never";
+SQFB_opt_friendlySideColors = "never";
 force SQFB_opt_GroupCrew = true;
 force SQFB_opt_HUDrefresh = 0.011;
 force SQFB_opt_HUDrefreshIFF = 0.011;
@@ -816,43 +888,43 @@ force SQFB_opt_iconHeightVeh = 0;
 force SQFB_opt_iconHor = 0;
 force SQFB_opt_iconHorVeh = 0;
 force SQFB_opt_iconSize = 1.2;
-force SQFB_opt_IFFCheckSolo = "always";
+SQFB_opt_IFFCheckSolo = "always";
 force SQFB_opt_IFFHUDkey_Toggle = false;
-force SQFB_opt_lastKnownEnemyPositionOnly = "never";
-force SQFB_opt_lastKnownFriendlyPositionOnly = "never";
+SQFB_opt_lastKnownEnemyPositionOnly = "never";
+SQFB_opt_lastKnownFriendlyPositionOnly = "never";
 force SQFB_opt_maxAlpha = 0.9;
 force SQFB_opt_maxRange = 300;
 force SQFB_opt_maxRangeAir = 3000;
 force SQFB_opt_on = true;
-force SQFB_opt_outFOVindex = true;
+SQFB_opt_outFOVindex = true;
 force SQFB_opt_profile = "custom";
 force SQFB_opt_scaleText = true;
-force SQFB_opt_showClass = false;
-force SQFB_opt_showColor = true;
-force SQFB_opt_ShowCrew = true;
-force SQFB_opt_showDead = true;
+SQFB_opt_showClass = false;
+SQFB_opt_showColor = true;
+SQFB_opt_ShowCrew = true;
+SQFB_opt_showDead = true;
 force SQFB_opt_showDeadMinTime = 3;
-force SQFB_opt_showDist = false;
-force SQFB_opt_showDistEnemy = false;
-force SQFB_opt_showDistFriendly = false;
-force SQFB_opt_showEnemies = "always";
+SQFB_opt_showDist = false;
+SQFB_opt_showDistEnemy = false;
+SQFB_opt_showDistFriendly = false;
+SQFB_opt_showEnemies = "always";
 force SQFB_opt_showEnemiesMaxRange = 300;
 force SQFB_opt_showEnemiesMaxRangeAir = 3000;
 force SQFB_opt_showEnemiesMaxUnits = 15;
 force SQFB_opt_showEnemiesMinRange = 0;
 force SQFB_opt_showEnemiesMinRangeAir = 300;
-force SQFB_opt_showFriendlies = "always";
+SQFB_opt_showFriendlies = "always";
 force SQFB_opt_showFriendliesMaxRange = 300;
 force SQFB_opt_showFriendliesMaxRangeAir = 3000;
 force SQFB_opt_showFriendliesMaxUnits = 15;
 force SQFB_opt_showFriendliesMinRange = 0;
 force SQFB_opt_showFriendliesMinRangeAir = 300;
-force SQFB_opt_showIcon = true;
-force SQFB_opt_showIndex = true;
-force SQFB_opt_showRoles = true;
-force SQFB_opt_showRolesIcon = true;
-force SQFB_opt_showSquad = true;
-force SQFB_opt_showText = true;
+SQFB_opt_showIcon = true;
+SQFB_opt_showIndex = true;
+SQFB_opt_showRoles = true;
+SQFB_opt_showRolesIcon = true;
+SQFB_opt_showSquad = true;
+SQFB_opt_showText = true;
 force SQFB_opt_SquadHUDkey_Toggle = false;
 force SQFB_opt_textFont = "PuristaMedium";
 force SQFB_opt_textSize = 1;
