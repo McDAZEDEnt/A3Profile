@@ -11,7 +11,9 @@ if not "%1"=="am_admin" (
 
 start "" "steam://rungameid/"
 
-del /s /q /f McDAZED.vars.Arma3Profile
+cd /d "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%"
+
+del /s /q /f %a3name%.vars.Arma3Profile
 
 timeout /t 12
 

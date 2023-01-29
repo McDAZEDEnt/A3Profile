@@ -512,7 +512,7 @@ force ace_weaponselect_displayText = false;
 
 // ACE Zeus
 force ace_zeus_autoAddObjects = false;
-force ace_zeus_canCreateZeus = 1;
+force ace_zeus_canCreateZeus = 0;
 force ace_zeus_radioOrdnance = true;
 force ace_zeus_remoteWind = true;
 force ace_zeus_revealMines = 0;
@@ -565,7 +565,7 @@ force EnableDeadHide = true;
 force EnableHCOverride = true;
 force EnablePlayerHide = false;
 force EnableVehicleHide = true;
-ForceRenderDistance = 10;
+force ForceRenderDistance = 50;
 force HigherQualityAI = false;
 force HigherQualityDead = false;
 force HigherQualityPlayer = false;
@@ -654,7 +654,7 @@ force PDT_ENVG_Effect = "mwEffect";
 force improved_ace_arsenal_category_main_enableMedicalTab = true;
 force improved_ace_arsenal_category_main_enableSurvivalTab = false;
 force improved_ace_arsenal_category_main_enableToolTab = true;
-improved_ace_arsenal_category_main_medicalTabItemsKATSetting = "[
+force improved_ace_arsenal_category_main_medicalTabItemsKATSetting = "[
 ""Attachable_Helistretcher"",
 ""kat_aatKit"",""kat_accuvac"",""kat_AED"",""kat_X_AED"",""kat_crossPanel"",
 ""kat_chestSeal"",""kat_larynx"",""kat_guedel"",""kat_Pulseoximeter"",""kat_stethoscope"",
@@ -671,7 +671,7 @@ improved_ace_arsenal_category_main_medicalTabItemsKATSetting = "[
 ""kat_ketamine"",""kat_fentanyl"",""kat_nalbuphine"",""kat_lorazepam"",""kat_flumazenil"",""kat_etomidate"",
 ""kat_phenylephrine_inject""
 ]";
-improved_ace_arsenal_category_main_medicalTabItemsSetting = "[
+force improved_ace_arsenal_category_main_medicalTabItemsSetting = "[
 ""FirstAidKit"",
 ""Medikit"",
 ""ACE_elasticBandage"",
@@ -696,29 +696,8 @@ improved_ace_arsenal_category_main_medicalTabItemsSetting = "[
 ""ACE_surgicalKit"",
 ""ACE_personalAidKit""
 ]";
-improved_ace_arsenal_category_main_survivalTabItemsSetting = "[
-""ACE_Banana"",
-""ACE_Can_Franta"",
-""ACE_Can_RedGull"",
-""ACE_Can_Spirit"",
-""ACE_Canteen"",
-""ACE_Canteen_Empty"",
-""ACE_Canteen_Half"",
-""ACE_Humanitarian_Ration"",
-""ACE_MRE_BeefStew"",
-""ACE_MRE_ChickenTikkaMasala"",
-""ACE_MRE_ChickenHerbDumplings"",
-""ACE_MRE_CreamChickenSoup"",
-""ACE_MRE_CreamTomatoSoup"",
-""ACE_MRE_LambCurry"",
-""ACE_MRE_MeatballsPasta"",
-""ACE_MRE_SteakVegetables"",
-""ACE_Sunflower_Seeds"",
-""ACE_WaterBottle"",
-""ACE_WaterBottle_Empty"",
-""ACE_WaterBottle_Half""
-]";
-improved_ace_arsenal_category_main_toolTabItemsSetting = "[
+force improved_ace_arsenal_category_main_survivalTabItemsSetting = "[]";
+force improved_ace_arsenal_category_main_toolTabItemsSetting = "[
 ""MineDetector"",
 ""ToolKit"",
 ""ACE_DefusalKit"",
@@ -728,12 +707,12 @@ improved_ace_arsenal_category_main_toolTabItemsSetting = "[
 ]";
 
 // LAMBS Danger
-force lambs_danger_cqbRange = 50;
-force lambs_danger_disableAIAutonomousManoeuvres = true;
+force lambs_danger_cqbRange = 30;
+force lambs_danger_disableAIAutonomousManoeuvres = false;
 force lambs_danger_disableAIDeployStaticWeapons = true;
 force lambs_danger_disableAIFindStaticWeapons = true;
 force lambs_danger_disableAIHideFromTanksAndAircraft = false;
-force lambs_danger_disableAIPlayerGroup = false;
+force lambs_danger_disableAIPlayerGroup = true;
 force lambs_danger_disableAIPlayerGroupReaction = false;
 force lambs_danger_disableAutonomousFlares = false;
 force lambs_danger_disableAutonomousSmokeGrenades = false;
@@ -741,13 +720,13 @@ force lambs_danger_panicChance = 0;
 
 // LAMBS Danger Eventhandlers
 force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
-force lambs_eventhandlers_ExplosionReactionTime = 9;
+force lambs_eventhandlers_ExplosionReactionTime = 15;
 
 // LAMBS Danger WP
 force lambs_wp_autoAddArtillery = false;
 
 // LAMBS Main
-force lambs_main_combatShareRange = 200;
+force lambs_main_combatShareRange = 25;
 force lambs_main_debug_drawAllUnitsInVehicles = false;
 force lambs_main_debug_Drawing = false;
 force lambs_main_debug_FSM = false;
@@ -755,22 +734,22 @@ force lambs_main_debug_FSM_civ = false;
 force lambs_main_debug_functions = false;
 force lambs_main_debug_RenderExpectedDestination = false;
 force lambs_main_disableAICallouts = false;
-force lambs_main_disableAIDodge = false;
+force lambs_main_disableAIDodge = true;
 force lambs_main_disableAIFleeing = false;
 force lambs_main_disableAIGestures = false;
 force lambs_main_disableAutonomousMunitionSwitching = false;
 force lambs_main_disablePlayerGroupSuppression = false;
 force lambs_main_indoorMove = 0;
 force lambs_main_maxRevealValue = 1;
-force lambs_main_minFriendlySuppressionDistance = 5;
+force lambs_main_minFriendlySuppressionDistance = 15;
 force lambs_main_minObstacleProximity = 5;
-force lambs_main_minSuppressionRange = 50;
-force lambs_main_radioBackpack = 2000;
-force lambs_main_radioDisabled = true;
-force lambs_main_radioEast = 500;
-force lambs_main_radioGuer = 500;
-force lambs_main_radioShout = 100;
-force lambs_main_radioWest = 500;
+force lambs_main_minSuppressionRange = 15;
+force lambs_main_radioBackpack = 500;
+force lambs_main_radioDisabled = false;
+force lambs_main_radioEast = 50;
+force lambs_main_radioGuer = 50;
+force lambs_main_radioShout = 25;
+force lambs_main_radioWest = 50;
 
 // Looting Enhanced
 force LootingEnhanced_CanLootContainers = true;
@@ -873,13 +852,13 @@ force SSS_setting_slingLoadWhitelist = "";
 force SSS_setting_useChatNotifications = false;
 
 // Squad Feedback - Settings 1
-force SQFB_opt_alternateOcclusionCheck = true;
-SQFB_opt_AlwaysShowCritical = "always";
-SQFB_opt_Arrows = true;
-SQFB_opt_changeIconsToBlufor = false;
+force SQFB_opt_alternateOcclusionCheck = false;
+force SQFB_opt_AlwaysShowCritical = "always";
+force SQFB_opt_Arrows = true;
+force SQFB_opt_changeIconsToBlufor = false;
 force SQFB_opt_checkOcclusion = false;
-SQFB_opt_enemySideColors = "never";
-SQFB_opt_friendlySideColors = "never";
+force SQFB_opt_enemySideColors = "never";
+force SQFB_opt_friendlySideColors = "never";
 force SQFB_opt_GroupCrew = true;
 force SQFB_opt_HUDrefresh = 0.011;
 force SQFB_opt_HUDrefreshIFF = 0.011;
@@ -888,43 +867,43 @@ force SQFB_opt_iconHeightVeh = 0;
 force SQFB_opt_iconHor = 0;
 force SQFB_opt_iconHorVeh = 0;
 force SQFB_opt_iconSize = 1.2;
-SQFB_opt_IFFCheckSolo = "always";
+force SQFB_opt_IFFCheckSolo = "always";
 force SQFB_opt_IFFHUDkey_Toggle = false;
-SQFB_opt_lastKnownEnemyPositionOnly = "never";
-SQFB_opt_lastKnownFriendlyPositionOnly = "never";
+force SQFB_opt_lastKnownEnemyPositionOnly = "never";
+force SQFB_opt_lastKnownFriendlyPositionOnly = "never";
 force SQFB_opt_maxAlpha = 0.9;
 force SQFB_opt_maxRange = 300;
 force SQFB_opt_maxRangeAir = 3000;
 force SQFB_opt_on = true;
-SQFB_opt_outFOVindex = true;
+force SQFB_opt_outFOVindex = true;
 force SQFB_opt_profile = "custom";
 force SQFB_opt_scaleText = true;
-SQFB_opt_showClass = false;
-SQFB_opt_showColor = true;
-SQFB_opt_ShowCrew = true;
-SQFB_opt_showDead = true;
+force SQFB_opt_showClass = false;
+force SQFB_opt_showColor = true;
+force SQFB_opt_ShowCrew = true;
+force SQFB_opt_showDead = true;
 force SQFB_opt_showDeadMinTime = 3;
-SQFB_opt_showDist = false;
-SQFB_opt_showDistEnemy = false;
-SQFB_opt_showDistFriendly = false;
-SQFB_opt_showEnemies = "always";
+force SQFB_opt_showDist = false;
+force SQFB_opt_showDistEnemy = false;
+force SQFB_opt_showDistFriendly = false;
+force SQFB_opt_showEnemies = "always";
 force SQFB_opt_showEnemiesMaxRange = 300;
 force SQFB_opt_showEnemiesMaxRangeAir = 3000;
 force SQFB_opt_showEnemiesMaxUnits = 15;
 force SQFB_opt_showEnemiesMinRange = 0;
-force SQFB_opt_showEnemiesMinRangeAir = 300;
-SQFB_opt_showFriendlies = "always";
+force SQFB_opt_showEnemiesMinRangeAir = 100;
+force SQFB_opt_showFriendlies = "always";
 force SQFB_opt_showFriendliesMaxRange = 300;
 force SQFB_opt_showFriendliesMaxRangeAir = 3000;
 force SQFB_opt_showFriendliesMaxUnits = 15;
 force SQFB_opt_showFriendliesMinRange = 0;
-force SQFB_opt_showFriendliesMinRangeAir = 300;
-SQFB_opt_showIcon = true;
-SQFB_opt_showIndex = true;
-SQFB_opt_showRoles = true;
-SQFB_opt_showRolesIcon = true;
-SQFB_opt_showSquad = true;
-SQFB_opt_showText = true;
+force SQFB_opt_showFriendliesMinRangeAir = 30;
+force SQFB_opt_showIcon = true;
+force SQFB_opt_showIndex = true;
+force SQFB_opt_showRoles = true;
+force SQFB_opt_showRolesIcon = true;
+force SQFB_opt_showSquad = true;
+force SQFB_opt_showText = true;
 force SQFB_opt_SquadHUDkey_Toggle = false;
 force SQFB_opt_textFont = "PuristaMedium";
 force SQFB_opt_textSize = 1;
@@ -933,7 +912,7 @@ force SQFB_opt_updateDelay = 5;
 // Squad Feedback - Settings 2
 force SQFB_opt_alwaysDisplayTarget = true;
 force SQFB_opt_checkOcclusionEnemies = true;
-force SQFB_opt_checkOcclusionFriendlies = false;
+force SQFB_opt_checkOcclusionFriendlies = true;
 force SQFB_opt_colorBlue = [0.33,0.65,0.9];
 force SQFB_opt_colorDefault = [0.9,0.9,0.9];
 force SQFB_opt_colorEnemy = [0.9,0.21,0.3];
