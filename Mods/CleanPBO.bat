@@ -21,6 +21,9 @@ rd /s /q "%ROOTDIR%\ACE3\include\x\cba"
 md "P:\x"
 md "P:\z"
 
+cls
+echo .
+echo Remember to install Python
 pause
 
 robocopy "%ROOTDIR%\CBA_A3" "%ROOTDIR%\ACE3\include\x\cba" *.* /S
