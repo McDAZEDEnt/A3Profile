@@ -23,7 +23,7 @@ echo .
 echo A white pop up will appear after you press 'Enter'.
 echo Answer 'Yes' to the prompt, and confirm the changes.
 echo .
-timeout /t 6
+timeout /t 12 /nobreak
 cd /d "%ROOTDIR%"
 hugepages.reg
 :: Repair in launcher
@@ -41,7 +41,7 @@ echo (This is normal behaviour, you can safely ignore it.)
 echo 4. Close the Launcher
 echo.
 start steam://rungameid/107410
-timeout /t 6
+timeout /t 12 /nobreak
 pause
 TASKKILL /F /IM steam.exe
 TASKKILL /F /IM arma3launcher.exe
