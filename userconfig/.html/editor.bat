@@ -9,6 +9,14 @@ if not "%1"=="am_admin" (
     exit /b
 )
 
+taskkill /f /im Dropbox.exe
+taskkill /f /im DropboxUpdate.exe
+taskkill /f /im wenativehost.exe
+taskkill /f /im fdm.exe
+taskkill /f /im helperservice.exe
+net stop DbxSvc
+sc stop DbxSvc
+
 start "" "ts3server://mcdazed.com/"
 
 start "" "steam://rungameid/"
