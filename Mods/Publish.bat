@@ -19,17 +19,20 @@ robocopy "%ROOTDIR%/A3-Antistasi-Plus/build/A3A-Plus" "%ROOTDIR%/A3-Antistasi-Pl
 pause
 
 cd /d "P:\z\NR6\addons"
-"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_airreinforcements" "P:\z\NR6\addons" -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
-"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_alice2" "P:\z\NR6\addons" -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
-"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_hal" "P:\z\NR6\addons" -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
-"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_reinforcements" "P:\z\NR6\addons" -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
-"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_sitemarkers" "P:\z\NR6\addons" -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
-"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_sites" "P:\z\NR6\addons" -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
-"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_tools" "P:\z\NR6\addons" -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
-"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_zbe_cache" "P:\z\NR6\addons" -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
+del /s /q /f *.pbo*
+"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_airreinforcements" "P:\z\NR6\addons" -clear -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
+"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_alice2" "P:\z\NR6\addons" -clear -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
+"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_hal" "P:\z\NR6\addons" -clear -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
+"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_reinforcements" "P:\z\NR6\addons" -clear -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
+"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_sitemarkers" "P:\z\NR6\addons" -clear -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
+"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_sites" "P:\z\NR6\addons" -clear -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
+"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_tools" "P:\z\NR6\addons" -clear -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
+"%arma3% tools/AddonBuilder/AddonBuilder.exe" "P:\z\NR6\addons\nr6_zbe_cache" "P:\z\NR6\addons" -clear -packonly -sign="%userprofile%\Dropbox\Save\_Stray\arma.biprivatekey"
+
+pause
 
 cd /d "P:\z\ace\tools"
-python make.py
+call python make.py
 
 cd /d "%arma3% Tools\Publisher"
 
