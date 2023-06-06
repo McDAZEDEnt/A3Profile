@@ -67,7 +67,6 @@ cd /d "%userprofile%/Documents"
 mkdir "Arma 3"
 cd /d "%userprofile%/Documents/Arma 3"
 del /s /q /f "%username%.Arma3Profile"
-del /s /q /f "%username%.vars.Arma3Profile"
 del /s /q /f "%username%.3den.Arma3Profile"
 rd /s /q "Saved"
 rd /s /q "UserSaved"
@@ -77,6 +76,5 @@ del *.vars
 robocopy "%ROOTDIR%/userconfig" "%ROOTDIR%" *.Arma3Profile
 ren "config.Arma3Profile" "%CurrDirName%.Arma3Profile"
 ren "config.3den.Arma3Profile" "%CurrDirName%.3den.Arma3Profile"
-ren "config.vars.Arma3Profile" "%CurrDirName%.vars.Arma3Profile"
 call FoV.exe
 EXIT

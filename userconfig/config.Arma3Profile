@@ -329,7 +329,7 @@ keySeagullDown[]={};
 keySeagullFastForward[]={};
 keySeagullForward[]={};
 keySeagullUp[]={};
-keySelectAll[]={705888301,87};
+keySelectAll[]={41};
 keySelectGroupUnit0[]={68};
 keySelectGroupUnit1[]={59};
 keySelectGroupUnit2[]={60};
@@ -455,18 +455,18 @@ class DifficultyPresets
 	{
 		class Options
 		{
-			groupIndicators=0;
-			friendlyTags=0;
+			groupIndicators=2;
+			friendlyTags=1;
 			enemyTags=0;
 			detectedMines=1;
 			commands=2;
 			waypoints=2;
-			weaponInfo=1;
-			stanceIndicator=1;
+			weaponInfo=2;
+			stanceIndicator=2;
 			reducedDamage=0;
 			staminaBar=1;
-			weaponCrosshair=0;
-			visionAid=1;
+			weaponCrosshair=1;
+			visionAid=0;
 			thirdPersonView=1;
 			cameraShake=1;
 			scoreTable=1;
@@ -476,10 +476,10 @@ class DifficultyPresets
 			mapContentEnemy=1;
 			mapContentMines=1;
 			autoReport=1;
-			multipleSaves=0;
-			tacticalPing=1;
+			multipleSaves=1;
+			tacticalPing=3;
 		};
-		aiLevelPreset="Custom";
+		aiLevelPreset="AILevelMedium";
 	};
 	class CustomAILevel
 	{
@@ -507,33 +507,45 @@ instructorFigure=0;
 showRadio=1;
 difficulty="Custom";
 bootCampWarning=1;
-keyA3A_core_battleMenu[]={21};
-keyA3A_core_artyMenu[]={705888277};
-keyA3A_core_infoBar[]={940769479};
-keyA3A_core_earPlugs[]={};
-keyA3A_core_customHintDismiss[]={14};
-keyA3A_core_commanderRebelMenu[]={15};
-keyA3A_core_projectileCameraEscape[]={};
 singleVoice=0;
-headBob=0;
+version=2;
+class MainMap
+{
+	class Compass
+	{
+		inBack=0;
+		position[]={-0.057120003,-0.053550001,0.2};
+		positionBack[]={0.0084000006,0,0.1};
+	};
+};
+customScheme=1;
+controller="Default";
+sensitivity="Medium";
+vibrations=1;
+class ControllerSchemes
+{
+};
 mouseSensitivityX=0.5;
 mouseSensitivityY=0.5;
+headBob=0;
+floatingZoneArea=0;
 sceneComplexity=1300000;
 shadowZDistance=100;
-viewDistance=1000.0001;
-preferredObjectViewDistance=1000.0001;
-pipViewDistance=500;
-terrainGrid=6.25;
-volumeCD=2.5;
-volumeFX=5;
-volumeSpeech=7.5;
+viewDistance=1600.0001;
+preferredObjectViewDistance=1105.4945;
+pipViewDistance=1105.0002;
+terrainGrid=12.5;
+volumeCD=5.0;
+volumeFX=5.0;
+volumeSpeech=5.0;
 volumeVoN=5;
-vonRecThreshold=0.15000001;
+vonRecThreshold=0.25;
 volumeMapDucking=0.5;
+volumeUI=0.5;
 gamma=1;
 ppBrightness=0.89999998;
 ppContrast=0.89999998;
 ppSaturation=1.1999999;
-brightness=1.3;
+brightness=1.2;
 fovTop=1.00;
 fovLeft=1.00;
