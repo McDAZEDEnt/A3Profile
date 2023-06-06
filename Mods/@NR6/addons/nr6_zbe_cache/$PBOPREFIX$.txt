@@ -1,4 +1,0 @@
-//<'nr6_zbe_cache.pbo' properties via Mikero's dos tools, dll version 9.10>
-prefix=NR6_zbe_cache;
-//PboType=Arma Addon;
-//</properties>

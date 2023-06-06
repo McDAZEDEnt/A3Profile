@@ -1,4 +1,0 @@
-//<'nr6_sites.pbo' properties via Mikero's dos tools, dll version 9.10>
-prefix=NR6_Sites;
-//PboType=Arma Addon;
-//</properties>
