@@ -442,12 +442,12 @@ keyZoomIn[]={};
 keyZoomOutToggle[]={705822725};
 keyZoomOut[]={};
 keyZoomTemp[]={65537};
+anisoFilter=16;
+shadowQuality=5;
+textureQuality=4;
 mouseAcceleration=0;
 mouseSmoothing=0;
 revMouse=0;
-anisoFilter=12;
-textureQuality=3;
-shadowQuality=4;
 tripleHead=0;
 class DifficultyPresets
 {
@@ -479,65 +479,59 @@ class DifficultyPresets
 			multipleSaves=1;
 			tacticalPing=3;
 		};
-		aiLevelPreset="AILevelMedium";
+		aiLevelPreset="Custom";
 	};
 	class CustomAILevel
 	{
-		skillAI=0.5;
-		precisionAI=0.5;
+		skillAI=0.69999999;
+		precisionAI=0.69999999;
 	};
 };
-battleyeLicense=1;
-bootcamp=1;
-blood=1;
-adaptiveCrosshair=0;
+RTDAutoTrim=1;
 RTDEnabled=0;
 RTDFullHUD=1;
 RTDRoughLanding=1;
-RTDWindDynamic=0;
-RTDAutoTrim=1;
 RTDStressDamage=0;
-showTitles=1;
-useImperialSystem=0;
-vehicleFreelook=0;
-useIncapacitatedState=1;
-tutorialHints=0;
-streamFriendlyUI=0;
-instructorFigure=0;
-showRadio=1;
-difficulty="Custom";
+RTDWindDynamic=0;
+adaptiveCrosshair=1;
+battleyeLicense=1;
+blood=1;
 bootCampWarning=1;
-singleVoice=0;
-version=2;
-class MainMap
-{
-	class Compass
-	{
-		inBack=0;
-		position[]={-0.057120003,-0.053550001,0.2};
-		positionBack[]={0.0084000006,0,0.1};
-	};
-};
-customScheme=1;
-controller="Default";
-sensitivity="Medium";
-vibrations=1;
-class ControllerSchemes
-{
-};
+bootcamp=1;
+difficulty="Custom";
+instructorFigure=0;
 mouseSensitivityX=0.5;
 mouseSensitivityY=0.5;
-headBob=0;
+showRadio=1;
+showTitles=1;
+singleVoice=0;
+streamFriendlyUI=0;
+tutorialHints=0;
+useImperialSystem=0;
+useIncapacitatedState=1;
+vehicleFreelook=0;
+vibrations=1;
+headBob=0.2;
 floatingZoneArea=0;
-sceneComplexity=1300000;
+class Identity
+{
+	face="WhiteHead_06";
+	glasses="None";
+	speaker="Male03_F";
+	pitch=1;
+	unitType=2;
+	squad="";
+	unitId=211962;
+};
+sceneComplexity=600000;
 shadowZDistance=100;
-viewDistance=1600.0001;
-preferredObjectViewDistance=1105.4945;
-pipViewDistance=1105.0002;
-terrainGrid=12.5;
-volumeCD=5.0;
-volumeFX=5.0;
-volumeSpeech=5.0;
+viewDistance=1500.0001;
+preferredObjectViewDistance=1500.0001;
+pipViewDistance=500;
+terrainGrid=3.125;
+volumeCD=5;
+volumeFX=5;
+volumeSpeech=5;
 volumeVoN=5;
 vonRecThreshold=0.25;
 volumeMapDucking=0.5;
