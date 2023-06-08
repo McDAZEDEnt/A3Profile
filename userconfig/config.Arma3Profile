@@ -18,8 +18,8 @@ keyAimUp[]={1048578};
 keyAirBankLeft[]={1048576};
 keyAirBankRight[]={1048577};
 keyAirPlaneBrake[]={45};
-keyAutoHoverCancel[]={299};
-keyAutoHover[]={43};
+keyAutoHoverCancel[]={291};
+keyAutoHover[]={35};
 keyBinocular[]={};
 keyBuldBack[]={};
 keyBuldBrushOuter[]={};
@@ -237,8 +237,8 @@ keyHelp[]={};
 keyHideMap[]={50};
 keyHoldBreath[]={65537};
 keyIngamePause[]={1,25};
-keyLandGearUp[]={};
-keyLandGear[]={43};
+keyLandGearUp[]={291};
+keyLandGear[]={35};
 keyLaunchCM[]={34};
 keyLeanLeftToggle[]={16};
 keyLeanLeft[]={};
@@ -431,20 +431,17 @@ keyVoiceOverNet[]={};
 keyWalkRunTemp[]={};
 keyWalkRunToggle[]={};
 keyWalk[]={};
-keyWatchToggle[]={};
-keyWatch[]={24};
+keyWatchToggle[]={24};
+keyWatch[]={};
 keyZeroingDown[]={756154371};
 keyZeroingUp[]={756154372};
 keyZoomContIn[]={};
 keyZoomContOut[]={};
 keyZoomInToggle[]={705822724};
-keyZoomIn[]={};
+keyZoomIn[]={65540};
 keyZoomOutToggle[]={705822725};
-keyZoomOut[]={};
+keyZoomOut[]={65539};
 keyZoomTemp[]={65537};
-anisoFilter=16;
-shadowQuality=5;
-textureQuality=4;
 mouseAcceleration=0;
 mouseSmoothing=0;
 revMouse=0;
@@ -500,8 +497,6 @@ bootCampWarning=1;
 bootcamp=1;
 difficulty="Custom";
 instructorFigure=0;
-mouseSensitivityX=0.5;
-mouseSensitivityY=0.5;
 showRadio=1;
 showTitles=1;
 singleVoice=0;
@@ -511,8 +506,6 @@ useImperialSystem=0;
 useIncapacitatedState=1;
 vehicleFreelook=0;
 vibrations=1;
-headBob=0.2;
-floatingZoneArea=0;
 class Identity
 {
 	face="WhiteHead_06";
@@ -523,12 +516,45 @@ class Identity
 	squad="";
 	unitId=211962;
 };
-sceneComplexity=600000;
-shadowZDistance=100;
+FavoriteServers[]={};
+version=2;
+currentCampaign="A3\Missions_F_EPA\Campaign";
+lastCampaignMission="A_hub01.Stratis";
+class MainMap
+{
+	class Compass
+	{
+		inBack=0;
+		position[]={-0.057120003,-0.053550001,0.2};
+		positionBack[]={0.0084000006,0,0.1};
+	};
+};
+customScheme=1;
+controller="Default";
+sensitivity="Medium";
+class ControllerSchemes
+{
+};
+keyPLP_LTR_ladderSlideDown[]={29};
+keysez_main_snapSelectedToCursor[]={25};
+keysez_main_toggleSnapping[]={};
+keysez_main_toggleRotation[]={};
+keysez_main_toggleTerrain[]={};
+keysez_main_OpenAttributes[]={};
+activeKeys[]=
+{
+	"BIS_A_m01.stratis_done"
+};
+mouseSensitivityX=0.5;
+mouseSensitivityY=0.5;
+headBob=0.2;
+floatingZoneArea=0;
+sceneComplexity=400000;
+shadowZDistance=50;
 viewDistance=1500.0001;
-preferredObjectViewDistance=1500.0001;
-pipViewDistance=500;
-terrainGrid=3.125;
+preferredObjectViewDistance=800.00006;
+pipViewDistance=500.00006;
+terrainGrid=6.25;
 volumeCD=5;
 volumeFX=5;
 volumeSpeech=5;
