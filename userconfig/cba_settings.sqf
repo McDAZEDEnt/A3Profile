@@ -1,3 +1,19 @@
+// Advanced Garbage Collector
+force AGC_bodyType = "Land_Bodybag_01_black_F";
+force AGC_checkTimes = 100;
+force AGC_GCenabled = true;
+force AGC_GCmaxBodyTime = 0;
+force AGC_GCmaxDistance = 1000;
+force AGC_GCmaxTime = 0;
+force AGC_GCminDistance = 100;
+force AGC_GCminTime = 60;
+force AGC_GCrefreshInterval = 0;
+force AGC_GCvehicleCleanupDistance = 10;
+force AGC_maxBodyHandle = 0;
+force AGC_ragdoll = false;
+force AGC_removeItems = 100;
+force AGC_showBodyCount = false;
+
 // Advanced Vault System
 force AVS_Jump_MAINWEAP_X = "4";
 force AVS_Jump_MAINWEAP_Z = "1.7";
@@ -157,7 +173,7 @@ force PC_SEARCH_SECTOR = 50;
 force PC_SHARE_TARGET_DISTANCE = 250;
 
 // Simple Suppress
-force simplesuppress_suppress_checkLOS = true;
+force simplesuppress_suppress_checkLOS = false;
 force simplesuppress_suppress_overlayFadeoutTime = 10;
 force simplesuppress_suppress_overlayOpacity = 0.96;
 force simplesuppress_suppress_overlayTexture = 1;

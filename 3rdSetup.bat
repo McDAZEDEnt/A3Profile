@@ -9,7 +9,7 @@ if not "%1"=="am_admin" (
     exit /b
 )
 
-taskkill /f /im "Dropbox.exe"
+::taskkill /f /im "Dropbox.exe"
 
 attrib -h "%Arma3%/!Workshop"
 rd /s /q "%Arma3%/!Workshop"
