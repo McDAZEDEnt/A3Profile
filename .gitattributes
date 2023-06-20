@@ -48,8 +48,8 @@
 *.uproject !filter !diff !merge
 *.url !filter !diff !merge
 *.xml !filter !diff !merge
-.gitattributes !filter !diff !merge
-.gitignore !filter !diff !merge
+.gitattributes !filter !diff !merge lockable
+.gitignore !filter !diff !merge lockable
 
 # UE5 locks #
 *.uasset filter=lfs diff=lfs merge=lfs -text lockable
