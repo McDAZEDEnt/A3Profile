@@ -59,8 +59,8 @@ pause
 TASKKILL /F /IM steam.exe
 TASKKILL /F /IM arma3launcher.exe
 :: UNHIDE !WORKSHOP & Copy missing keys
-cd /d "%arma3%"
 attrib -h "%arma3%\!Workshop"
+cd /d "%arma3%"
 for /r %%d in (*.bikey) do copy "%%d" "%userprofile%\Documents\Arma 3 - Other Profiles\%a3name%\userconfig\keys"
 :: userconfig and mission symlink
 cd /d "%arma3%"
