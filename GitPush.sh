@@ -1,3 +1,4 @@
+git rm . -r --cached
 git add --all
 git commit -am "commit"
 git push
