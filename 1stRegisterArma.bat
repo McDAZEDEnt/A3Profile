@@ -6,6 +6,7 @@ if not "%1"=="am_admin" (
     exit /b
 )
 
+:start
 setlocal enableextensions
 for /f "tokens=3*" %%a in ('REG QUERY "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Steam App 107410" /v InstallLocation ^| Find "InstallLocation"') do SET REG=%%a %%b
 
@@ -14,13 +15,13 @@ echo .
 echo .
 SET correct=
 SET /p correct=Is the Arma 3 path correct? [Y/N]:
-IF NOT '%choice%'=='' SET choice=%choice:~0,1%
-IF '%choice%'=='Y' GOTO yes
-IF '%choice%'=='y' GOTO yes
-IF '%choice%'=='N' GOTO no
-IF '%choice%'=='n' GOTO no
-IF '%choice%'=='' GOTO no
-ECHO "%choice%" is not valid
+IF NOT '%correct%'=='' SET correct=%correct:~0,1%
+IF '%correct%'=='Y' GOTO yes
+IF '%correct%'=='y' GOTO yes
+IF '%correct%'=='N' GOTO no
+IF '%correct%'=='n' GOTO no
+IF '%correct%'=='' GOTO no
+ECHO "%correct%" is not valid
 ECHO.
 GOTO start
 
