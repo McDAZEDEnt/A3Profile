@@ -1,17 +1,106 @@
+// ACE Arsenal
+force ace_arsenal_allowDefaultLoadouts = true;
+force ace_arsenal_allowSharedLoadouts = true;
+force ace_arsenal_camInverted = false;
+force ace_arsenal_enableIdentityTabs = false;
+force ace_arsenal_enableModIcons = true;
+force ace_arsenal_EnableRPTLog = false;
+force ace_arsenal_fontHeight = 4.5;
+force ace_arsenal_loadoutsSaveFace = false;
+force ace_arsenal_loadoutsSaveInsignia = false;
+force ace_arsenal_loadoutsSaveVoice = false;
+
+// ACE Common
+force ace_common_allowFadeMusic = false;
+force ace_common_checkPBOsAction = 2;
+force ace_common_checkPBOsCheckAll = false;
+force ace_common_checkPBOsWhitelist = "[]";
+force ace_common_displayTextColor = [0,0,0,0.1];
+force ace_common_displayTextFontColor = [1,1,1,1];
+ace_common_epilepsyFriendlyMode = false;
+force ace_common_progressBarInfo = 1;
+force ace_common_settingFeedbackIcons = 1;
+force ace_common_settingProgressBarLocation = 0;
+
+// ACE Fortify
+force ace_fortify_markObjectsOnMap = 1;
+force ace_fortify_timeCostCoefficient = 0.5;
+force ace_fortify_timeMin = 0;
+force acex_fortify_settingHint = 2;
+
+// ACE Interaction
+force ace_interaction_disableNegativeRating = false;
+force ace_interaction_enableGroupRenaming = false;
+force ace_interaction_enableMagazinePassing = true;
+force ace_interaction_enableTeamManagement = true;
+force ace_interaction_enableWeaponAttachments = true;
+force ace_interaction_interactWithTerrainObjects = false;
+
+// ACE Interaction Menu
+force ace_interact_menu_actionOnKeyRelease = false;
+force ace_interact_menu_addBuildingActions = false;
+force ace_interact_menu_alwaysUseCursorInteraction = true;
+force ace_interact_menu_alwaysUseCursorSelfInteraction = true;
+force ace_interact_menu_colorShadowMax = [0,0,0,1];
+force ace_interact_menu_colorShadowMin = [0,0,0,0.25];
+force ace_interact_menu_colorTextMax = [1,1,1,1];
+force ace_interact_menu_colorTextMin = [1,1,1,0.25];
+force ace_interact_menu_consolidateSingleChild = true;
+force ace_interact_menu_cursorKeepCentered = false;
+force ace_interact_menu_cursorKeepCenteredSelfInteraction = false;
+force ace_interact_menu_menuAnimationSpeed = 1;
+force ace_interact_menu_menuBackground = 0;
+force ace_interact_menu_menuBackgroundSelf = 1;
+force ace_interact_menu_selectorColor = [1,0,0];
+force ace_interact_menu_shadowSetting = 2;
+force ace_interact_menu_textSize = 2;
+force ace_interact_menu_useListMenu = true;
+force ace_interact_menu_useListMenuSelf = true;
+
+// ACE Name Tags
+force ace_nametags_ambientBrightnessAffectViewDist = 1;
+force ace_nametags_defaultNametagColor = [0.77,0.51,0.08,1];
+force ace_nametags_nametagColorBlue = [0.67,0.67,1,1];
+force ace_nametags_nametagColorGreen = [0.67,1,0.67,1];
+force ace_nametags_nametagColorMain = [1,1,1,1];
+force ace_nametags_nametagColorRed = [1,0.67,0.67,1];
+force ace_nametags_nametagColorYellow = [1,1,0.67,1];
+force ace_nametags_playerNamesMaxAlpha = 0.8;
+force ace_nametags_playerNamesViewDistance = 5;
+force ace_nametags_showCursorTagForVehicles = true;
+force ace_nametags_showNamesForAI = true;
+force ace_nametags_showPlayerNames = 2;
+force ace_nametags_showPlayerRanks = true;
+force ace_nametags_showSoundWaves = 1;
+force ace_nametags_showVehicleCrewInfo = true;
+force ace_nametags_tagSize = 2;
+
+// ACE Pointing
+force ace_finger_enabled = true;
+force ace_finger_indicatorColor = [0.83,0.68,0.21,0.75];
+force ace_finger_indicatorForSelf = true;
+force ace_finger_maxRange = 50;
+force ace_finger_proximityScaling = false;
+force ace_finger_sizeCoef = 0.5;
+
+// ACE Weapons
+force ace_common_persistentLaserEnabled = false;
+force ace_weaponselect_displayText = false;
+
 // Advanced Garbage Collector
 force AGC_bodyType = "Land_Bodybag_01_black_F";
-force AGC_checkTimes = 25;
+force AGC_checkTimes = 100;
 force AGC_GCenabled = true;
-force AGC_GCmaxBodyTime = 300;
-force AGC_GCmaxDistance = 750;
-force AGC_GCmaxTime = 250;
-force AGC_GCminDistance = 75;
-force AGC_GCminTime = 25;
-force AGC_GCrefreshInterval = 1;
-force AGC_GCvehicleCleanupDistance = 75;
+force AGC_GCmaxBodyTime = 0;
+force AGC_GCmaxDistance = 1000;
+force AGC_GCmaxTime = 0;
+force AGC_GCminDistance = 100;
+force AGC_GCminTime = 60;
+force AGC_GCrefreshInterval = 0;
+force AGC_GCvehicleCleanupDistance = 10;
 force AGC_maxBodyHandle = 0;
 force AGC_ragdoll = false;
-force AGC_removeItems = 10;
+force AGC_removeItems = 100;
 force AGC_showBodyCount = false;
 
 // Advanced Vault System
@@ -50,11 +139,6 @@ force cba_network_loadoutValidation = 0;
 cba_optics_usePipOptics = true;
 cba_ui_notifyLifetime = 4;
 cba_ui_StorePasswords = 1;
-
-// LAxemann's Environment Ducking
-L_envDucking_distanceMultiplier = 1;
-L_envDucking_enabled = true;
-L_envDucking_intensity = 1;
 
 // No More Aircraft Bouncing
 force NMAB_setting_classExclusionsStr = "";
@@ -300,7 +384,7 @@ force PiR_weapon_on = false;
 force PiR_west_on = true;
 
 // Simple Suppress
-force simplesuppress_suppress_checkLOS = true;
+force simplesuppress_suppress_checkLOS = false;
 force simplesuppress_suppress_overlayFadeoutTime = 10;
 force simplesuppress_suppress_overlayOpacity = 0.8;
 force simplesuppress_suppress_overlayTexture = 1;
