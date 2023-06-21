@@ -505,46 +505,6 @@ tutorialHints=0;
 useImperialSystem=0;
 useIncapacitatedState=1;
 vehicleFreelook=0;
-vibrations=1;
-class Identity
-{
-	face="WhiteHead_06";
-	glasses="None";
-	speaker="Male03_F";
-	pitch=1;
-	unitType=2;
-	squad="";
-	unitId=211962;
-};
-FavoriteServers[]={};
-version=2;
-currentCampaign="A3\Missions_F_EPA\Campaign";
-lastCampaignMission="A_hub01.Stratis";
-class MainMap
-{
-	class Compass
-	{
-		inBack=0;
-		position[]={-0.057120003,-0.053550001,0.2};
-		positionBack[]={0.0084000006,0,0.1};
-	};
-};
-customScheme=1;
-controller="Default";
-sensitivity="Medium";
-class ControllerSchemes
-{
-};
-keyPLP_LTR_ladderSlideDown[]={29};
-keysez_main_snapSelectedToCursor[]={25};
-keysez_main_toggleSnapping[]={};
-keysez_main_toggleRotation[]={};
-keysez_main_toggleTerrain[]={};
-keysez_main_OpenAttributes[]={};
-activeKeys[]=
-{
-	"BIS_A_m01.stratis_done"
-};
 mouseSensitivityX=0.5;
 mouseSensitivityY=0.5;
 anisoFilter=12;
@@ -556,7 +516,7 @@ sceneComplexity=1300000;
 shadowZDistance=500;
 viewDistance=2000.0002;
 preferredObjectViewDistance=1000.0001;
-pipViewDistance=500.00006;
+pipViewDistance=500;
 terrainGrid=6.25;
 volumeCD=5;
 volumeFX=5;
