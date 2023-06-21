@@ -121,9 +121,6 @@ cba_optics_usePipOptics = true;
 cba_ui_notifyLifetime = 4;
 cba_ui_StorePasswords = 1;
 
-// Fire Mode On My Command
-force IBR_FIRE_ON_MY_SHOT_NO_THROW_NO_PUT = true;
-
 // LAxemann's Environment Ducking
 force L_envDucking_distanceMultiplier = 1;
 force L_envDucking_enabled = true;
@@ -133,44 +130,6 @@ force L_envDucking_intensity = 1;
 force NMAB_setting_classExclusionsStr = "";
 force NMAB_setting_pfxHelicopters = true;
 force NMAB_setting_pfxPlanes = true;
-
-// Platoon Commander - Detonation of REDs One by One
-force IBR_EDS_ALLOW_NAME = true;
-
-// Platoon Commander - Throwables in Your Belt
-force IBR_OTHER_SMOKE_TYPES = "";
-
-// Platoon Commander - Trip Wire Grenade
-force IBR_ALLOW_FOR_EVERYONE = false;
-force IBR_STRETCH_ACTIVATION_GUARANTEE = true;
-force IBR_STRETCH_AUTO_TAKE = false;
-force IBR_STRETCH_TYPES = "";
-
-// Platoon Commander 2
-force IBR_ACC_COEF = 0.2;
-force PC_ACC_ANIM_SPEED_COEF = 0.15;
-force PC_ALL_AROUND_TIME = 2;
-force PC_ALLOW_GESTURES = true;
-force PC_ALLOW_GROUP_ICON_HUD = true;
-force PC_ALLOW_GROUP_ICON_MAP = true;
-force PC_ALLOW_MANUAL_HINTS = true;
-force PC_ALLOW_PLAYER_NAME_IN_CHATS = false;
-force PC_ALLOW_SWITCHABLE = true;
-force PC_AMBUSH_ACTION_TIME = 3;
-force PC_AMBUSH_DISTANCE = 300;
-force PC_AMBUSH_SECTOR = 200;
-force PC_AMBUSH_WAITING_TIME = 15;
-force PC_BOMB_DETONATION_DIST = 100;
-force PC_BOMB_DISTANCE = 50;
-force PC_EXPLOSION_GUARANTY = true;
-force PC_FIND_BUILDING_DIST = 100;
-force PC_MINING_FIND_ROAD_DIST = 50;
-force PC_MINING_SAFE_DIST = 50;
-force PC_RECON_MIN_MOVING_DIST = 30;
-force PC_RECON_MOVING_DIST = 200;
-force PC_RETREAT_TIME = 1;
-force PC_SEARCH_SECTOR = 50;
-force PC_SHARE_TARGET_DISTANCE = 250;
 
 // Simple Suppress
 force simplesuppress_suppress_checkLOS = false;
@@ -188,4 +147,5 @@ SEM_EnemyMarkerColor = [1,0,0,0.7];
 SEM_MaxMarkerRange = 500;
 
 // WebKnight's Two Primary Weapons
+force WBK_DualWeapons_SaveWeaponAfterRespawn = false;
 force WBK_DualWeapons_WhereWeaponAt = "Spine";
